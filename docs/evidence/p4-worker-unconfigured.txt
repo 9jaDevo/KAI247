@@ -1,0 +1,5 @@
+
+> kai247-renewpilot-ai@0.1.0 reminders:process
+> node scripts/process-reminders.mjs
+
+{"processed":0,"providerUnavailable":true,"mode":"one-shot","deliveryClaimed":false}

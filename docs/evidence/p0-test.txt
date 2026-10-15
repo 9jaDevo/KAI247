@@ -1,0 +1,13 @@
+
+> kai247-renewpilot-ai@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.4 C:/xampp/htdocs/Project/KAI247
+
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  12:17:41
+   Duration  782ms (import 58%, transform 28%, tests 10%, worker 4%)
+

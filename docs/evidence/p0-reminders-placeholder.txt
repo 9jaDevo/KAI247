@@ -1,0 +1,5 @@
+
+> kai247-renewpilot-ai@0.1.0 reminders:process
+> node scripts/process-reminders.mjs
+
+Not implemented: reminder processing belongs to P4. No jobs processed or emails sent.

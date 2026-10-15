@@ -1,0 +1,24 @@
+
+> kai247-renewpilot-ai@0.1.0 format
+> prettier --write src scripts tests package.json tsconfig.json *.mjs
+
+src/app/globals.css 128ms
+src/app/layout.tsx 260ms
+src/app/page.tsx 24ms
+src/components/README.md 83ms
+src/lib/ai/README.md 10ms
+src/lib/auth/README.md 5ms
+src/lib/db/README.md 7ms
+src/lib/notifications/README.md 10ms
+src/lib/renewals/README.md 4ms
+src/lib/security/env.ts 149ms
+src/types/README.md 8ms
+scripts/process-reminders.mjs 91ms
+tests/fixtures/README.md 6ms (unchanged)
+tests/integration/README.md 6ms (unchanged)
+tests/unit/env.test.ts 48ms
+package.json 12ms
+tsconfig.json 7ms
+eslint.config.mjs 11ms
+next.config.mjs 4ms
+postcss.config.mjs 9ms

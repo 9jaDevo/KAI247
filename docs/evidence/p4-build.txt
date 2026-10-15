@@ -1,0 +1,56 @@
+
+> kai247-renewpilot-ai@0.1.0 build
+> next build
+
+▲ Next.js 16.4.0 (Turbopack)
+- Environments: .env.local, .env
+✓ Running next.config.mjs took 98ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1825ms
+  Running TypeScript ...
+  Finished TypeScript in 2.7s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/23) ...
+  Generating static pages using 7 workers (5/23) 
+  Generating static pages using 7 workers (11/23) 
+  Generating static pages using 7 workers (17/23) 
+✓ Generating static pages using 7 workers (23/23) in 426ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/activity
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/dashboard
+├ ƒ /api/email-verification
+├ ƒ /api/email-verification/confirm
+├ ƒ /api/extractions
+├ ƒ /api/extractions/[id]
+├ ƒ /api/extractions/[id]/confirm
+├ ƒ /api/extractions/[id]/reject
+├ ƒ /api/reminder-preview
+├ ƒ /api/renewals
+├ ƒ /api/renewals/[id]
+├ ƒ /api/renewals/[id]/renew
+├ ƒ /api/settings
+├ ƒ /api/test-email
+├ ƒ /app
+├ ƒ /app/activity
+├ ƒ /app/import
+├ ƒ /app/import/[id]
+├ ƒ /app/import/review
+├ ƒ /app/renewals
+├ ƒ /app/renewals/[id]
+├ ƒ /app/renewals/[id]/edit
+├ ƒ /app/renewals/new
+├ ƒ /app/settings
+└ ƒ /login
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

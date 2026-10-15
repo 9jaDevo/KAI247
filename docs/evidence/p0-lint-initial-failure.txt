@@ -1,0 +1,14 @@
+
+> kai247-renewpilot-ai@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+C:\xampp\htdocs\Project\KAI247\next.config.mjs
+  6:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\xampp\htdocs\Project\KAI247\postcss.config.mjs
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+✖ 2 problems (0 errors, 2 warnings)
+
+ESLint found too many warnings (maximum: 0).

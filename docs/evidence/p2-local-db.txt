@@ -1,0 +1,37 @@
+Downloading MongoDB "8.2.6": 0% (0mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 1% (1.7mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 4.2% (7.1mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 8.6% (14.7mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 12.7% (21.7mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 16.8% (28.8mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 21.1% (36.1mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 25.3% (43.4mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 29.6% (50.7mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 34.7% (59.4mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 39% (66.7mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 43.5% (74.5mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 48% (82.2mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 48.3% (82.7mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 53.2% (91mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 58% (99.2mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 62% (106.1mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 66.9% (114.5mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 71.1% (121.8mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 75.7% (129.6mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 79.1% (135.4mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 81.9% (140.2mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 84.7% (145mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 87.7% (150.1mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 91.3% (156.3mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 95.5% (163.5mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 99.9% (171.1mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 100% (171.2mb / 171.2mb)[0G
+Downloading MongoDB "8.2.6": 100% (0mb / 0mb)[0G
+Local MongoDB replica set is running on loopback port 27018. Data persists in ignored .local/mongodb. Atlas is NOT configured.
+MONGODB_URI local configuration: mongodb://127.0.0.1:27018/kai247_local?replicaSet=kai247-local
+Warning: Detected unsettled top-level await at file:///C:/xampp/htdocs/Project/KAI247/scripts/db-local.mjs:10
+await new Promise(()=>{});
+^
+
+
+

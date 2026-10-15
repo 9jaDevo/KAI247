@@ -1,0 +1,35 @@
+
+> kai247-renewpilot-ai@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.4 C:/xampp/htdocs/Project/KAI247
+
+ ❯ tests/unit/env.test.ts (10 tests | 1 failed) 49ms
+   ❯ server environment validation (synthetic values only) (10)
+     × does not leak invalid values in errors 18ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/env.test.ts > server environment validation (synthetic values only) > does not leak invalid values in errors
+AssertionError: expected 'TypeError: Invalid URL' to contain 'GEMMA_API_BASE_URL'
+
+Expected: "GEMMA_API_BASE_URL"
+Received: "TypeError: Invalid URL"
+
+ ❯ tests/unit/env.test.ts:23:29
+     21|       validateEnv({ GEMMA_API_BASE_URL: "synthetic-private-value" });
+     22|     } catch (error) {
+     23|       expect(String(error)).toContain("GEMMA_API_BASE_URL");
+       |                             ^
+     24|       expect(String(error)).not.toContain("synthetic-private-value");
+     25|       return;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 passed (10)
+   Start at  12:16:47
+   Duration  2.15s (transform 48%, import 35%, worker 10%, tests 7%)
+

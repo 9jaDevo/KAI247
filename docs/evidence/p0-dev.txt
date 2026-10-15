@@ -1,0 +1,437 @@
+
+> kai247-renewpilot-ai@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.4.0 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+✓ Ready in 2.9s
+✓ Running next.config.mjs took 326ms
+
+✓ Generated AGENTS.md for AI agents. Set `agentRules: false` in next.config to disable.
+○ Compiling / ...
+ GET / 200 in 2.4s (next.js: 1428ms, application-code: 949ms)
+ GET / 200 in 167ms (next.js: 8ms, application-code: 159ms)
+ GET / 200 in 128ms (next.js: 8ms, application-code: 120ms)
+ GET / 200 in 331ms (next.js: 32ms, application-code: 299ms)
+✓ Compiled in 363ms
+ GET / 200 in 169ms (next.js: 21ms, application-code: 148ms)
+✓ Compiled in 3.9s
+ GET / 200 in 346ms (next.js: 80ms, application-code: 266ms)
+✓ Compiled in 506ms
+ GET / 200 in 852ms (next.js: 22ms, application-code: 829ms)
+ GET / 200 in 1080ms (next.js: 8ms, application-code: 1071ms)
+ GET / 200 in 705ms (next.js: 10ms, application-code: 695ms)
+ GET / 200 in 659ms (next.js: 37ms, application-code: 622ms)
+ GET / 200 in 414ms (next.js: 12ms, application-code: 401ms)
+ GET / 200 in 228ms (next.js: 12ms, application-code: 216ms)
+✓ Compiled in 2.8s
+ GET / 200 in 667ms (next.js: 69ms, application-code: 598ms)
+ GET / 200 in 717ms (next.js: 21ms, application-code: 696ms)
+ GET / 200 in 768ms (next.js: 34ms, application-code: 734ms)
+ GET / 200 in 408ms (next.js: 9ms, application-code: 399ms)
+ GET / 200 in 228ms (next.js: 9ms, application-code: 219ms)
+✓ Compiled in 265ms
+ GET / 200 in 544ms (next.js: 27ms, application-code: 517ms)
+✓ Compiled in 1858ms
+ GET / 200 in 203ms (next.js: 13ms, application-code: 190ms)
+✓ Compiled in 340ms
+○ Compiling /app/renewals/[id] ...
+ GET /app/renewals/sample-hosting 307 in 2.8s (next.js: 2.1s, application-code: 691ms)
+ GET /login 200 in 728ms (next.js: 321ms, application-code: 407ms)
+ GET /app 200 in 302ms (next.js: 63ms, application-code: 239ms)
+ POST /login 200 in 2.0s (next.js: 6ms, application-code: 2.0s)
+  └─ ƒ enterPreview() in 11ms src/lib/auth/preview-actions.ts
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 578ms (next.js: 16ms, application-code: 562ms)
+ GET /login 200 in 212ms (next.js: 6ms, application-code: 206ms)
+ GET /app 200 in 817ms (next.js: 6ms, application-code: 811ms)
+ GET /app/renewals 200 in 356ms (next.js: 46ms, application-code: 310ms)
+ GET /app/renewals/new 200 in 356ms (next.js: 51ms, application-code: 305ms)
+ GET /app/renewals/sample-hosting 200 in 360ms (next.js: 50ms, application-code: 310ms)
+ GET /app/renewals/sample-hosting/edit 200 in 2.2s (next.js: 1925ms, application-code: 282ms)
+ GET /app/import 200 in 419ms (next.js: 147ms, application-code: 272ms)
+ GET /app/import/review 200 in 328ms (next.js: 44ms, application-code: 284ms)
+ GET /app/activity 200 in 300ms (next.js: 48ms, application-code: 252ms)
+ GET /app/settings 200 in 433ms (next.js: 66ms, application-code: 367ms)
+ GET / 200 in 253ms (next.js: 6ms, application-code: 248ms)
+ GET /login 200 in 177ms (next.js: 6ms, application-code: 171ms)
+ GET /app 200 in 347ms (next.js: 6ms, application-code: 341ms)
+ GET /app/renewals 200 in 344ms (next.js: 3ms, application-code: 341ms)
+ GET /app/renewals/new 200 in 267ms (next.js: 6ms, application-code: 260ms)
+ GET /app/renewals/sample-hosting 200 in 333ms (next.js: 48ms, application-code: 285ms)
+ GET /app/renewals/sample-hosting/edit 200 in 677ms (next.js: 51ms, application-code: 626ms)
+ GET /app/import 200 in 319ms (next.js: 12ms, application-code: 307ms)
+ GET /app/import/review 200 in 306ms (next.js: 5ms, application-code: 301ms)
+ GET /app/activity 200 in 264ms (next.js: 6ms, application-code: 258ms)
+ GET /app/settings 200 in 336ms (next.js: 10ms, application-code: 326ms)
+ GET / 200 in 300ms (next.js: 6ms, application-code: 294ms)
+ GET /login 200 in 247ms (next.js: 4ms, application-code: 243ms)
+ GET /app 200 in 472ms (next.js: 8ms, application-code: 464ms)
+ GET /app/renewals 200 in 677ms (next.js: 7ms, application-code: 670ms)
+ GET /app/renewals/new 200 in 306ms (next.js: 14ms, application-code: 292ms)
+ GET /app/renewals/sample-hosting 200 in 313ms (next.js: 41ms, application-code: 272ms)
+ GET /app/renewals/sample-hosting/edit 200 in 622ms (next.js: 55ms, application-code: 567ms)
+ GET /app/import 200 in 298ms (next.js: 16ms, application-code: 282ms)
+ GET /app/import/review 200 in 366ms (next.js: 8ms, application-code: 358ms)
+ GET /app/activity 200 in 362ms (next.js: 13ms, application-code: 349ms)
+ GET /app/settings 200 in 353ms (next.js: 7ms, application-code: 346ms)
+ GET /app 200 in 303ms (next.js: 4ms, application-code: 299ms)
+ GET /app/renewals 200 in 126ms (next.js: 8ms, application-code: 118ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/renewals/new 200 in 331ms (next.js: 5ms, application-code: 326ms)
+✓ Compiled in 548ms
+ GET /app/renewals/sample-hosting 307 in 423ms (next.js: 89ms, application-code: 334ms)
+ GET /login 200 in 276ms (next.js: 5ms, application-code: 270ms)
+ GET /app 200 in 239ms (next.js: 11ms, application-code: 228ms)
+ POST /login 200 in 562ms (next.js: 17ms, application-code: 546ms)
+  └─ ƒ enterPreview() in 9ms src/lib/auth/preview-actions.ts
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 296ms (next.js: 8ms, application-code: 288ms)
+ GET /login 200 in 178ms (next.js: 5ms, application-code: 172ms)
+ GET /app 200 in 250ms (next.js: 6ms, application-code: 243ms)
+ GET /app/renewals 200 in 307ms (next.js: 11ms, application-code: 296ms)
+ GET /app/renewals/new 200 in 304ms (next.js: 11ms, application-code: 293ms)
+ GET /app/renewals/sample-hosting 200 in 278ms (next.js: 47ms, application-code: 231ms)
+ GET /app/renewals/sample-hosting/edit 200 in 354ms (next.js: 45ms, application-code: 310ms)
+ GET /app/import 200 in 336ms (next.js: 28ms, application-code: 308ms)
+ GET /app/import/review 200 in 213ms (next.js: 10ms, application-code: 203ms)
+ GET /app/activity 200 in 229ms (next.js: 9ms, application-code: 220ms)
+ GET /app/settings 200 in 197ms (next.js: 8ms, application-code: 189ms)
+ GET / 200 in 259ms (next.js: 7ms, application-code: 252ms)
+ GET /login 200 in 173ms (next.js: 5ms, application-code: 167ms)
+ GET /app 200 in 272ms (next.js: 5ms, application-code: 267ms)
+ GET /app/renewals 200 in 383ms (next.js: 16ms, application-code: 367ms)
+ GET /app/renewals/new 200 in 294ms (next.js: 6ms, application-code: 288ms)
+ GET /app/renewals/sample-hosting 200 in 303ms (next.js: 36ms, application-code: 267ms)
+ GET /app/renewals/sample-hosting/edit 200 in 319ms (next.js: 48ms, application-code: 271ms)
+ GET /app/import 200 in 313ms (next.js: 9ms, application-code: 304ms)
+ GET /app/import/review 200 in 340ms (next.js: 5ms, application-code: 335ms)
+ GET /app/activity 200 in 230ms (next.js: 7ms, application-code: 223ms)
+ GET /app/settings 200 in 271ms (next.js: 8ms, application-code: 263ms)
+ GET / 200 in 253ms (next.js: 8ms, application-code: 245ms)
+ GET /login 200 in 391ms (next.js: 11ms, application-code: 379ms)
+ GET /app 200 in 530ms (next.js: 10ms, application-code: 521ms)
+ GET /app/renewals 200 in 863ms (next.js: 22ms, application-code: 841ms)
+ GET /app/renewals/new 200 in 753ms (next.js: 7ms, application-code: 746ms)
+ GET /app/renewals/sample-hosting 200 in 642ms (next.js: 111ms, application-code: 530ms)
+ GET /app/renewals/sample-hosting/edit 200 in 550ms (next.js: 59ms, application-code: 491ms)
+ GET /app/import 200 in 532ms (next.js: 26ms, application-code: 506ms)
+ GET /app/import/review 200 in 670ms (next.js: 31ms, application-code: 639ms)
+ GET /app/activity 200 in 971ms (next.js: 15ms, application-code: 956ms)
+ GET /app/settings 200 in 709ms (next.js: 75ms, application-code: 634ms)
+ GET /app 200 in 1173ms (next.js: 11ms, application-code: 1162ms)
+ GET /app/renewals 200 in 564ms (next.js: 33ms, application-code: 531ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/renewals/new 200 in 5.4s (next.js: 6ms, application-code: 5.4s)
+✓ Compiled in 282ms
+✓ Compiled in 411ms
+✓ Compiled in 205ms
+ GET /app/renewals/sample-hosting 307 in 437ms (next.js: 72ms, application-code: 365ms)
+ GET /login 200 in 225ms (next.js: 10ms, application-code: 215ms)
+ GET /app 200 in 254ms (next.js: 25ms, application-code: 230ms)
+ POST /login 200 in 964ms (next.js: 11ms, application-code: 953ms)
+  └─ ƒ enterPreview() in 5ms src/lib/auth/preview-actions.ts
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 443ms (next.js: 18ms, application-code: 424ms)
+ GET /login 200 in 260ms (next.js: 9ms, application-code: 251ms)
+ GET /app 200 in 407ms (next.js: 5ms, application-code: 401ms)
+ GET /app/renewals 200 in 309ms (next.js: 9ms, application-code: 300ms)
+ GET /app/renewals/new 200 in 334ms (next.js: 8ms, application-code: 326ms)
+ GET /app/renewals/sample-hosting 200 in 403ms (next.js: 55ms, application-code: 348ms)
+ GET /app/renewals/sample-hosting/edit 200 in 342ms (next.js: 48ms, application-code: 293ms)
+ GET /app/import 200 in 321ms (next.js: 8ms, application-code: 313ms)
+ GET /app/import/review 200 in 326ms (next.js: 8ms, application-code: 317ms)
+ GET /app/activity 200 in 273ms (next.js: 15ms, application-code: 258ms)
+ GET /app/settings 200 in 258ms (next.js: 9ms, application-code: 248ms)
+ GET / 200 in 159ms (next.js: 3ms, application-code: 155ms)
+ GET /login 200 in 198ms (next.js: 9ms, application-code: 189ms)
+ GET /app 200 in 362ms (next.js: 7ms, application-code: 356ms)
+ GET /app/renewals 200 in 444ms (next.js: 9ms, application-code: 434ms)
+ GET /app/renewals/new 200 in 261ms (next.js: 4ms, application-code: 257ms)
+ GET /app/renewals/sample-hosting 200 in 510ms (next.js: 54ms, application-code: 456ms)
+ GET /app/renewals/sample-hosting/edit 200 in 425ms (next.js: 53ms, application-code: 372ms)
+ GET /app/import 200 in 234ms (next.js: 5ms, application-code: 229ms)
+ GET /app/import/review 200 in 304ms (next.js: 5ms, application-code: 299ms)
+ GET /app/activity 200 in 754ms (next.js: 40ms, application-code: 714ms)
+ GET /app/settings 200 in 374ms (next.js: 37ms, application-code: 337ms)
+ GET / 200 in 223ms (next.js: 8ms, application-code: 215ms)
+ GET /login 200 in 189ms (next.js: 5ms, application-code: 185ms)
+ GET /app 200 in 380ms (next.js: 5ms, application-code: 375ms)
+ GET /app/renewals 200 in 404ms (next.js: 12ms, application-code: 392ms)
+ GET /app/renewals/new 200 in 658ms (next.js: 8ms, application-code: 650ms)
+ GET /app/renewals/sample-hosting 200 in 548ms (next.js: 68ms, application-code: 481ms)
+ GET /app/renewals/sample-hosting/edit 200 in 369ms (next.js: 50ms, application-code: 318ms)
+ GET /app/import 200 in 286ms (next.js: 5ms, application-code: 281ms)
+ GET /app/import/review 200 in 371ms (next.js: 25ms, application-code: 346ms)
+ GET /app/activity 200 in 306ms (next.js: 8ms, application-code: 299ms)
+ GET /app/settings 200 in 259ms (next.js: 6ms, application-code: 253ms)
+ GET /app 200 in 323ms (next.js: 5ms, application-code: 318ms)
+ GET /app/renewals 200 in 119ms (next.js: 8ms, application-code: 112ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/renewals/new 200 in 298ms (next.js: 8ms, application-code: 290ms)
+ GET /app/renewals/sample-hosting 200 in 628ms (next.js: 69ms, application-code: 559ms)
+ GET /app/renewals/sample-hosting 200 in 342ms (next.js: 6ms, application-code: 336ms)
+ GET /app/renewals/sample-hosting/edit 200 in 643ms (next.js: 45ms, application-code: 597ms)
+ GET /app/import 200 in 291ms (next.js: 5ms, application-code: 286ms)
+ GET /app/import/review 200 in 164ms (next.js: 6ms, application-code: 158ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/settings 200 in 624ms (next.js: 15ms, application-code: 609ms)
+ GET /app/renewals/unknown-sample 200 in 563ms (next.js: 57ms, application-code: 505ms)
+ GET /app 200 in 347ms (next.js: 4ms, application-code: 343ms)
+ GET /login 200 in 124ms (next.js: 10ms, application-code: 114ms)
+ POST /app 200 in 360ms (next.js: 5ms, application-code: 355ms)
+  └─ ƒ exitPreview() in 8ms src/lib/auth/preview-actions.ts
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/settings 307 in 319ms (next.js: 4ms, application-code: 315ms)
+ GET /login 200 in 248ms (next.js: 9ms, application-code: 238ms)
+ GET / 200 in 281ms (next.js: 8ms, application-code: 273ms)
+ GET / 200 in 407ms (next.js: 12ms, application-code: 395ms)
+ GET /login 200 in 137ms (next.js: 8ms, application-code: 129ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 26ms (next.js: 5ms, application-code: 21ms)
+  Reload env: .env
+ GET / 200 in 483ms (next.js: 217ms, application-code: 266ms)
+ GET / 200 in 87ms (next.js: 6ms, application-code: 82ms)
+  Reload env: .env
+ GET / 200 in 779ms (next.js: 148ms, application-code: 631ms)
+ GET / 200 in 243ms (next.js: 94ms, application-code: 149ms)
+ GET / 200 in 130ms (next.js: 4ms, application-code: 126ms)
+ GET / 200 in 68ms (next.js: 3ms, application-code: 64ms)
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\bson\\lib\\bson.bundle.js.map").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (1.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\mongodb\\lib\\client-side-encryption\\providers").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\mongodb\\lib\\operations\\get_more.js.map").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (1.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\mongodb\\src\\read_concern.ts").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\async-mutex\\lib").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (1.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\bare-path\\package.json").
+✓ Compiled in 216ms
+ GET / 200 in 275ms (next.js: 14ms, application-code: 261ms)
+ GET / 200 in 218ms (next.js: 6ms, application-code: 212ms)
+ GET / 200 in 177ms (next.js: 5ms, application-code: 172ms)
+ GET / 200 in 159ms (next.js: 7ms, application-code: 152ms)
+ GET / 200 in 152ms (next.js: 4ms, application-code: 148ms)
+ GET / 200 in 286ms (next.js: 5ms, application-code: 281ms)
+ GET / 200 in 339ms (next.js: 6ms, application-code: 333ms)
+ GET / 200 in 382ms (next.js: 11ms, application-code: 371ms)
+ GET / 200 in 259ms (next.js: 9ms, application-code: 250ms)
+ GET / 200 in 131ms (next.js: 12ms, application-code: 119ms)
+ GET / 200 in 216ms (next.js: 6ms, application-code: 209ms)
+ GET / 200 in 173ms (next.js: 6ms, application-code: 167ms)
+ GET / 200 in 184ms (next.js: 4ms, application-code: 179ms)
+ GET / 200 in 196ms (next.js: 5ms, application-code: 190ms)
+ GET / 200 in 175ms (next.js: 4ms, application-code: 171ms)
+ GET / 200 in 145ms (next.js: 4ms, application-code: 141ms)
+ GET / 200 in 150ms (next.js: 4ms, application-code: 146ms)
+ GET / 200 in 74ms (next.js: 3ms, application-code: 71ms)
+  Reload env: .env.local
+ GET / 200 in 4.6s (next.js: 2.9s, application-code: 1646ms)
+✓ Compiled in 7.8s
+ GET / 200 in 1043ms (next.js: 166ms, application-code: 877ms)
+ GET / 200 in 451ms (next.js: 18ms, application-code: 433ms)
+ GET / 200 in 203ms (next.js: 13ms, application-code: 190ms)
+✓ Compiled in 333ms
+ GET / 200 in 269ms (next.js: 27ms, application-code: 242ms)
+ GET / 200 in 241ms (next.js: 9ms, application-code: 232ms)
+✓ Compiled in 391ms
+ GET / 200 in 507ms (next.js: 41ms, application-code: 467ms)
+ GET / 200 in 152ms (next.js: 14ms, application-code: 138ms)
+✓ Compiled in 176ms
+ GET / 200 in 275ms (next.js: 44ms, application-code: 231ms)
+ GET / 200 in 68ms (next.js: 6ms, application-code: 62ms)
+✓ Compiled in 745ms
+ GET / 200 in 431ms (next.js: 13ms, application-code: 419ms)
+ GET / 200 in 164ms (next.js: 8ms, application-code: 156ms)
+  Reload env: .env
+ GET / 200 in 842ms (next.js: 367ms, application-code: 475ms)
+ GET / 200 in 140ms (next.js: 8ms, application-code: 133ms)
+✓ Compiled in 140ms
+ GET / 200 in 269ms (next.js: 12ms, application-code: 257ms)
+ GET / 200 in 111ms (next.js: 4ms, application-code: 108ms)
+✓ Compiled in 172ms
+✓ Compiled in 191ms
+✓ Compiled in 257ms
+ GET / 200 in 187ms (next.js: 38ms, application-code: 149ms)
+ GET / 200 in 193ms (next.js: 6ms, application-code: 187ms)
+✓ Compiled in 632ms
+ GET / 200 in 240ms (next.js: 25ms, application-code: 215ms)
+✓ Compiled in 814ms
+ GET / 200 in 262ms (next.js: 19ms, application-code: 242ms)
+✓ Compiled in 219ms
+ GET / 200 in 165ms (next.js: 12ms, application-code: 153ms)
+ GET / 200 in 276ms (next.js: 6ms, application-code: 270ms)
+ GET / 200 in 264ms (next.js: 5ms, application-code: 259ms)
+ GET / 200 in 274ms (next.js: 7ms, application-code: 267ms)
+ GET / 200 in 418ms (next.js: 5ms, application-code: 414ms)
+ GET / 200 in 223ms (next.js: 34ms, application-code: 190ms)
+ GET / 200 in 249ms (next.js: 5ms, application-code: 244ms)
+ GET / 200 in 140ms (next.js: 7ms, application-code: 133ms)
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\.vitest-cache").
+✓ Compiled in 142ms
+ GET / 200 in 125ms (next.js: 7ms, application-code: 117ms)
+ GET / 200 in 64ms (next.js: 5ms, application-code: 59ms)
+✓ Compiled in 80ms
+✓ Compiled in 56ms
+ GET / 200 in 121ms (next.js: 34ms, application-code: 88ms)
+ GET / 200 in 60ms (next.js: 5ms, application-code: 55ms)
+✓ Compiled in 71ms
+ GET / 200 in 130ms (next.js: 4ms, application-code: 126ms)
+ GET / 200 in 58ms (next.js: 3ms, application-code: 55ms)
+  Reload env: .env
+ GET / 200 in 363ms (next.js: 140ms, application-code: 224ms)
+ GET / 200 in 89ms (next.js: 4ms, application-code: 85ms)
+  Reload env: .env
+ GET / 200 in 792ms (next.js: 144ms, application-code: 648ms)
+ GET / 200 in 295ms (next.js: 114ms, application-code: 181ms)
+ GET / 200 in 125ms (next.js: 4ms, application-code: 121ms)
+ GET / 200 in 43ms (next.js: 5ms, application-code: 39ms)
+ GET / 200 in 234ms (next.js: 106ms, application-code: 129ms)
+ GET / 200 in 71ms (next.js: 3ms, application-code: 67ms)
+✓ Compiled in 57ms
+ GET / 200 in 95ms (next.js: 3ms, application-code: 93ms)
+ GET / 200 in 46ms (next.js: 6ms, application-code: 40ms)
+✓ Compiled in 91ms
+ GET / 200 in 142ms (next.js: 4ms, application-code: 138ms)
+ GET / 200 in 68ms (next.js: 4ms, application-code: 64ms)
+  Reload env: .env
+ GET / 200 in 286ms (next.js: 144ms, application-code: 142ms)
+ GET / 200 in 67ms (next.js: 3ms, application-code: 64ms)
+✓ Compiled in 105ms
+ GET / 200 in 261ms (next.js: 50ms, application-code: 211ms)
+ GET / 200 in 108ms (next.js: 4ms, application-code: 105ms)
+ GET /app 307 in 1403ms (next.js: 105ms, application-code: 1298ms)
+ GET /login 200 in 408ms (next.js: 60ms, application-code: 348ms)
+ GET /api/renewals 401 in 300ms (next.js: 251ms, application-code: 49ms)
+ GET /app 307 in 124ms (next.js: 3ms, application-code: 121ms)
+ GET /login 200 in 62ms (next.js: 2ms, application-code: 60ms)
+ POST /api/auth/login 200 in 888ms (next.js: 38ms, application-code: 850ms)
+ GET /app 200 in 246ms (next.js: 2ms, application-code: 244ms)
+ GET /app/renewals/new 200 in 210ms (next.js: 63ms, application-code: 147ms)
+✓ Compiled in 90ms
+✓ Compiled in 123ms
+ GET /app/renewals/new 200 in 417ms (next.js: 6ms, application-code: 411ms)
+ GET / 200 in 546ms (next.js: 11ms, application-code: 535ms)
+ GET / 200 in 294ms (next.js: 67ms, application-code: 227ms)
+✓ Compiled in 152ms
+ POST /api/renewals 201 in 94ms (next.js: 6ms, application-code: 88ms)
+✓ Compiled in 87ms
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 489ms (next.js: 128ms, application-code: 362ms)
+ GET / 200 in 492ms (next.js: 101ms, application-code: 391ms)
+ GET / 200 in 652ms (next.js: 14ms, application-code: 637ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 433ms (next.js: 30ms, application-code: 403ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 279ms (next.js: 22ms, application-code: 257ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 273ms (next.js: 4ms, application-code: 269ms)
+ GET /api/renewals/6acfbddd42674b76bf3b19e9 200 in 1659ms (next.js: 1621ms, application-code: 38ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9/edit 200 in 217ms (next.js: 76ms, application-code: 140ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ PATCH /api/renewals/6acfbddd42674b76bf3b19e9 200 in 94ms (next.js: 21ms, application-code: 72ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 184ms (next.js: 25ms, application-code: 159ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 267ms (next.js: 4ms, application-code: 263ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 367ms (next.js: 8ms, application-code: 360ms)
+ GET /api/renewals/6acfbddd42674b76bf3b19e9 200 in 66ms (next.js: 6ms, application-code: 61ms)
+ POST /api/renewals/6acfbddd42674b76bf3b19e9/renew 200 in 2.3s (next.js: 2.2s, application-code: 75ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 259ms (next.js: 31ms, application-code: 228ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 332ms (next.js: 5ms, application-code: 328ms)
+ GET /api/renewals/6acfbddd42674b76bf3b19e9 200 in 88ms (next.js: 33ms, application-code: 56ms)
+ GET /app/renewals 200 in 493ms (next.js: 103ms, application-code: 390ms)
+ GET /api/renewals?q=Synthetic+browser+domain+1791999443810+edited&category=all&status=all 200 in 106ms (next.js: 9ms, application-code: 97ms)
+ GET /api/renewals?q=no-matching-record-xyz&category=all&status=all 200 in 160ms (next.js: 11ms, application-code: 148ms)
+ POST /api/renewals 403 in 25ms (next.js: 5ms, application-code: 20ms)
+ GET /api/auth/me 200 in 239ms (next.js: 199ms, application-code: 41ms)
+ GET /api/activity 200 in 235ms (next.js: 177ms, application-code: 58ms)
+ GET / 200 in 367ms (next.js: 19ms, application-code: 349ms)
+ GET /login 200 in 107ms (next.js: 6ms, application-code: 101ms)
+ GET /app 200 in 461ms (next.js: 8ms, application-code: 453ms)
+ GET /app/renewals 200 in 250ms (next.js: 4ms, application-code: 246ms)
+ GET /app/renewals/new 200 in 287ms (next.js: 6ms, application-code: 281ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 337ms (next.js: 35ms, application-code: 302ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9/edit 200 in 322ms (next.js: 28ms, application-code: 295ms)
+ GET /app/import 200 in 590ms (next.js: 235ms, application-code: 355ms)
+ GET /app/import/review 200 in 970ms (next.js: 204ms, application-code: 766ms)
+ GET /app/activity 200 in 436ms (next.js: 158ms, application-code: 277ms)
+ GET /app/settings 200 in 396ms (next.js: 77ms, application-code: 318ms)
+ GET / 200 in 160ms (next.js: 3ms, application-code: 157ms)
+ GET /login 200 in 102ms (next.js: 3ms, application-code: 98ms)
+ GET /app 200 in 398ms (next.js: 2ms, application-code: 395ms)
+ GET /app/renewals 200 in 178ms (next.js: 3ms, application-code: 174ms)
+ GET /app/renewals/new 200 in 180ms (next.js: 3ms, application-code: 177ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 173ms (next.js: 13ms, application-code: 159ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9/edit 200 in 259ms (next.js: 20ms, application-code: 239ms)
+ GET /app/import 200 in 216ms (next.js: 3ms, application-code: 213ms)
+ GET /app/import/review 200 in 169ms (next.js: 2ms, application-code: 167ms)
+ GET /app/activity 200 in 157ms (next.js: 3ms, application-code: 155ms)
+ GET /app/settings 200 in 131ms (next.js: 2ms, application-code: 129ms)
+ GET / 200 in 89ms (next.js: 1.7ms, application-code: 87ms)
+ GET /login 200 in 56ms (next.js: 2ms, application-code: 53ms)
+ GET /app 200 in 258ms (next.js: 4ms, application-code: 253ms)
+ GET /app/renewals 200 in 137ms (next.js: 2.0ms, application-code: 135ms)
+ GET /app/renewals/new 200 in 149ms (next.js: 3ms, application-code: 146ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9 200 in 189ms (next.js: 38ms, application-code: 151ms)
+ GET /app/renewals/6acfbddd42674b76bf3b19e9/edit 200 in 159ms (next.js: 17ms, application-code: 143ms)
+ GET /app/import 200 in 110ms (next.js: 2ms, application-code: 108ms)
+ GET /app/import/review 200 in 110ms (next.js: 1.8ms, application-code: 108ms)
+ GET /app/activity 200 in 92ms (next.js: 1.5ms, application-code: 90ms)
+ GET /app/settings 200 in 114ms (next.js: 2ms, application-code: 111ms)
+ GET /app/settings 200 in 114ms (next.js: 1.8ms, application-code: 112ms)
+ PATCH /api/settings 200 in 142ms (next.js: 94ms, application-code: 48ms)
+ GET /app/settings 200 in 119ms (next.js: 3ms, application-code: 116ms)
+ POST /api/auth/logout 200 in 139ms (next.js: 97ms, application-code: 42ms)
+ GET /login 200 in 103ms (next.js: 3ms, application-code: 100ms)
+ GET /api/auth/me 401 in 20ms (next.js: 3ms, application-code: 17ms)
+ GET /app 307 in 118ms (next.js: 3ms, application-code: 115ms)
+ GET /login 200 in 103ms (next.js: 4ms, application-code: 99ms)
+✓ Compiled in 124ms
+ GET / 200 in 134ms (next.js: 4ms, application-code: 130ms)
+ GET / 200 in 48ms (next.js: 3ms, application-code: 44ms)
+✓ Compiled in 371ms
+ GET / 200 in 196ms (next.js: 20ms, application-code: 177ms)
+ GET / 200 in 49ms (next.js: 3ms, application-code: 46ms)
+ GET /login 200 in 47ms (next.js: 4ms, application-code: 43ms)
+ POST /api/auth/login 200 in 411ms (next.js: 4ms, application-code: 407ms)
+ GET /api/renewals/6acfbddd42674b76bf3b19e9 200 in 84ms (next.js: 25ms, application-code: 59ms)
+ POST /api/auth/logout 200 in 35ms (next.js: 2.0ms, application-code: 33ms)
+✓ Compiled in 121ms
+ GET /login 200 in 181ms (next.js: 10ms, application-code: 171ms)
+ GET / 200 in 103ms (next.js: 8ms, application-code: 95ms)
+✓ Compiled in 90ms
+ GET /login 200 in 402ms (next.js: 28ms, application-code: 373ms)
+ GET / 200 in 110ms (next.js: 8ms, application-code: 102ms)
+✓ Compiled in 421ms
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\unpdf\\dist\\types\\src\\shared\\image_utils.d.ts").
+✓ Compiled in 1309ms
+ GET /login 200 in 1357ms (next.js: 1031ms, application-code: 326ms)
+ GET / 200 in 1492ms (next.js: 155ms, application-code: 1337ms)
+✓ Compiled in 2.2s
+ GET / 200 in 636ms (next.js: 63ms, application-code: 573ms)
+ GET /login 200 in 359ms (next.js: 22ms, application-code: 337ms)
+✓ Compiled in 360ms
+ GET /login 200 in 166ms (next.js: 10ms, application-code: 155ms)
+ GET / 200 in 385ms (next.js: 15ms, application-code: 370ms)
+✓ Compiled in 1021ms
+ GET /login 200 in 786ms (next.js: 37ms, application-code: 750ms)
+ GET / 200 in 1002ms (next.js: 16ms, application-code: 986ms)
+ GET /login 200 in 778ms (next.js: 7ms, application-code: 770ms)
+ GET / 200 in 847ms (next.js: 11ms, application-code: 836ms)
+ GET /login 200 in 590ms (next.js: 10ms, application-code: 579ms)
+ GET / 200 in 688ms (next.js: 11ms, application-code: 676ms)
+ GET /login 200 in 409ms (next.js: 9ms, application-code: 400ms)
+ GET / 200 in 248ms (next.js: 15ms, application-code: 233ms)
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\.vitest-cache\\.tmp-1792005406934-1shelodavms").
+✓ Compiled in 5.3s
+ GET /login 200 in 381ms (next.js: 19ms, application-code: 361ms)
+ GET / 200 in 243ms (next.js: 8ms, application-code: 235ms)
+✓ Compiled in 320ms
+ GET /login 200 in 393ms (next.js: 36ms, application-code: 358ms)
+ GET / 200 in 222ms (next.js: 16ms, application-code: 206ms)
+✓ Compiled in 1288ms
+ GET /login 200 in 488ms (next.js: 8ms, application-code: 480ms)
+ GET / 200 in 740ms (next.js: 22ms, application-code: 718ms)
+ GET /login 200 in 309ms (next.js: 6ms, application-code: 303ms)
+ GET / 200 in 200ms (next.js: 17ms, application-code: 183ms)
+✓ Compiled in 605ms
+✓ Compiled in 644ms
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\xampp\\htdocs\\Project\\KAI247\\node_modules\\.vitest-cache").
+ GET /api/health 404 in 1783ms (next.js: 1620ms, application-code: 163ms)
+✓ Compiled in 1116ms
+ GET /login 200 in 500ms (next.js: 74ms, application-code: 426ms)
+ GET / 200 in 253ms (next.js: 9ms, application-code: 244ms)

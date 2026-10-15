@@ -1,0 +1,24 @@
+
+> kai247-renewpilot-ai@0.1.0 test:integration
+> vitest run --config vitest.integration.config.ts
+
+
+ RUN  v5.0.4 C:/xampp/htdocs/Project/KAI247
+
+ ❯ tests/integration/owner-workflow.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/integration/owner-workflow.test.ts [ tests/integration/owner-workflow.test.ts ]
+TypeError: describe.sequential is not a function
+ ❯ tests/integration/owner-workflow.test.ts:29:10
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  13:22:06
+   Duration  6.64s (worker 99%, environment 1%)
+

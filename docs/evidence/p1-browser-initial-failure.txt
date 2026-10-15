@@ -1,0 +1,7 @@
+{
+  "outcome": "fail",
+  "routesChecked": 33,
+  "checks": 4,
+  "errors": [],
+  "failure": "Error: locator.waitFor: Error: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" id=\"title-error\" class=\"field-error\">Enter a renewal title, not just spaces.</p> aka getByText('Enter a renewal title, not')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\"></div> aka locator('[id=\"__next-route-announcer__\"]')\n\nCall log:\n\u001b[2m  - waiting for getByRole('alert') to be visible\u001b[22m\n"
+}

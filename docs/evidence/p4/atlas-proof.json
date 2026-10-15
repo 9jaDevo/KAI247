@@ -1,0 +1,12 @@
+{
+  "timestampUtc": "2026-10-15T07:26:10.165Z",
+  "dataset": "SYNTHETIC isolated Atlas database; no production records queried; no mailbox verification or email delivery claimed",
+  "database": "kai247_p4_evidence_faaa6d8c23fe",
+  "checks": [
+    "Atlas transaction and four persisted planner jobs passed",
+    "Unique idempotency index rejects duplicate",
+    "Fresh pooled connection reads persisted jobs"
+  ],
+  "jobCount": 4,
+  "outcome": "PASS"
+}

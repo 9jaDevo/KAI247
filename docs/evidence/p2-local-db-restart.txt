@@ -1,0 +1,2 @@
+Local MongoDB replica set is running on loopback port 27018. Data persists in ignored .local/mongodb. Atlas is NOT configured.
+MONGODB_URI local configuration: mongodb://127.0.0.1:27018/kai247_local?replicaSet=kai247-local

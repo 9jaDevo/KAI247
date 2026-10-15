@@ -1,0 +1,17 @@
+SYNTHETIC TEST DOCUMENT - invented for KAI247 testing. Not a real invoice.
+
+Example Cloud Hosting Ltd
+12 Sample Street, Ikeja, Lagos
+billing@example-cloud.invalid
+
+TAX INVOICE
+Invoice number: ECH-2026-00417
+Invoice date: 14/10/2026
+Bill to: Synthetic Traders Ventures
+
+Description: Business Shared Hosting - annual plan (example-traders.invalid)
+Service period: 21 October 2026 to 20 October 2027
+Amount due: NGN 85,000.00
+
+Your hosting plan renews on 21 October 2027. Renew before this date to avoid suspension.
+Thank you for your business.

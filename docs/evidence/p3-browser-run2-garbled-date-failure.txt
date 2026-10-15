@@ -1,0 +1,11 @@
+run started 2026-10-14T19:57:54Z
+P3 browser verification: fail
+- Unauthenticated upload API returns 401 and /app/import redirects to sign-in.
+- Owner signed in; a cross-origin authenticated upload is rejected with 403.
+- Scanned image-only PDF rejected with NO_TEXT_LAYER message before any model call; nothing persisted. OCR not claimed.
+  hosting-invoice-two-dates.pdf: gemma-4-26b-a4b-it model 8844ms x1, UI 10.3s, date unsupported -
+FAILURE: Expected values to be strictly equal:
+
+'' !== '2027-10-21'
+
+exit 1

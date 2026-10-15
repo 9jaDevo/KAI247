@@ -1,0 +1,170 @@
+{
+  "_note": "Real Gemma calls on the SYNTHETIC two-page hosting invoice PDF, json_schema output, max_tokens 1024, 5 runs per variant, 2026-10-14. Small sample; indicative only.",
+  "rows": [
+    {
+      "variant": "26b-t0",
+      "run": 1,
+      "status": 200,
+      "finish": "stop",
+      "completion": 344,
+      "ms": 9250,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "26b-t0",
+      "run": 2,
+      "status": 200,
+      "finish": "stop",
+      "completion": 306,
+      "ms": 7277,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "supported"
+    },
+    {
+      "variant": "26b-t0",
+      "run": 3,
+      "status": 200,
+      "finish": "stop",
+      "completion": 281,
+      "ms": 6871,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "supported"
+    },
+    {
+      "variant": "26b-t0",
+      "run": 4,
+      "status": 200,
+      "finish": "stop",
+      "completion": 352,
+      "ms": 8155,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "26b-t0",
+      "run": 5,
+      "status": 200,
+      "finish": "stop",
+      "completion": 369,
+      "ms": 8583,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "26b-t0.3",
+      "run": 1,
+      "status": 200,
+      "finish": "stop",
+      "completion": 355,
+      "ms": 8292,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "26b-t0.3",
+      "run": 2,
+      "status": 200,
+      "finish": "stop",
+      "completion": 348,
+      "ms": 8141,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "supported"
+    },
+    {
+      "variant": "26b-t0.3",
+      "run": 3,
+      "status": 200,
+      "finish": "stop",
+      "completion": 285,
+      "ms": 14483,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "supported"
+    },
+    {
+      "variant": "26b-t0.3",
+      "run": 4,
+      "status": 200,
+      "finish": "stop",
+      "completion": 347,
+      "ms": 8191,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "supported"
+    },
+    {
+      "variant": "26b-t0.3",
+      "run": 5,
+      "status": 200,
+      "finish": "stop",
+      "completion": 322,
+      "ms": 7750,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "supported"
+    },
+    {
+      "variant": "31b-t0",
+      "run": 1,
+      "status": 200,
+      "finish": "stop",
+      "completion": 439,
+      "ms": 12838,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "31b-t0",
+      "run": 2,
+      "status": 200,
+      "finish": "stop",
+      "completion": 432,
+      "ms": 12818,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "31b-t0",
+      "run": 3,
+      "status": 200,
+      "finish": "stop",
+      "completion": 439,
+      "ms": 13417,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "31b-t0",
+      "run": 4,
+      "status": 200,
+      "finish": "stop",
+      "completion": 439,
+      "ms": 13069,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    },
+    {
+      "variant": "31b-t0",
+      "run": 5,
+      "status": 200,
+      "finish": "stop",
+      "completion": 432,
+      "ms": 12868,
+      "outcome": "valid",
+      "iso": "2027-10-21",
+      "dateStatus": "ambiguous"
+    }
+  ]
+}

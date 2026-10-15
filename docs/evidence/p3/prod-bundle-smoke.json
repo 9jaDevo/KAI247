@@ -1,0 +1,7 @@
+{
+  "timestampUtc": "2026-10-14T20:08:23.802Z",
+  "target": "http://127.0.0.1:3100",
+  "checks": [],
+  "outcome": "fail",
+  "failure": "Expected values to be strictly equal:\n\n503 !== 200\n"
+}

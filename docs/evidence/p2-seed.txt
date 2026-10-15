@@ -1,0 +1,1 @@
+Owner provisioned with a hashed password and an isolated workspace. No credentials printed. Synthetic records added only in synthetic mode.

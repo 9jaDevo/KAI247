@@ -1,0 +1,44 @@
+
+> kai247-renewpilot-ai@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+C:\xampp\htdocs\Project\KAI247\src\app\app\renewals\[id]\edit\page.tsx
+  15:7  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\xampp\htdocs\Project\KAI247\src\app\app\renewals\[id]\edit\page.tsx:15:7
+  13 |     const data = await getRenewal(ctx, (await params).id);
+  14 |     return (
+> 15 |       <RenewalForm
+     |       ^^^^^^^^^^^^
+> 16 |         renewal={data.renewal}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |         timezone={ctx.organization.timezone}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |       />
+     | ^^^^^^^^^ Avoid constructing JSX within try/catch
+  19 |     );
+  20 |   } catch (error) {
+  21 |     if (error instanceof AppError && [400, 404].includes(error.status))  react-hooks/error-boundaries
+
+C:\xampp\htdocs\Project\KAI247\src\app\app\renewals\[id]\page.tsx
+  14:12  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\xampp\htdocs\Project\KAI247\src\app\app\renewals\[id]\page.tsx:14:12
+  12 |   try {
+  13 |     const data = await getRenewal(ctx, (await params).id);
+> 14 |     return <RenewalDetail renewal={data.renewal} history={data.history} />;
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  15 |   } catch (error) {
+  16 |     if (error instanceof AppError && [400, 404].includes(error.status))
+  17 |       notFound();  react-hooks/error-boundaries
+
+C:\xampp\htdocs\Project\KAI247\src\lib\client-api.ts
+  25:5  warning  Do not use `window.location.assign()` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+
+✖ 3 problems (2 errors, 1 warning)
+

@@ -1,0 +1,50 @@
+{
+  "timestampUtc": "2026-10-14T19:57:59.186Z",
+  "outcome": "fail",
+  "model": "Real Gemma through the app's own adapter; no mock in this run",
+  "database": "Local MongoDB 8.2.6 replica set; Atlas not verified",
+  "checks": [
+    "Unauthenticated upload API returns 401 and /app/import redirects to sign-in.",
+    "Owner signed in; a cross-origin authenticated upload is rejected with 403.",
+    "Scanned image-only PDF rejected with NO_TEXT_LAYER message before any model call; nothing persisted. OCR not claimed."
+  ],
+  "extractions": [
+    {
+      "fixture": "hosting-invoice-two-dates.pdf",
+      "id": "6acfdedb24217675be46302f",
+      "uiSecondsUploadToReview": 10.3,
+      "modelId": "gemma-4-26b-a4b-it",
+      "provider": "generativelanguage.googleapis.com",
+      "modelMs": 8844,
+      "modelAttempts": 1,
+      "usage": {
+        "promptTokens": 1040,
+        "completionTokens": 346
+      },
+      "validationStatus": "pending_review",
+      "dateStatus": "unsupported",
+      "raw": "21 October <li>er 2027",
+      "iso": null,
+      "interpretations": [],
+      "evidence": "Your hosting plan renews on 21 October 2027.",
+      "otherDates": [
+        {
+          "raw": "14/10/2026",
+          "type": "invoice_issue",
+          "iso": "2026-10-14"
+        }
+      ],
+      "warnings": [
+        "The date Gemma reported is not inside its quoted evidence, so the date was discarded.",
+        "2 other dates reported by Gemma were dropped because the quoted evidence or the written date could not be verified in the document."
+      ]
+    }
+  ],
+  "screenshots": [
+    "docs/evidence/p3/import-1280.png",
+    "docs/evidence/p3/scanned-pdf-rejected-1280.png",
+    "docs/evidence/p3/failure.png"
+  ],
+  "errors": [],
+  "failure": "Expected values to be strictly equal:\n\n'' !== '2027-10-21'\n"
+}

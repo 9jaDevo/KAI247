@@ -1,0 +1,2 @@
+<strong>Entry Period</strong>: The Contest begins on October 12, 2026 at 12:00 PM PDT and ends on October 18, 2026 at 11:59 PM PDT (the "<strong>Entry Period</strong>")</p>
+<li>A brand-new project built during the Entry Period that uses open-weight models and/or open-source AI tools (such as open-source agent harnesses, frameworks, or local inference) as a core part of the project.</li>

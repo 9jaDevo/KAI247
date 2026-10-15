@@ -1,0 +1,240 @@
+{
+  "timestampUtc": "2026-10-14T17:37:23.807Z",
+  "outcome": "pass",
+  "database": "Local MongoDB; Atlas not verified",
+  "checks": [
+    "Direct page/API visits and legacy public preview marker cannot access the owner workspace.",
+    "Real credential login succeeded; sealed HttpOnly/SameSite=Lax cookie issued for local HTTP. Secure production HTTPS deployment remains unverified.",
+    "Created a confirmed domain renewal for 2027-06-15; reload and a new authenticated API read show real persisted data, minor amount 1234567 and created audit.",
+    "Edited title and amount; reload retained the change and incremented the record version.",
+    "Marked renewed with next date 2028-06-15; reload shows completion, new version, persisted notes and updated history. No new reminder jobs created.",
+    "Stored search/no-results states, HTTP cross-origin rejection, safe owner response and empty real notification history passed.",
+    "All 11 authenticated/public routes fit 360/768/1280px; source/history values remain scoped to the signed-in synthetic owner.",
+    "Preferences save, disabled email send, logout revocation (including replay of the old sealed cookie) and server page guard passed."
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/renewals",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/renewals/new",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/renewals/6acfbddd42674b76bf3b19e9",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/renewals/6acfbddd42674b76bf3b19e9/edit",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/import",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/import/review",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/activity",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/app/settings",
+      "width": 360,
+      "viewport": 360,
+      "document": 360
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/renewals",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/renewals/new",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/renewals/6acfbddd42674b76bf3b19e9",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/renewals/6acfbddd42674b76bf3b19e9/edit",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/import",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/import/review",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/activity",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/app/settings",
+      "width": 768,
+      "viewport": 768,
+      "document": 768
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/renewals",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/renewals/new",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/renewals/6acfbddd42674b76bf3b19e9",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/renewals/6acfbddd42674b76bf3b19e9/edit",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/import",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/import/review",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/activity",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    },
+    {
+      "route": "/app/settings",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280
+    }
+  ],
+  "screenshots": [
+    "docs/evidence/p2/renewal-history-1280.png",
+    "docs/evidence/p2/dashboard-360.png",
+    "docs/evidence/p2/renewal-360.png",
+    "docs/evidence/p2/settings-360.png",
+    "docs/evidence/p2/dashboard-768.png",
+    "docs/evidence/p2/renewal-768.png",
+    "docs/evidence/p2/settings-768.png",
+    "docs/evidence/p2/dashboard-1280.png",
+    "docs/evidence/p2/renewal-1280.png",
+    "docs/evidence/p2/settings-1280.png"
+  ],
+  "errors": [],
+  "record": {
+    "id": "6acfbddd42674b76bf3b19e9",
+    "title": "Synthetic browser domain 1791999443810 edited",
+    "dueDate": "2028-06-15",
+    "version": 3,
+    "amountMinor": 1240010,
+    "historyActions": [
+      "renewed",
+      "updated",
+      "created"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "outcome": "pass",
+  "routesChecked": 33,
+  "checks": 9,
+  "errors": []
+}

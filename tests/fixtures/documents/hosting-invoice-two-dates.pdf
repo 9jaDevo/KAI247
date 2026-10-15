@@ -1,0 +1,72 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<<  /Length 577 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+56 780 Td
+(SYNTHETIC TEST DOCUMENT - invented for KAI247 testing. Not a real invoice.) Tj T*
+() Tj T*
+(Example Cloud Hosting Ltd) Tj T*
+(12 Sample Street, Ikeja, Lagos) Tj T*
+(billing@example-cloud.invalid) Tj T*
+() Tj T*
+(TAX INVOICE) Tj T*
+(Invoice number: ECH-2026-00417) Tj T*
+(Invoice date: 14/10/2026) Tj T*
+(Bill to: Synthetic Traders Ventures) Tj T*
+() Tj T*
+(Description: Business Shared Hosting - annual plan \(example-traders.invalid\)) Tj T*
+(Service period: 21 October 2026 to 20 October 2027) Tj T*
+(Amount due: NGN 85,000.00) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<<  /Length 205 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+56 780 Td
+(Renewal terms) Tj T*
+() Tj T*
+(Your hosting plan renews on 21 October 2027. Renew before this date to avoid suspension.) Tj T*
+(Thank you for your business.) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000350 00000 n 
+0000000979 00000 n 
+0000001105 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+1362
+%%EOF

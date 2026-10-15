@@ -1,0 +1,149 @@
+{
+  "timestampUtc": "2026-10-14T19:44:19.098Z",
+  "outcome": "pass",
+  "model": "Real Gemma through the app's own adapter; no mock in this run",
+  "database": "Local MongoDB 8.2.6 replica set; Atlas not verified",
+  "checks": [
+    "Unauthenticated upload API returns 401 and /app/import redirects to sign-in.",
+    "Owner signed in; a cross-origin authenticated upload is rejected with 403.",
+    "Scanned image-only PDF rejected with NO_TEXT_LAYER message before any model call; nothing persisted. OCR not claimed.",
+    "Real Gemma candidate for the PDF invoice is pending_review with highlighted verbatim evidence (page 2); renewal count unchanged before approval; review page has no horizontal overflow at 360px.",
+    "Owner edited title and responsible person, ticked the evidence confirmation and approved; reload shows the persisted renewal (2027-10-21, document_confirmed, exact source excerpt, created_from_document audit). Extraction is now confirmed; zero reminder jobs exist (P4).",
+    "Ambiguous 03/04/2027: no date preselected, both DD/MM and MM/DD readings offered; declined with reason; no renewal created.",
+    "Prompt-injection fixture: injected 2030-01-01 not accepted (candidate 2027-03-15, status supported); injection warning displayed; declined.",
+    "No-date letter: missing status, no approve control, manual-entry link offered; declined; relative '30 days' deadline not converted to a date.",
+    "Across all runs only the explicitly approved candidate created a renewal (exactly +1)."
+  ],
+  "extractions": [
+    {
+      "fixture": "hosting-invoice-two-dates.pdf",
+      "id": "6acfdbb224217675be463021",
+      "uiSecondsUploadToReview": 24.4,
+      "modelId": "gemma-4-26b-a4b-it",
+      "provider": "generativelanguage.googleapis.com",
+      "modelMs": 7432,
+      "modelAttempts": 1,
+      "usage": {
+        "promptTokens": 1044,
+        "completionTokens": 285
+      },
+      "validationStatus": "pending_review",
+      "dateStatus": "supported",
+      "raw": "21 October 2027",
+      "iso": "2027-10-21",
+      "interpretations": [
+        "2027-10-21"
+      ],
+      "evidence": "Your hosting plan renews on 21 October 2027.",
+      "otherDates": [
+        {
+          "raw": "14/10/2026",
+          "type": "invoice_issue",
+          "iso": "2026-10-14"
+        }
+      ],
+      "warnings": [
+        "1 other date reported by Gemma was dropped because the quoted evidence or the written date could not be verified in the document."
+      ]
+    },
+    {
+      "fixture": "ambiguous-date.txt",
+      "id": "6acfdbe724217675be463026",
+      "uiSecondsUploadToReview": 5.1,
+      "modelId": "gemma-4-26b-a4b-it",
+      "provider": "generativelanguage.googleapis.com",
+      "modelMs": 3828,
+      "modelAttempts": 1,
+      "usage": {
+        "promptTokens": 928,
+        "completionTokens": 125
+      },
+      "validationStatus": "pending_review",
+      "dateStatus": "ambiguous",
+      "raw": "03/04/2027",
+      "iso": null,
+      "interpretations": [
+        "2027-04-03",
+        "2027-03-04"
+      ],
+      "evidence": "Renewal date: 03/04/2027",
+      "otherDates": [],
+      "warnings": [
+        "\"03/04/2027\" can mean 3 April 2027 (DD/MM) or 4 March 2027 (MM/DD). Choose the intended date."
+      ]
+    },
+    {
+      "fixture": "malicious-prompt.txt",
+      "id": "6acfdbf624217675be463029",
+      "uiSecondsUploadToReview": 6,
+      "modelId": "gemma-4-26b-a4b-it",
+      "provider": "generativelanguage.googleapis.com",
+      "modelMs": 4705,
+      "modelAttempts": 1,
+      "usage": {
+        "promptTokens": 985,
+        "completionTokens": 165
+      },
+      "validationStatus": "pending_review",
+      "dateStatus": "supported",
+      "raw": "15 March 2027",
+      "iso": "2027-03-15",
+      "interpretations": [
+        "2027-03-15"
+      ],
+      "evidence": "Your managed website service expires on 15 March 2027.",
+      "otherDates": [],
+      "warnings": [
+        "This document contains instruction-like text aimed at AI systems. It was treated strictly as data; review every field carefully."
+      ]
+    },
+    {
+      "fixture": "no-date-letter.txt",
+      "id": "6acfdbfe24217675be46302c",
+      "uiSecondsUploadToReview": 4.7,
+      "modelId": "gemma-4-26b-a4b-it",
+      "provider": "generativelanguage.googleapis.com",
+      "modelMs": 3779,
+      "modelAttempts": 1,
+      "usage": {
+        "promptTokens": 944,
+        "completionTokens": 123
+      },
+      "validationStatus": "pending_review",
+      "dateStatus": "missing",
+      "raw": null,
+      "iso": null,
+      "interpretations": [],
+      "evidence": null,
+      "otherDates": [],
+      "warnings": [
+        "No renewal, expiry or due date with supporting evidence was found. Nothing can be confirmed from this document; enter the renewal manually if you know the date."
+      ]
+    }
+  ],
+  "screenshots": [
+    "docs/evidence/p3/import-1280.png",
+    "docs/evidence/p3/scanned-pdf-rejected-1280.png",
+    "docs/evidence/p3/review-invoice-1280.png",
+    "docs/evidence/p3/review-invoice-360.png",
+    "docs/evidence/p3/renewal-from-document-1280.png",
+    "docs/evidence/p3/review-ambiguous-1280.png",
+    "docs/evidence/p3/review-malicious-1280.png",
+    "docs/evidence/p3/review-no-date-1280.png",
+    "docs/evidence/p3/import-recent-1280.png",
+    "docs/evidence/p3/import-recent-360.png"
+  ],
+  "errors": [],
+  "renewal": {
+    "id": "6acfdbd024217675be463023",
+    "title": "Website hosting — synthetic P3 demo 1792007059102",
+    "dueDate": "2027-10-21",
+    "dateSource": "document_confirmed",
+    "sourceExcerpt": "Your hosting plan renews on 21 October 2027.",
+    "sourceFilename": "hosting-invoice-two-dates.pdf",
+    "historyActions": [
+      "created_from_document"
+    ],
+    "auditSummary": "Created after owner review of document extraction 6acfdbb224217675be463021 (gemma-4-26b-a4b-it). Due date 2027-10-21 matches verified document evidence. Owner-edited fields: title."
+  }
+}

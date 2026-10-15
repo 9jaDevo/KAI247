@@ -1,0 +1,16 @@
+run started 2026-10-14T20:06:32Z
+P3 browser verification: pass
+- Unauthenticated upload API returns 401 and /app/import redirects to sign-in.
+- Owner signed in; a cross-origin authenticated upload is rejected with 403.
+- Scanned image-only PDF rejected with NO_TEXT_LAYER message before any model call; nothing persisted. OCR not claimed.
+- Real Gemma candidate for the PDF invoice is pending_review with highlighted verbatim evidence (page 2); renewal count unchanged before approval; review page has no horizontal overflow at 360px.
+- Owner edited title and responsible person, ticked the evidence confirmation and approved; reload shows the persisted renewal (2027-10-21, document_confirmed, exact source excerpt, created_from_document audit). Extraction is now confirmed; zero reminder jobs exist (P4).
+- Ambiguous 03/04/2027: no date preselected, both DD/MM and MM/DD readings offered; declined with reason; no renewal created.
+- Prompt-injection fixture: injected 2030-01-01 not accepted (candidate 2027-03-15, status supported); injection warning displayed; declined.
+- No-date letter: missing status, no approve control, manual-entry link offered; declined; relative '30 days' deadline not converted to a date.
+- Across all runs only the explicitly approved candidate created a renewal (exactly +1).
+  hosting-invoice-two-dates.pdf: gemma-4-26b-a4b-it model 8499ms x1, UI 10s, date ambiguous 2027-10-21
+  ambiguous-date.txt: gemma-4-26b-a4b-it model 5326ms x1, UI 6.3s, date ambiguous -
+  malicious-prompt.txt: gemma-4-26b-a4b-it model 4855ms x1, UI 5.8s, date supported 2027-03-15
+  no-date-letter.txt: gemma-4-26b-a4b-it model 3497ms x1, UI 4.3s, date missing -
+exit 0

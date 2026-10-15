@@ -1,0 +1,10 @@
+run started 2026-10-14T20:00:30Z
+P3 browser verification: fail
+- Unauthenticated upload API returns 401 and /app/import redirects to sign-in.
+- Owner signed in; a cross-origin authenticated upload is rejected with 403.
+- Scanned image-only PDF rejected with NO_TEXT_LAYER message before any model call; nothing persisted. OCR not claimed.
+FAILURE: page.waitForURL: Timeout 150000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "load"
+============================================================
+exit 1

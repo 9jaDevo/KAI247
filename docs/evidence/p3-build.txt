@@ -1,0 +1,55 @@
+started 2026-10-14T20:13:15Z
+$ npm run build
+
+> kai247-renewpilot-ai@0.1.0 build
+> next build
+
+▲ Next.js 16.4.0 (Turbopack)
+- Environments: .env.local, .env
+✓ Running next.config.mjs took 493ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.6s
+  Running TypeScript ...
+  Finished TypeScript in 11.1s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/19) ...
+  Generating static pages using 7 workers (4/19) 
+  Generating static pages using 7 workers (9/19) 
+  Generating static pages using 7 workers (14/19) 
+✓ Generating static pages using 7 workers (19/19) in 1794ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/activity
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/dashboard
+├ ƒ /api/extractions
+├ ƒ /api/extractions/[id]
+├ ƒ /api/extractions/[id]/confirm
+├ ƒ /api/extractions/[id]/reject
+├ ƒ /api/renewals
+├ ƒ /api/renewals/[id]
+├ ƒ /api/renewals/[id]/renew
+├ ƒ /api/settings
+├ ƒ /app
+├ ƒ /app/activity
+├ ƒ /app/import
+├ ƒ /app/import/[id]
+├ ƒ /app/import/review
+├ ƒ /app/renewals
+├ ƒ /app/renewals/[id]
+├ ƒ /app/renewals/[id]/edit
+├ ƒ /app/renewals/new
+├ ƒ /app/settings
+└ ƒ /login
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+exit 0

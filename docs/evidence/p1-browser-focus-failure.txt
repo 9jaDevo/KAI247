@@ -1,0 +1,7 @@
+{
+  "outcome": "fail",
+  "routesChecked": 33,
+  "checks": 4,
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(\n"
+}

@@ -1,0 +1,7 @@
+node_modules
+.next
+package-lock.json
+docs
+01_RENEWPILOT_MASTER_SPEC.md
+02_DEVELOPMENT_TRACKER.md
+03_CODEX_PHASE_PROMPTS.md

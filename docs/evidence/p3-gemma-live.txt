@@ -1,0 +1,14 @@
+run started 2026-10-14T19:38:44Z
+
+> kai247-renewpilot-ai@0.1.0 ai:proof
+> node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/gemma-live-proof.ts
+
+hosting-invoice-two-dates.txt     gemma-4-26b-a4b-it   9360ms x1 ambiguous   2027-10-21  MISMATCH
+hosting-invoice-two-dates.pdf     gemma-4-26b-a4b-it   7109ms x1 supported   2027-10-21  MATCH
+insurance-certificate.txt         gemma-4-26b-a4b-it   5075ms x1 supported   2027-10-31  MATCH
+no-date-letter.txt                gemma-4-26b-a4b-it   3157ms x1 missing     -  MATCH
+ambiguous-date.txt                gemma-4-26b-a4b-it   3999ms x1 ambiguous   -  MATCH
+malicious-prompt.txt              gemma-4-26b-a4b-it   4570ms x1 supported   2027-03-15  MATCH
+scanned-no-text.pdf               rejected_before_model_call: NO_TEXT_LAYER (0 model call(s))  MATCH
+http model calls=6 invalid answers=0 median=4823ms min=3157ms max=9360ms labels matched 6/7
+exit 0

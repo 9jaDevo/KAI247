@@ -1,0 +1,42 @@
+
+> kai247-renewpilot-ai@0.1.0 test:integration
+> vitest run --config vitest.integration.config.ts
+
+
+ RUN  v5.0.4 C:/xampp/htdocs/Project/KAI247
+
+ ❯ tests/integration/extraction-workflow.test.ts (11 tests | 1 failed) 2679ms
+   ❯ P3 extraction API on real MongoDB (synthetic Gemma transport) (11)
+     × only an explicit, evidence-acknowledged owner confirmation creates one renewal 49ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/integration/extraction-workflow.test.ts > P3 extraction API on real MongoDB (synthetic Gemma transport) > only an explicit, evidence-acknowledged owner confirmation creates one renewal
+AssertionError: expected { status: 'disabled', …(2) } to match object { status: 'deferred', jobsCreated: +0 }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "jobsCreated": 0,
+-   "status": "deferred",
++   "status": "disabled",
+  }
+
+ ❯ tests/integration/extraction-workflow.test.ts:391:38
+    389|       "Your hosting plan renews on 21 October 2027.",
+    390|     );
+    391|     expect(confirmed.data.reminders).toMatchObject({
+       |                                      ^
+    392|       status: "deferred",
+    393|       jobsCreated: 0,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 36 passed (37)
+   Start at  03:24:48
+   Duration  22.08s (tests 60%, import 38%, transform 3%)
+

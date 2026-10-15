@@ -1,0 +1,19 @@
+{
+  "timestampUtc": "2026-10-14T20:00:34.912Z",
+  "outcome": "fail",
+  "model": "Real Gemma through the app's own adapter; no mock in this run",
+  "database": "Local MongoDB 8.2.6 replica set; Atlas not verified",
+  "checks": [
+    "Unauthenticated upload API returns 401 and /app/import redirects to sign-in.",
+    "Owner signed in; a cross-origin authenticated upload is rejected with 403.",
+    "Scanned image-only PDF rejected with NO_TEXT_LAYER message before any model call; nothing persisted. OCR not claimed."
+  ],
+  "extractions": [],
+  "screenshots": [
+    "docs/evidence/p3/import-1280.png",
+    "docs/evidence/p3/scanned-pdf-rejected-1280.png",
+    "docs/evidence/p3/failure.png"
+  ],
+  "errors": [],
+  "failure": "page.waitForURL: Timeout 150000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================"
+}

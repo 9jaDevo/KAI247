@@ -1,0 +1,13 @@
+SYNTHETIC TEST DOCUMENT - invented for KAI247 testing.
+
+Example Office Supplies Ltd
+Customer notice
+
+Dear valued customer,
+
+We are upgrading our customer portal. Your account remains active and no action
+is needed today. If you would like to renew your maintenance plan, please contact
+our support team within 30 days of receiving this letter.
+
+Kind regards,
+Customer Care Team

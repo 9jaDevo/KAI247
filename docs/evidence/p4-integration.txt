@@ -1,0 +1,13 @@
+
+> kai247-renewpilot-ai@0.1.0 test:integration
+> vitest run --config vitest.integration.config.ts
+
+
+ RUN  v5.0.4 C:/xampp/htdocs/Project/KAI247
+
+
+ Test Files  3 passed (3)
+      Tests  41 passed (41)
+   Start at  03:32:18
+   Duration  14.02s (tests 88%, import 10%, transform 2%)
+

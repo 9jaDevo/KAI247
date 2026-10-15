@@ -1,0 +1,10 @@
+SYNTHETIC TEST DOCUMENT - invented for KAI247 testing.
+
+Example Domains NG
+Domain renewal notice
+
+Domain: synthetic-traders.invalid
+Renewal date: 03/04/2027
+Renewal fee: NGN 12,500.00
+
+Please renew on or before the renewal date to keep your domain active.

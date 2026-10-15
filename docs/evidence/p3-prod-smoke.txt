@@ -1,0 +1,18 @@
+run started 2026-10-14T20:08:23Z
+{
+  "timestampUtc": "2026-10-14T20:08:23.802Z",
+  "target": "http://127.0.0.1:3100",
+  "checks": [],
+  "outcome": "fail",
+  "failure": "Expected values to be strictly equal:\n\n503 !== 200\n"
+}
+exit 1
+
+ANALYSIS (2026-10-14): BLOCKED BY DESIGN, NOT A P3 DEFECT.
+`next start` runs with NODE_ENV=production. The P2 production guards in
+src/lib/security/env.ts correctly refused the local sandbox configuration:
+  auth -> "APP_URL must use HTTPS for production authentication."
+  db   -> "Production requires an authenticated MongoDB Atlas SRV connection."
+Login therefore returned 503 before any upload. The production build itself
+passed (p3-build.txt, all P3 routes compiled). Runtime verification of the
+bundled PDF/Gemma path requires HTTPS + Atlas and is deferred to P5 deployment.

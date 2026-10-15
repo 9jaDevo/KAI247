@@ -1,0 +1,262 @@
+{
+  "timestampUtc": "2026-10-14T16:45:23.096Z",
+  "base": "http://127.0.0.1:3000",
+  "outcome": "fail",
+  "routes": [
+    {
+      "route": "/",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Keep the business moving.\nKnow what’s due."
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Your business moves.\nYour deadlines shouldn’t get left behind."
+    },
+    {
+      "route": "/app",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "A clearer view of what’s next."
+    },
+    {
+      "route": "/app/renewals",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Every date, in one place."
+    },
+    {
+      "route": "/app/renewals/new",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Give the next date a place."
+    },
+    {
+      "route": "/app/renewals/sample-hosting",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Website hosting"
+    },
+    {
+      "route": "/app/renewals/sample-hosting/edit",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Edit the details."
+    },
+    {
+      "route": "/app/import",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Find the date. Keep the context."
+    },
+    {
+      "route": "/app/import/review",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "You have the final say."
+    },
+    {
+      "route": "/app/activity",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "Reminders, with a paper trail."
+    },
+    {
+      "route": "/app/settings",
+      "width": 360,
+      "viewport": 360,
+      "document": 360,
+      "heading": "A rhythm that works for you."
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Keep the business moving.\nKnow what’s due."
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Your business moves.\nYour deadlines shouldn’t get left behind."
+    },
+    {
+      "route": "/app",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "A clearer view of what’s next."
+    },
+    {
+      "route": "/app/renewals",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Every date, in one place."
+    },
+    {
+      "route": "/app/renewals/new",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Give the next date a place."
+    },
+    {
+      "route": "/app/renewals/sample-hosting",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Website hosting"
+    },
+    {
+      "route": "/app/renewals/sample-hosting/edit",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Edit the details."
+    },
+    {
+      "route": "/app/import",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Find the date. Keep the context."
+    },
+    {
+      "route": "/app/import/review",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "You have the final say."
+    },
+    {
+      "route": "/app/activity",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "Reminders, with a paper trail."
+    },
+    {
+      "route": "/app/settings",
+      "width": 768,
+      "viewport": 768,
+      "document": 768,
+      "heading": "A rhythm that works for you."
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Keep the business moving.\nKnow what’s due."
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Your business moves.\nYour deadlines shouldn’t get left behind."
+    },
+    {
+      "route": "/app",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "A clearer view of what’s next."
+    },
+    {
+      "route": "/app/renewals",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Every date, in one place."
+    },
+    {
+      "route": "/app/renewals/new",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Give the next date a place."
+    },
+    {
+      "route": "/app/renewals/sample-hosting",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Website hosting"
+    },
+    {
+      "route": "/app/renewals/sample-hosting/edit",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Edit the details."
+    },
+    {
+      "route": "/app/import",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Find the date. Keep the context."
+    },
+    {
+      "route": "/app/import/review",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "You have the final say."
+    },
+    {
+      "route": "/app/activity",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "Reminders, with a paper trail."
+    },
+    {
+      "route": "/app/settings",
+      "width": 1280,
+      "viewport": 1280,
+      "document": 1280,
+      "heading": "A rhythm that works for you."
+    }
+  ],
+  "checks": [
+    "Direct workspace visit redirected to login; owner sign-in fields disabled.",
+    "Explicit preview entry sets HttpOnly/SameSite public-fixture marker; no credentials supplied.",
+    "All 11 routes inspected at 360/768/1280px; zero document-level horizontal overflow. Activity table has intentional contained horizontal scrolling.",
+    "Mobile navigation expands/collapses; search, category, status, clear filters, loading, error recovery and empty states exercised."
+  ],
+  "screenshots": [
+    "docs/evidence/p1/landing-360.png",
+    "docs/evidence/p1/login-360.png",
+    "docs/evidence/p1/dashboard-360.png",
+    "docs/evidence/p1/app-renewals-new-360.png",
+    "docs/evidence/p1/review-360.png",
+    "docs/evidence/p1/app-activity-360.png",
+    "docs/evidence/p1/app-settings-360.png",
+    "docs/evidence/p1/landing-768.png",
+    "docs/evidence/p1/dashboard-768.png",
+    "docs/evidence/p1/review-768.png",
+    "docs/evidence/p1/landing-1280.png",
+    "docs/evidence/p1/dashboard-1280.png",
+    "docs/evidence/p1/review-1280.png",
+    "docs/evidence/p1/failure.png"
+  ],
+  "errors": [],
+  "failure": "Error: locator.waitFor: Error: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" id=\"title-error\" class=\"field-error\">Enter a renewal title, not just spaces.</p> aka getByText('Enter a renewal title, not')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\"></div> aka locator('[id=\"__next-route-announcer__\"]')\n\nCall log:\n\u001b[2m  - waiting for getByRole('alert') to be visible\u001b[22m\n"
+}

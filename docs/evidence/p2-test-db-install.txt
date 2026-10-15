@@ -1,0 +1,12 @@
+
+added 32 packages, and audited 445 packages in 16s
+
+164 packages are looking for funding
+  run `npm fund` for details
+
+5 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.

@@ -1,0 +1,15 @@
+SYNTHETIC TEST DOCUMENT - invented for KAI247 testing. Not a real policy.
+
+Sample Assurance Plc
+CERTIFICATE OF MOTOR INSURANCE (THIRD PARTY)
+
+Policy number: SAP/MTR/XX-0000
+Insured: Synthetic Logistics Enterprise
+Vehicle registration: TEST-000-XX
+Vehicle make/model: Example Van 2019
+
+Period of cover: 1 November 2026 to 31 October 2027
+This certificate expires on 31 October 2027.
+Annual premium: NGN 45,000.00
+
+Keep this certificate in the vehicle at all times.
