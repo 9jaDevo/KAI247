@@ -1,0 +1,6 @@
+{
+  "timestampUtc": "2026-10-16T05:16:23.828Z",
+  "request": "Unauthenticated empty-body login from actual public origin; no credentials supplied",
+  "status": 503,
+  "errorCode": "SERVICE_UNAVAILABLE"
+}

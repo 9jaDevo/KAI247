@@ -1,0 +1,25 @@
+{
+  "timestampUtc": "2026-10-16T05:12:31.984Z",
+  "url": "https://kai247.onrender.com",
+  "source": "Existing service discovered in authenticated Render dashboard",
+  "serviceId": "srv-db8qvg6q1p3s73931peg",
+  "deployId": "dep-db8qvgmq1p3s73931r60",
+  "deployedSha": "32e07f8a1533b1d46106d4f57715203696897866",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/api/health",
+      "status": 404,
+      "location": null
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 401,
+      "location": null
+    }
+  ]
+}

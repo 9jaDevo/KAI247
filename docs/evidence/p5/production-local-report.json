@@ -1,0 +1,24 @@
+{
+  "timestampUtc": "2026-10-16T05:06:33.191Z",
+  "scope": "LOCAL next start production bundle over loopback HTTP, synthetic account in isolated real Atlas; NOT deployed Render or TLS proof",
+  "database": "kai247_p5_smoke_25764549759b",
+  "checks": [
+    "Production startup binds configured PORT; public readiness pings real Atlas and returns no infrastructure details.",
+    "Actual owner login; production Secure/HttpOnly/SameSite cookie flags; unauthenticated API rejected. Cookie replay is manual over loopback, not browser TLS evidence.",
+    "Authenticated manual create/read/edit/renew and fresh read/audit persist in isolated Atlas.",
+    "Built production PDF parser and REAL Gemma return a pending candidate; reference-labelled synthetic owner confirmation alone creates the second persisted renewal. No model-direct creation."
+  ],
+  "outcome": "PASS_LOCAL_CORE",
+  "realEmailSent": false,
+  "uploadStatus": 201,
+  "extraction": {
+    "modelId": "gemma-4-26b-a4b-it",
+    "modelMs": 10000,
+    "method": "pdf_text_layer",
+    "status": "pending_review"
+  },
+  "email": {
+    "status": "BLOCKED",
+    "reason": "Provider key/sender absent and synthetic owner unverified; no send attempted"
+  }
+}

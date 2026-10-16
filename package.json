@@ -16,12 +16,13 @@
     "test:integration": "vitest run --config vitest.integration.config.ts",
     "db:local": "node scripts/db-local.mjs",
     "setup:local": "node scripts/setup-local.mjs",
-    "owner:setup": "node --env-file=.env.local scripts/seed-owner.mjs",
+    "owner:setup": "node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/seed-owner.mjs",
     "format": "prettier --write src scripts tests package.json tsconfig.json *.mjs",
     "format:check": "prettier --check src scripts tests package.json tsconfig.json *.mjs",
     "reminders:process": "node scripts/process-reminders.mjs",
     "ai:proof": "node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/gemma-live-proof.ts",
-    "fixtures:p3": "node scripts/generate-p3-fixtures.mjs"
+    "fixtures:p3": "node scripts/generate-p3-fixtures.mjs",
+    "start:render": "node scripts/start-production.mjs"
   },
   "dependencies": {
     "@js-temporal/polyfill": "0.5.1",

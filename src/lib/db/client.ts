@@ -27,8 +27,8 @@ export async function getClient() {
   if (!globalDb.kai247Mongo || globalDb.kai247Mongo.key !== key) {
     const client = new MongoClient(env.MONGODB_URI!, {
       maxPoolSize: 10,
-      serverSelectionTimeoutMS: 5000,
-      connectTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 3000,
+      connectTimeoutMS: 3000,
     });
     const ready = client.connect().catch((error) => {
       globalDb.kai247Mongo = undefined;

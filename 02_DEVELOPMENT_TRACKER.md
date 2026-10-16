@@ -1,6 +1,6 @@
 # KAI247 AI — Development Tracker & Evidence Log
 
-**Tracker version:** 1.0 | **Created:** 2026-10-14 | **Overall:** P4 CODE/LOCAL RELIABILITY VERIFIED; REAL EMAIL BLOCKED; ATLAS ISOLATED JOB PERSISTENCE VERIFIED; P0–P4 UNCOMMITTED  
+**Tracker version:** 1.0 | **Created:** 2026-10-14 | **Overall:** P5 RELEASE IN PROGRESS; P0–P4 BASELINE COMMITTED/DEPLOYED BY FOUNDER; REAL EMAIL STILL BLOCKED
 **Authoritative requirements:** `01_RENEWPILOT_MASTER_SPEC.md` | **This tracker:** `02_DEVELOPMENT_TRACKER.md` | **Execution prompts:** `03_CODEX_PHASE_PROMPTS.md`
 
 > **THIS TRACKER IS MUTABLE.** Codex must update checkboxes, status, evidence links and blockers **after actually performing and verifying work**. Do not tick anything on the basis of intent, scaffolding alone, an unexecuted test, or simulated partner integration. Never modify the master spec unless the founder approves a versioned change. Keep a handoff note after every phase, even when blocked.
@@ -24,7 +24,7 @@
 | **P2**           | Oct 14–15              | Auth, Atlas, manual renewal CRUD                                               | Real persistent end-to-end CRUD under owner auth        | `[-]` local CRUD verified; full Atlas app story pending |
 | **P3**           | Oct 15                 | Gemma document extraction and human approval                                   | Real Gemma extraction → evidence → approved record      | `[x]` local verified (real Gemma); Atlas/deployed run pending |
 | **P4**           | Oct 16                 | Email reminder engine and reliability                                          | Test email + persisted job + cancel/retry tests         | `[-]` code/reliability verified; real email blocked |
-| **P5**           | Oct 16                 | Render deployment and CI                                                       | Public working URL + passing workflow + cron configured | `[ ]`  |
+| **P5**           | Oct 16                 | Render deployment and CI                                                       | Public working URL + passing workflow + cron configured | `[-]` publishing tested code; live gates pending |
 | **P6**           | Oct 17                 | Sentry traces and safety/quality hardening                                     | Sanitized traces + test evidence + errors handled       | `[ ]`  |
 | **P7**           | Oct 17–18              | Evaluation, real-user test, product demo                                       | Reproducible benchmark + demo + evidence log            | `[ ]`  |
 | **P8**           | Oct 18                 | DEV submission and prize proof                                                 | Article published and entry verified                    | `[ ]`  |
@@ -43,7 +43,7 @@
 - [x] P0.04 — Create folders, `.gitignore`, `.env.example`, consistent scripts (`dev`, `build`, `lint`, `typecheck`, `test`).
 - [x] P0.05 — Design and document required environment variables; secret values never in git.
 - [x] P0.06 — Run clean install/build/lint/typecheck, record outputs.
-- [ ] P0.07 — Commit and push only after confirming ownership/permissions; save commit SHA.
+- [x] P0.07 — Founder committed/pushed the P0–P4 baseline as `32e07f8a1533b1d46106d4f57715203696897866`, 2026-10-15 08:13:28 UTC; verified local/remote match during P5 (`docs/evidence/p5/account-status.json`). Prior pending-commit notes are historical.
 
 **Evidence:** https://github.com/9jaDevo/KAI247 | initial SHA: `51c5f2af008eb247340373760b3a0f0793b550d4` | boot: `docs/evidence/p0-dev.txt`, `p0-dev-http.json`. P0.02–P0.06 proof: `docs/evidence/p0-verification.md` and its command logs.  
 **Known blockers:** P0.07 commit/push authorization pending; no scaffold SHA. Five high development-only advisories remain; production dependency audit has zero. **Phase status:** `[-]` — local work verified; docs-committed exit gate pending.
@@ -112,14 +112,14 @@
 
 **Exit gate:** Public Render URL operates against Atlas/real Gemma and reminder processor configured; green CI.
 
-- [ ] P5.01 — Configure GitHub Actions lint/typecheck/test/build on push/PR.
-- [ ] P5.02 — Deploy web app on Render; configure secrets in dashboard, not git; select reasonable tier.
-- [ ] P5.03 — Configure separate Render Cron service with UTC schedule, persistent DB and clear job logs; document likely minimum charge and confirm founder approval before spending.
-- [ ] P5.04 — Configure HTTPS, auth session secrets, verified callback/base URLs and health endpoint.
-- [ ] P5.05 — Deploy smoke test end-to-end: login, manual renewal, Gemma extraction, confirm, email test.
-- [ ] P5.06 — Verify no reliance on ephemeral local file persistence; screenshot Render services and live app.
+- [-] P5.01 — Push/PR/manual CI workflow implemented, Actionlint passes, isolated secret-free install/lint/types/93 unit/41 integration/build pass. Authorized publication in progress; hosted run URL pending.
+- [-] P5.02 — Existing founder-deployed https://kai247.onrender.com on baseline 32e07f8 verified Live in Render dashboard. P5 release/settings update pending. No new tier selected.
+- [-] P5.03 — Dedicated one-shot worker and exact UTC Cron setup documented; founder replied Proceed to paid Cron setup (minimum US$1/month plus active compute). Service creation/run evidence pending.
+- [-] P5.04 — Production startup/health code verified locally with real Atlas. Existing live health is 404 and login disabled/503; founder asked to privately complete AUTH_SECRET/HTTPS APP_URL. No secret shown.
+- [!] P5.05 — Local production-bundle actual Atlas CRUD + real Gemma PDF/approval pass; deployed auth/CRUD/AI/email workflow not yet passed. Provider key/sender remain absent locally.
+- [-] P5.06 — Code review confirms durable state in Atlas, uploads transient in memory, no web timers or disk requirement. Real Render baseline and blocked-login screenshots saved; deployed restart/read verification pending.
 
-**Evidence:** live URL: `TBD` | Render dashboard screenshot: `TBD` | GitHub Action run URL: `TBD`. **Phase status:** `[ ]`.
+**Evidence:** live baseline https://kai247.onrender.com; `docs/evidence/p5/render-baseline-live.png`, `live-login-blocked.png`, `live-before.json`, `live-origin-check.json`; local production proof `production-local-report.json`; `docs/P5_DEPLOYMENT.md`, `docs/evidence/p5-verification.md`. Hosted CI URL pending. **Phase status:** `[-]` — code/local gates passed; release and external gates in progress. P6 untouched.
 
 ## 8. P6 — Sentry, resilience and safeguards
 
@@ -181,7 +181,7 @@
 | Category             | Intended role                      | Real integration? | Evidence URL/path | Eligible to claim? |
 | -------------------- | ---------------------------------- | ----------------- | ----------------- | ------------------ |
 | Gemma                | Structured document extraction     | Yes — real `gemma-4-26b-a4b-it` calls in the app extraction path (hosted Google AI Studio), local app only | docs/evidence/p3-verification.md, docs/evidence/p3/gemma-live-proof.json, docs/evidence/p3/browser-report.json | Not yet — reproducible benchmark (P7) and deployed run (P5) still required |
-| Render               | Hosted web app + cron              | No                | —                 | No                 |
+| Render | Existing founder web service verified Live; dedicated Cron pending | Yes — baseline web only | https://kai247.onrender.com; docs/evidence/p5/render-baseline-live.png | No full workflow/cron claim yet |
 | MongoDB Atlas | Persistent DB | Yes — isolated synthetic P4 planner jobs, transaction/index/reconnect | docs/evidence/p4/atlas-proof.json | Full owner app workflow/deployed evidence still pending; not a prize claim |
 | Sentry Agent Tracing | Instrumented AI pipeline           | No                | —                 | No                 |
 | .tech Domain         | Public production URL              | No                | —                 | No                 |
@@ -240,13 +240,13 @@ P4 latest executed checks: **80 unit/UI tests, 41 integration tests, lint/typech
 
 ## 15. Latest Codex handoff (replace after each phase)
 
-**Last phase attempted:** P4 only. Code, synthetic transport tests and local browser flow verified; isolated Atlas persistence verified. Real-send exit gate remains blocked, so P4 is not marked complete.
-**Current branch / commit:** main / 51c5f2af008eb247340373760b3a0f0793b550d4 (initial commit; P0–P4 source uncommitted). No commit/push authorization.
-**Completed:** deterministic Temporal planner; transactional jobs at manual create/edit/renew and human extraction confirmation; offset/version/settings idempotency; coalesced catch-up; atomic claims, lease tokens, recovery, bounded retry; Resend adapter with fixed endpoint and stable persisted request; mailbox code proof (hashed, single use, expiry, owner scoped), explicit opt-in, owner-only limited TEST; honest preview and activity; CLI independent of web. See docs/P4_SETUP.md and docs/evidence/p4-verification.md for files and commands.
-**Tests actually run:** 80 unit/UI and 41 real-MongoDB integration tests; lint/typecheck/build/format passed. Synthetic transport only in email tests, never represented as real provider acceptance. Child process exit before send and later recovery passed. Browser real sign-in/preferences/preview + settings/activity 360/768/1280 passed; six screenshots, zero runtime errors. Atlas four synthetic jobs + unique index + fresh connection proof passed in isolated database identified in atlas-proof.json. No real email sent.
-**Known unavailable:** real mailbox verification/TEST email (key/sender missing), delivery receipts, actual unattended Render Cron/deployment/CI/Sentry. Full P2 CRUD UI story against Atlas is still pending; older missing-URI wording is superseded (URI now exists and ping works). .env.local overrides .env with loopback MongoDB. The retained synthetic Atlas evidence DB is not the app's production workspace. No production readiness or prize eligibility claim.
-**Pending founder input:** configure EMAIL_API_KEY and EMAIL_FROM securely, then use a private owner mailbox you control to verify and explicitly opt in. Do not paste secrets into chat. Real TEST may then be sent under the existing P4 authorization and redacted acceptance recorded; receipt must be confirmed separately. Commit/push authorization still pending. Local app and MongoDB were started for browser review.
-**Next phase:** P4 repair/configuration verification to close the real-email gate. P5 requires a separate request; it has not started. Master and phase prompts remain unchanged.
+**Last phase attempted:** P5 only, explicitly requested with earlier real-email gate open. Release in progress; do not mark complete from code alone.
+**Current branch / commit:** main; founder baseline 32e07f8a1533b1d46106d4f57715203696897866 is committed, pushed and deployed. Founder explicitly authorized the focused P5 commit/push during this turn; release SHA will be recorded after publication.
+**Completed:** secret-free push/PR CI workflow, pinned Node/actions, production startup guards/PORT binding, bounded safe DB-backed health, Render web/Cron environment matrix/provisioning/rollback runbook. Code state remains Atlas-backed and uploads memory-only. Existing live Render service found in authenticated browser despite connector remaining initiated. No duplicate web service created.
+**Tests actually run:** root lint/typecheck/format/build, 93 unit/UI tests and 41 real-MongoDB integration tests pass. Clean isolated source-copy install/lint/types/tests/build also all pass with no provider env/files. Actionlint final exit 0. Local production bundle + actual Atlas + real gemma-4-26b-a4b-it PDF pending/explicit approval + CRUD/renew/fresh history pass; no email sent. These are not deployed browser/TLS proof. Evidence: docs/evidence/p5-verification.md and p5 reports.
+**Known unavailable:** live baseline login disabled (same-origin preflight 503); new health route still unpublished/404; hosted Actions run, actual Cron and deployed full smoke pending. Real email key/sender absent locally; no real TEST or inbox receipt. Sentry/P6 untouched. Local .env.local still selects loopback MongoDB.
+**Pending founder inputs:** privately finish Render AUTH_SECRET/public HTTPS APP_URL, email provider/sender and verified opted-in private owner. Do not paste secrets. Founder replied Proceed to paid Cron (minimum US$1/month plus usage), so create only the one requested smallest suitable Cron; record rate/run and do not change existing web tier. No production readiness or prize claim yet.
+**Next phase:** finish P5 release/configuration/deployed smoke. P6 has not started. Master and phase prompts unchanged.
 
 ---
 **Do not mark any item checked solely because a generated code snippet looks plausible. Run, inspect, and capture evidence.**

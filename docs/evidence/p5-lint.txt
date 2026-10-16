@@ -1,0 +1,3 @@
+
+> kai247-renewpilot-ai@0.1.0 lint
+> eslint . --max-warnings=0

@@ -2,7 +2,7 @@
 
 KAI247 AI is a planned renewal tracker for Nigerian small businesses: enter a renewal or extract candidate details from a document using an open-weight Gemma model, human-confirm the deadline, then receive auditable email reminders.
 
-**Current implementation: P4 scheduler implemented and locally verified; real email gate blocked by missing provider configuration.** Owner authentication, persistent manual CRUD and real Gemma extraction/review are joined by deterministic timezone-aware planning, MongoDB jobs, atomic claims/leases, retries, a one-shot worker, mailbox verification and opt-in controls. Atlas job persistence passed in a separate synthetic database; the local app still uses `.env.local` and local MongoDB. No real email, delivery receipt, unattended cron or deployment is claimed. See [P4 setup](docs/P4_SETUP.md) and [verification](docs/evidence/p4-verification.md).
+**Current implementation: P5 deployment preparation and local production-bundle verification.** The founder deployed the earlier baseline at [kai247.onrender.com](https://kai247.onrender.com). The P5 CI workflow, startup checks and health endpoint are prepared locally; publishing them and updating the existing service remain pending. Authenticated CRUD, real Gemma PDF extraction and explicit approval passed against isolated real Atlas using the local production bundle. Real email remains blocked; no Cron or hosted CI success is claimed. See [P5 deployment](docs/P5_DEPLOYMENT.md) and [evidence](docs/evidence/p5-verification.md).
 
 ## Source of truth
 
@@ -33,6 +33,7 @@ Open the exact configured `APP_URL` ([generated local URL](http://127.0.0.1:3000
 | `npm run dev`                             | Local Next.js development server                                                    |
 | `npm run build`                           | Production build                                                                    |
 | `npm start`                               | Serve an existing production build                                                  |
+| `npm run start:render` | Validate production HTTPS/Atlas/auth config, then bind 0.0.0.0 on Render PORT |
 | `npm run lint`                            | ESLint, zero warnings allowed                                                       |
 | `npm run typecheck`                       | Generate Next route types, then strict TypeScript check                             |
 | `npm test`                                | Unit tests with synthetic fixtures and labelled mock model answers; no external services |
@@ -103,7 +104,11 @@ One entry, the official DEV template, English article, `devchallenge`/`hf26chall
 
 See the root tracker, [P0 verification report](docs/evidence/p0-verification.md), [P1 verification report](docs/evidence/p1-verification.md), [P2 verification report](docs/evidence/p2-verification.md) and [P3 verification report](docs/evidence/p3-verification.md) for actual commands and results. Local checks do not establish production readiness or contest acceptance. Unit tests use synthetic values; integration tests use a real ephemeral MongoDB server, and browser QA exercises the local app only. Real email acceptance/receipt, physical-device QA and deployed smoke tests remain future gates. P0's five high development-tool advisories and deprecated ESLint 9 compatibility constraint remain documented risks.
 
-No app commit or push is made without explicit founder authorization, per the shared instructions. Stopped at P4: local code/reliability and isolated Atlas jobs are verified; real mailbox verification/TEST email require provider configuration. P5 has not started. Git publication remains pending.
+P0–P4 were committed and pushed by the founder as `32e07f8`. P5 changes remain local until publication is authorized under the shared instructions. P5 live health/CI/Cron/full smoke gates remain pending; real email requires provider configuration. P6 has not started.
+
+## Render and CI (P5)
+
+Follow [the P5 runbook](docs/P5_DEPLOYMENT.md) for the existing service, environment matrix, Atlas allowlist, one-time owner provisioning, UTC Cron and rollback. The workflow performs a secret-free clean install, lint, types, unit/UI tests, real ephemeral MongoDB integration tests and build on push/PR. Hosted success requires an actual Actions run URL. The production start command is `npm run start:render`; set the real HTTPS APP_URL and Atlas/auth secrets privately. `/api/health` reports readiness only, never credentials or provider connectivity. Durable records/jobs/sessions remain in Atlas; raw uploads are transient and Render filesystem caches are disposable. Cron has a documented minimum US$1/month plus usage and requires founder spending approval.
 
 
 ## P4 email operations
