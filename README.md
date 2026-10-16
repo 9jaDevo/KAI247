@@ -1,8 +1,14 @@
 # KAI247 · KAI247 AI
 
+**Publication update (2026-10-16):** The founder authorized committing and pushing the reviewed P6/P7 source and sanitized evidence. Phase-close notes below describe their pre-publication state; use Git history for the publication commit. Hosted CI and Render deployment of these changes remain unverified here.
+
 KAI247 AI is a planned renewal tracker for Nigerian small businesses: enter a renewal or extract candidate details from a document using an open-weight Gemma model, human-confirm the deadline, then receive auditable email reminders.
 
 **Current implementation: P5 deployed core verified; email gate blocked.** The [live Render app](https://kai247.onrender.com) passes HTTPS authentication, Atlas CRUD/renew/history and a real Gemma TXT candidate → explicit browser approval → persisted renewal. [GitHub Actions passed](https://github.com/9jaDevo/KAI247/actions/runs/38855395748) for release `d690810`. Separate `kai247-reminders` Cron runs every 15 minutes UTC; its actual scheduled invocation exited 2/provider unavailable, zero emails sent. Two deployed PDF calls returned invalid Gemma output and were safely rejected. P5 is not fully complete. See [deployment/setup](docs/P5_DEPLOYMENT.md) and [evidence](docs/evidence/p5-verification.md).
+
+**P6 is implemented and verified locally, with genuine Sentry visibility.** Server-side tracing covers parsing, Gemma, validation, approval, scheduling and email transport, with an explicit privacy allowlist. A real Gemma request and clearly labeled synthetic failures are visible in Sentry. Security, accessibility and request-body safeguards are tested. See [P6 setup](docs/P6_OBSERVABILITY.md) and [P6 verification](docs/evidence/p6-verification.md). These P6 changes have not been committed, pushed or deployed; Render remains on the P5 release.
+
+**P7 evidence package is prepared; video and independent human label review remain pending.** Sixteen synthetic texts ran twice through the real Gemma adapter with unchanged labels/pipeline: original strict correctness **2/16** (14 provider failures), full repeat **10/16**, simple regex **10/16**. All field counts, failures and small-sample timing are retained in the [benchmark analysis](docs/evidence/p7-benchmark-analysis.md) and [methodology](docs/P7_METHODOLOGY.md). A real browser import/review/approval → Atlas renewal/jobs → verified opted-in owner TEST → renewal/version cancellation/reload passed locally. Resend accepted the single TEST and the founder confirmed receipt and its TEST label. No delivered webhook, deployed Cron email proof, customer feedback, payment or recorded video is claimed. See [P7 verification](docs/evidence/p7-verification.md), [2:40 storyboard](docs/P7_DEMO_STORYBOARD.md), [commercial/interview hypothesis](docs/P7_COMMERCIAL_HYPOTHESIS.md), and [cost/privacy/licence notes](docs/P7_COSTS_PRIVACY_LICENSE.md). P7 fixes old scheduling copy and replacement-date provenance; these fixes are not yet deployed.
 
 ## Source of truth
 
@@ -40,6 +46,8 @@ Open the exact configured `APP_URL` ([generated local URL](http://127.0.0.1:3000
 | `npm run test:integration`                | Real ephemeral MongoDB replica set; Gemma transport mocked and labelled synthetic   |
 | `npm run ai:proof`                        | **Real** Gemma calls on the synthetic fixtures; writes `docs/evidence/p3/gemma-live-proof.json` |
 | `npm run fixtures:p3`                     | Regenerate the synthetic PDF fixtures deterministically                             |
+| `node scripts/benchmark-p7.mjs --out docs/evidence/p7/run-03` | Real Gemma on the frozen16-text set; primary private .env, new output directory required; consumes provider quota |
+| `node scripts/report-p7.mjs docs/evidence/p7/run-01` | Reproduce exact field scores and report offline; no new inference |
 | `npm run format` / `npm run format:check` | Format/check code, excluding locked management docs                                 |
 | `npm run reminders:process`               | One-shot batch (max 25), closes DB and exits; **2** if provider unavailable, **1** on service error |
 
@@ -54,7 +62,8 @@ Keep secrets in ignored `.env.local` or deployment secret settings. `.env.exampl
 | `MONGODB_URI`, `MONGODB_DB`                             | Blank in P0; required together for P2 database access                                             |
 | `GEMMA_API_BASE_URL`, `GEMMA_MODEL_ID`, `GEMMA_API_KEY` | Required for P3 extraction. OpenAI-compatible endpoint serving Gemma; non-`gemma-*` model IDs are refused |
 | `EMAIL_API_KEY`, `EMAIL_FROM`                           | Blank in P0; required for P4 provider delivery; verified sender and owner opt-in still required   |
-| `SENTRY_DSN`                                            | Optional; real integration deferred to P6                                                         |
+| `SENTRY_DSN`                                            | Optional server-only Sentry integration; blank disables telemetry |
+| `SENTRY_TRACES_SAMPLE_RATE`                             | Optional 0–1; default 0.1; 1 for a bounded synthetic proof only |
 
 Future server modules must call `validateEnv(process.env, ['auth'])`, `['db']`, `['ai']` or `['notifications']` before using that capability. Missing optional credentials do not prevent P0 builds; requesting an unconfigured capability fails clearly. Validation does **not** prove connectivity, model identity, sender verification or delivery. Configuration stays server-side.
 
@@ -90,7 +99,7 @@ See [P3 setup](docs/P3_SETUP.md) for the Gemma provider, licence notes, pipeline
 
 Run unit tests with `npm test` and real-MongoDB integration tests with `npm run test:integration`. Optional `node --env-file=.env.local scripts/verify-p2.mjs` uses an installed Playwright package/browser (or `KAI247_PLAYWRIGHT_MODULE`) and only synthetic sandbox data. P1 browser artifacts remain historical. Current evidence: [P2 verification report](docs/evidence/p2-verification.md).
 
-P2 persistence, P3 real Gemma extraction and P4 scheduling/reliability are verified locally. P5 also verifies deployed HTTPS owner CRUD/renew/history on Atlas and real Gemma TXT extraction/approval. The P4 Resend adapter is implemented, but real send is blocked by blank EMAIL_API_KEY/EMAIL_FROM. P5 web hosting, separate UTC Cron and GitHub Actions are configured; real email remains a blocked P5 gate. Sanitized Sentry traces belong to P6. No extra services, provider SDKs or guessed Render blueprint are added in P0. No web-process timer will substitute for durable scheduling. Paid infrastructure requires founder authorization.
+P2 persistence, P3 real Gemma extraction and P4 scheduling/reliability are verified locally. P5 also verifies deployed HTTPS owner CRUD/renew/history on Atlas and real Gemma TXT extraction/approval. P7 now verifies the Resend owner mailbox-proof/opt-in/real TEST locally, with founder receipt attestation; the last checked deployed Cron lacked email configuration, so deployed email/Cron validation remains open. P6's synthetic failures remain explicitly synthetic and are not retroactively called real sends. Sentry SDK tracing is verified locally and in its actual dashboard. No web-process timer substitutes for durable scheduling. Paid infrastructure requires founder authorization.
 
 ## Contest constraints and evidence
 
@@ -102,9 +111,9 @@ One entry, the official DEV template, English article, `devchallenge`/`hf26chall
 
 ## Verification and limitations
 
-See the root tracker, [P0 verification report](docs/evidence/p0-verification.md), [P1 verification report](docs/evidence/p1-verification.md), [P2 verification report](docs/evidence/p2-verification.md) and [P3 verification report](docs/evidence/p3-verification.md) for actual commands and results. Local checks do not establish production readiness or contest acceptance. Unit tests use synthetic values; integration tests use a real ephemeral MongoDB server, and P5 browser QA also exercises the live Render app with an isolated synthetic owner. Real email acceptance/receipt and physical-device QA remain open gates. P0's five high development-tool advisories and deprecated ESLint 9 compatibility constraint remain documented risks.
+See the root tracker and phase verification reports for actual commands and results. Local checks do not establish production readiness or contest acceptance. Unit tests use synthetic values; integration tests use a real ephemeral MongoDB server. P5 browser QA exercises deployed Render; P7 exercises a separate local app against Atlas. Local real-email acceptance and founder-reported receipt now pass; deployed email/Cron and physical-device QA remain open gates. The last P6 audit retained five high development-tool advisories; P7 adds no dependency changes.
 
-P0–P4 were committed and pushed by the founder as `32e07f8`. The founder authorized P5 publication and the smallest separate paid Cron. Release `d690810` is pushed and its hosted CI passes. Real email still requires provider configuration and a verified opted-in owner. P6 has not started.
+P0–P4 were committed and pushed by the founder as `32e07f8`. The founder authorized P5 publication and the smallest separate paid Cron. Release `d690810` is pushed and its hosted CI passes; P5 evidence follow-up is `cfbb19e`. P6/P7 local checks and real provider evidence are documented; publication needs separate founder authorization under the shared phase rules. P8 has not started.
 
 ## Render and CI (P5)
 

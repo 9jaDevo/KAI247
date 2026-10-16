@@ -314,12 +314,15 @@ export async function renewRenewal(
         {
           $set: {
             dueDate: data.dueDate,
+            // The previous document supports the previous cycle, not an owner-entered replacement.
+            dateSource: "manual",
             status: "active",
             renewedAt: now,
             completedAt: now,
             updatedAt: now,
             ...(data.notes !== undefined ? { notes: data.notes } : {}),
           },
+          $unset: { sourceExcerpt: "", sourceFilename: "", sourceHash: "" },
           $inc: { version: 1 },
         },
         { returnDocument: "after", session },
@@ -343,7 +346,7 @@ export async function renewRenewal(
         ctx,
         recordId,
         "renewed",
-        `Previous cycle completed; due date ${current.dueDate} replaced with ${data.dueDate}. Future jobs invalidated.`,
+        `Previous cycle completed; due date ${current.dueDate} replaced with ${data.dueDate}. Replacement date entered by owner; the original document supports the previous cycle only. Future jobs invalidated.`,
         session,
       );
       await planInitialReminders(ctx, updated!, session);

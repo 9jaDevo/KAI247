@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Brand } from "./brand";
@@ -25,16 +25,26 @@ export function AppShell({
 }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuToggle = useRef<HTMLButtonElement>(null);
   const [logoutError, setLogoutError] = useState("");
   return (
     <div className="app-frame">
       <a href="#workspace-main" className="skip-link">
         Skip to workspace
       </a>
-      <aside className="sidebar">
+      <aside
+        className="sidebar"
+        onKeyDown={(event) => {
+          if (event.key === "Escape" && menuOpen) {
+            setMenuOpen(false);
+            menuToggle.current?.focus();
+          }
+        }}
+      >
         <div className="sidebar-brand">
           <Brand />
           <button
+            ref={menuToggle}
             className="icon-button mobile-menu"
             aria-label={menuOpen ? "Close navigation" : "Open navigation"}
             aria-expanded={menuOpen}
@@ -141,8 +151,8 @@ export function AppShell({
             <strong>
               {organization.isDemo ? "Synthetic sandbox" : "Owner account"}
             </strong>{" "}
-            · Records are persisted in your isolated workspace. No emails are
-            scheduled or sent yet.
+            · Records are persisted in your isolated workspace. Email requires a
+            verified address, explicit opt-in and an available provider.
           </span>
           <Link href="/app/settings">
             Connection status <Icon name="arrow" width="16" />

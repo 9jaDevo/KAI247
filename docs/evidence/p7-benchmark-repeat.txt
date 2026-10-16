@@ -1,0 +1,17 @@
+{"id":"01-hosting","error":null,"elapsedMs":6372,"correctFields":10,"totalFields":10}
+{"id":"02-issue-renewal-grace","error":null,"elapsedMs":6091,"correctFields":10,"totalFields":10}
+{"id":"03-policy","error":null,"elapsedMs":5049,"correctFields":10,"totalFields":10}
+{"id":"04-license","error":null,"elapsedMs":11445,"correctFields":9,"totalFields":10}
+{"id":"05-contract","error":null,"elapsedMs":6476,"correctFields":10,"totalFields":10}
+{"id":"06-filing-written","error":null,"elapsedMs":3910,"correctFields":10,"totalFields":10}
+{"id":"07-filing-relative","error":null,"elapsedMs":9929,"correctFields":10,"totalFields":10}
+{"id":"08-no-date","error":null,"elapsedMs":3431,"correctFields":10,"totalFields":10}
+{"id":"09-ambiguous-ddmm","error":null,"elapsedMs":4277,"correctFields":10,"totalFields":10}
+{"id":"10-declared-ddmm","error":null,"elapsedMs":4299,"correctFields":9,"totalFields":10}
+{"id":"11-competing-services","error":null,"elapsedMs":6111,"correctFields":4,"totalFields":10}
+{"id":"12-prompt-injection","error":null,"elapsedMs":4803,"correctFields":9,"totalFields":10}
+{"id":"13-wrong-amount","error":"MODEL_OUTPUT_INVALID","elapsedMs":24681,"correctFields":0,"totalFields":10}
+{"id":"14-leap-year","error":null,"elapsedMs":6069,"correctFields":10,"totalFields":10}
+{"id":"15-impossible-date","error":null,"elapsedMs":10006,"correctFields":10,"totalFields":10}
+{"id":"16-paid-not-renewal","error":null,"elapsedMs":12121,"correctFields":8,"totalFields":10}
+{"output":"docs/evidence/p7/run-02","summary":{"gemma":{"documents":16,"completed":15,"strictAllFields":10,"perField":{"documentType":{"correct":15,"total":16},"provider":{"correct":14,"total":16},"rawDate":{"correct":14,"total":16},"date":{"correct":14,"total":16},"dateType":{"correct":14,"total":16},"dateStatus":{"correct":12,"total":16},"interpretations":{"correct":14,"total":16},"evidence":{"correct":14,"total":16},"amountMinor":{"correct":14,"total":16},"currency":{"correct":14,"total":16}}},"baseline":{"documents":16,"completed":16,"strictAllFields":10,"perField":{"documentType":{"correct":16,"total":16},"provider":{"correct":16,"total":16},"rawDate":{"correct":12,"total":16},"date":{"correct":12,"total":16},"dateType":{"correct":14,"total":16},"dateStatus":{"correct":13,"total":16},"interpretations":{"correct":12,"total":16},"evidence":{"correct":12,"total":16},"amountMinor":{"correct":14,"total":16},"currency":{"correct":15,"total":16}}},"documentLatency":{"n":16,"medianMs":6101,"p95Ms":null,"p95Note":"Not reported: fewer than 20 document observations; median only, no population tail claim.","minMs":3431,"maxMs":24681},"wallMs":125227}}

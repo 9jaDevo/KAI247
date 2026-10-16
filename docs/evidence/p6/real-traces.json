@@ -1,0 +1,258 @@
+{
+  "utc": "2026-10-16T11:49:19.522Z",
+  "dataset": "New isolated synthetic Atlas database; real Gemma; explicitly synthetic parse failure; zero real email",
+  "database": "kai247_p6_a1fb7961a25f",
+  "configured": true,
+  "sampleRate": 1,
+  "spans": [
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "97f157eb6482d180",
+      "parent_span_id": "8dd1b3a44d6e48bd",
+      "name": "parse_document",
+      "start_timestamp": 1792151366.0145411,
+      "end_timestamp": 1792151366.0155478,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "outcome": "success",
+        "text_method": "txt_utf8",
+        "page_count": 1,
+        "duration_ms": 0.469199999999546,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "84220b6b0a1de887",
+      "parent_span_id": "8dd1b3a44d6e48bd",
+      "name": "gemma_extract",
+      "start_timestamp": 1792151366.0212736,
+      "end_timestamp": 1792151371.7618823,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "gen_ai.system": "gemma",
+        "gen_ai.request.model": "gemma-4-26b-a4b-it",
+        "attempt": 1,
+        "outcome": "success",
+        "gen_ai.usage.input_tokens": 1007,
+        "gen_ai.usage.output_tokens": 204,
+        "duration_ms": 5740.3066,
+        "sentry.op": "gen_ai.chat",
+        "gen_ai.operation.type": "ai_client",
+        "gen_ai.operation.name": "chat"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "966d290f3a78f01f",
+      "parent_span_id": "8dd1b3a44d6e48bd",
+      "name": "validate_candidate",
+      "start_timestamp": 1792151371.762849,
+      "end_timestamp": 1792151371.7671356,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "attempt": 1,
+        "outcome": "success",
+        "duration_ms": 3.9664000000011583,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "9876601e5c6ea957",
+      "parent_span_id": "8dd1b3a44d6e48bd",
+      "name": "validate_candidate",
+      "start_timestamp": 1792151371.7682302,
+      "end_timestamp": 1792151371.7860322,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "outcome": "success",
+        "duration_ms": 17.435699999999997,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "8dd1b3a44d6e48bd",
+      "name": "ai_workflow",
+      "start_timestamp": 1792151365.567891,
+      "end_timestamp": 1792151372.4380045,
+      "status": "ok",
+      "is_segment": true,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "success",
+        "duration_ms": 6867.985200000001,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "a6b84c4fef3847e6",
+      "parent_span_id": "9dad00fff52bc2be",
+      "name": "queue_reminder",
+      "start_timestamp": 1792151373.5260186,
+      "end_timestamp": 1792151373.7376413,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "disabled",
+        "jobs_created": 0,
+        "duration_ms": 211.33739999999852,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "9dad00fff52bc2be",
+      "name": "approve_renewal",
+      "start_timestamp": 1792151372.4397874,
+      "end_timestamp": 1792151373.9524965,
+      "status": "ok",
+      "is_segment": true,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "success",
+        "duration_ms": 1512.4537999999993,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "a61d1246e77bc30e",
+      "name": "send_email",
+      "start_timestamp": 1792151375.6215947,
+      "end_timestamp": 1792151375.6223252,
+      "status": "error",
+      "is_segment": true,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "provider_rejected",
+        "error_code": "PROVIDER_HTTP_500",
+        "retryable": true,
+        "duration_ms": 0.5714000000007218,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "828efd810f27db51",
+      "parent_span_id": "ba8d9584bd9cb8ac",
+      "name": "parse_document",
+      "start_timestamp": 1792151375.8483615,
+      "end_timestamp": 1792151376.0230968,
+      "status": "error",
+      "is_segment": false,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "failure",
+        "duration_ms": 173.73050000000148,
+        "error_code": "MALFORMED_DOCUMENT",
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "ba8d9584bd9cb8ac",
+      "name": "ai_workflow",
+      "start_timestamp": 1792151375.8475163,
+      "end_timestamp": 1792151376.0238242,
+      "status": "error",
+      "is_segment": true,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "failure",
+        "duration_ms": 175.87389999999868,
+        "error_code": "MALFORMED_DOCUMENT",
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "7512242656ca4d34a78153a27ee5aa7e",
+      "span_id": "a10d3c6f5753a21f",
+      "name": "reminder_batch",
+      "start_timestamp": 1792151376.0329173,
+      "end_timestamp": 1792151376.0340364,
+      "status": "ok",
+      "is_segment": true,
+      "attributes": {
+        "outcome": "success",
+        "provider_unavailable": true,
+        "processed": 0,
+        "duration_ms": 0.5999999999985448,
+        "sentry.op": "function"
+      }
+    }
+  ],
+  "ingestion": [
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "span"
+      ]
+    },
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "span"
+      ]
+    },
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "span"
+      ]
+    },
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "event"
+      ]
+    },
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "span"
+      ]
+    }
+  ],
+  "realEmailSent": false,
+  "outcome": "PASS_REAL_GEMMA_AND_APPROVAL",
+  "extraction": {
+    "id": "6ad20f4bd9cd3d130c98a885",
+    "modelId": "gemma-4-26b-a4b-it",
+    "elapsedMs": 5747,
+    "attempts": 1,
+    "status": "pending_review",
+    "dateStatus": "supported",
+    "usage": {
+      "promptTokens": 1007,
+      "completionTokens": 204
+    }
+  },
+  "renewalId": "6ad20f4cd9cd3d130c98a887",
+  "reminders": {
+    "status": "disabled",
+    "jobsCreated": 0,
+    "message": "No jobs: verified owner email and explicit opt-in are required."
+  },
+  "syntheticMailFailure": {
+    "code": "VERIFICATION_NOT_ACCEPTED",
+    "label": "Injected SYNTHETIC provider HTTP 500; no email/network delivery"
+  },
+  "syntheticFailure": {
+    "code": "MALFORMED_DOCUMENT",
+    "expected": "MALFORMED_DOCUMENT",
+    "label": "Deliberately invalid synthetic PDF"
+  },
+  "nonDeliveringBatch": {
+    "processed": 0,
+    "providerUnavailable": true
+  },
+  "sentryAccepted": true
+}

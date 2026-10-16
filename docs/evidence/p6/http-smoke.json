@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-16T12:00:53.759Z",
+  "target": "http://127.0.0.1:3017",
+  "mode": "Actual production build, isolated synthetic Atlas workspace; local HTTP probe with production HTTPS origin/cookies; not a deployed browser test",
+  "checks": [
+    {
+      "name": "Atlas readiness",
+      "status": 200
+    },
+    {
+      "name": "Unauthenticated renewal API",
+      "status": 401
+    },
+    {
+      "name": "Unauthenticated protected page",
+      "status": 307
+    },
+    {
+      "name": "Cross-origin login rejected",
+      "status": 403
+    },
+    {
+      "name": "Synthetic owner login",
+      "status": 200
+    },
+    {
+      "name": "Authenticated persisted renewals",
+      "status": 200
+    },
+    {
+      "name": "Unknown valid object ID hidden",
+      "status": 404
+    },
+    {
+      "name": "Malformed object ID rejected",
+      "status": 400
+    },
+    {
+      "name": "Authenticated foreign-origin write rejected",
+      "status": 403
+    }
+  ],
+  "cookieFlags": {
+    "httpOnly": true,
+    "secure": true,
+    "sameSiteLax": true
+  },
+  "persistedReadback": true,
+  "outcome": "PASS"
+}

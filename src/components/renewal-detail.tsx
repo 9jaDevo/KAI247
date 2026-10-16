@@ -172,7 +172,9 @@ export function RenewalDetail({
             Archive renewal
           </Button>
           <p className="small muted" style={{ marginTop: 18 }}>
-            No emails are sent or scheduled yet.
+            Email schedules require verified owner opt-in. Check notification
+            activity for actual jobs and attempts; provider acceptance is not
+            delivery.
           </p>
         </Card>
       </div>

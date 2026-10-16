@@ -26,6 +26,10 @@ const schema = z.object({
   EMAIL_API_KEY: optionalText,
   EMAIL_FROM: optionalText,
   SENTRY_DSN: optionalUrl,
+  SENTRY_TRACES_SAMPLE_RATE: z.preprocess(
+    (value) => (value === "" ? undefined : value),
+    z.coerce.number().min(0).max(1).optional(),
+  ),
 });
 
 export type EnvironmentCapability = "auth" | "db" | "ai" | "notifications";

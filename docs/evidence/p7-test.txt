@@ -1,0 +1,15 @@
+
+> kai247-renewpilot-ai@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.4 C:/xampp/htdocs/Project/KAI247
+
+
+ Test Files  15 passed (15)
+      Tests  106 passed (106)
+   Start at  08:54:17
+   Duration  3.47s (import 71%, tests 20%, transform 8%, worker 2%)
+
+    Isolate  15 workers spawned · ~538ms startup each (spawn + environment, per file)
+             at least ~615ms faster with isolate: false — reuses workers across files instead of one per file

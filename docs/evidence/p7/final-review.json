@@ -1,0 +1,186 @@
+{
+  "utc": "2026-10-16T13:09:14.165Z",
+  "branch": "main",
+  "baselineCommit": "cfbb19ef38814d2a25f8bc7eaca2388e2f9fdd51",
+  "noCommitOrPublication": true,
+  "changedFiles": [
+    ".env.example",
+    "02_DEVELOPMENT_TRACKER.md",
+    "README.md",
+    "next.config.mjs",
+    "package-lock.json",
+    "package.json",
+    "scripts/process-reminders.mjs",
+    "src/app/app/settings/page.tsx",
+    "src/components/app-shell.tsx",
+    "src/components/extraction-review.tsx",
+    "src/components/login-form.tsx",
+    "src/components/renewal-detail.tsx",
+    "src/components/settings-preview.tsx",
+    "src/lib/ai/extract.ts",
+    "src/lib/ai/gemma.ts",
+    "src/lib/documents/upload.ts",
+    "src/lib/extractions/service.ts",
+    "src/lib/notifications/jobs.ts",
+    "src/lib/notifications/service.ts",
+    "src/lib/notifications/worker.ts",
+    "src/lib/renewals/service.ts",
+    "src/lib/security/env.ts",
+    "src/lib/security/http.ts",
+    "tests/integration/extraction-workflow.test.ts",
+    "tests/unit/gemma-adapter.test.ts",
+    "docs/P6_OBSERVABILITY.md",
+    "docs/P7_COMMERCIAL_HYPOTHESIS.md",
+    "docs/P7_COSTS_PRIVACY_LICENSE.md",
+    "docs/P7_DEMO_STORYBOARD.md",
+    "docs/P7_METHODOLOGY.md",
+    "docs/evidence/p6-build.txt",
+    "docs/evidence/p6-dev.txt",
+    "docs/evidence/p6-format-check.txt",
+    "docs/evidence/p6-format.txt",
+    "docs/evidence/p6-integration.txt",
+    "docs/evidence/p6-lint.txt",
+    "docs/evidence/p6-real-traces-initial.txt",
+    "docs/evidence/p6-real-traces.txt",
+    "docs/evidence/p6-test.txt",
+    "docs/evidence/p6-typecheck.txt",
+    "docs/evidence/p6-verification.md",
+    "docs/evidence/p6/activity-empty-360.png",
+    "docs/evidence/p6/audit-summary.json",
+    "docs/evidence/p6/browser-report.json",
+    "docs/evidence/p6/dashboard-360.png",
+    "docs/evidence/p6/final-review.json",
+    "docs/evidence/p6/http-smoke.json",
+    "docs/evidence/p6/integration-failed-before-fix.txt",
+    "docs/evidence/p6/login-error-360.png",
+    "docs/evidence/p6/manual-form-1280.png",
+    "docs/evidence/p6/real-traces-initial.json",
+    "docs/evidence/p6/real-traces.json",
+    "docs/evidence/p6/sentry-gemma.png",
+    "docs/evidence/p6/sentry-synthetic-email-failure.png",
+    "docs/evidence/p6/sentry-waterfall.png",
+    "docs/evidence/p6/typecheck-generated-types-race.txt",
+    "docs/evidence/p7-benchmark-analysis.md",
+    "docs/evidence/p7-benchmark-repeat.txt",
+    "docs/evidence/p7-benchmark.txt",
+    "docs/evidence/p7-build.txt",
+    "docs/evidence/p7-dev.txt",
+    "docs/evidence/p7-format-check.txt",
+    "docs/evidence/p7-integration.txt",
+    "docs/evidence/p7-lint.txt",
+    "docs/evidence/p7-scorer-test.txt",
+    "docs/evidence/p7-test.txt",
+    "docs/evidence/p7-typecheck.txt",
+    "docs/evidence/p7-verification.md",
+    "docs/evidence/p7/01-import.png",
+    "docs/evidence/p7/02-review.png",
+    "docs/evidence/p7/03-explicit-confirmation.png",
+    "docs/evidence/p7/04-renewal-scheduled.png",
+    "docs/evidence/p7/05-real-test-activity.png",
+    "docs/evidence/p7/06-mark-renewed.png",
+    "docs/evidence/p7/07-renewed-reloaded.png",
+    "docs/evidence/p7/08-cancelled-and-new-jobs.png",
+    "docs/evidence/p7/09-mobile-renewal.png",
+    "docs/evidence/p7/browser-report.json",
+    "docs/evidence/p7/email-verification.json",
+    "docs/evidence/p7/failure-provenance-before-fix.png",
+    "docs/evidence/p7/final-review.json",
+    "docs/evidence/p7/founder-receipt.json",
+    "docs/evidence/p7/run-01/REPORT.md",
+    "docs/evidence/p7/run-01/analysis.json",
+    "docs/evidence/p7/run-01/results.csv",
+    "docs/evidence/p7/run-01/results.json",
+    "docs/evidence/p7/run-02/REPORT.md",
+    "docs/evidence/p7/run-02/analysis.json",
+    "docs/evidence/p7/run-02/results.csv",
+    "docs/evidence/p7/run-02/results.json",
+    "docs/evidence/p7/walkthrough-stages.json",
+    "scripts/benchmark-p7.mjs",
+    "scripts/benchmark/p7-core.mjs",
+    "scripts/report-p7.mjs",
+    "scripts/verify-p6-traces.mjs",
+    "src/instrumentation.ts",
+    "src/lib/observability/privacy.ts",
+    "src/lib/observability/telemetry.ts",
+    "src/lib/security/body.ts",
+    "tests/fixtures/benchmark/p7/README.md",
+    "tests/fixtures/benchmark/p7/dataset.json",
+    "tests/fixtures/benchmark/p7/walkthrough-hosting.txt",
+    "tests/unit/body-deadline.test.ts",
+    "tests/unit/p7-benchmark.test.ts",
+    "tests/unit/telemetry.test.ts"
+  ],
+  "secretScan": {
+    "privateValuesChecked": 13,
+    "leakedFiles": [],
+    "scope": "Changed/untracked text files, literal and URI-encoded credential/email values. Screenshots visually checked separately."
+  },
+  "lockedDocuments": [
+    {
+      "file": "01_RENEWPILOT_MASTER_SPEC.md",
+      "sha256": "30e867667519b3c9549387cabd218f33ef6803a212e9f16e1195db8b3a8cb9a0",
+      "unchangedFromHead": true,
+      "matchesRetainedCopy": true
+    },
+    {
+      "file": "03_CODEX_PHASE_PROMPTS.md",
+      "sha256": "a961399b147354372a46026fa9aa0945f820e7c69bcd7f7905668fc06a0c182d",
+      "unchangedFromHead": true,
+      "matchesRetainedCopy": true
+    }
+  ],
+  "diffCheck": "PASS",
+  "benchmark": {
+    "sameDataset": true,
+    "sameAiSources": true,
+    "originalDocuments": 16,
+    "repeatDocuments": 16
+  },
+  "qaCleanup": {
+    "ownerOptedOut": true,
+    "noPendingOrClaimed": true,
+    "acceptedTestJobs": 1
+  },
+  "screenshots": [
+    {
+      "file": "01-import.png",
+      "exists": true
+    },
+    {
+      "file": "02-review.png",
+      "exists": true
+    },
+    {
+      "file": "03-explicit-confirmation.png",
+      "exists": true
+    },
+    {
+      "file": "04-renewal-scheduled.png",
+      "exists": true
+    },
+    {
+      "file": "05-real-test-activity.png",
+      "exists": true
+    },
+    {
+      "file": "06-mark-renewed.png",
+      "exists": true
+    },
+    {
+      "file": "07-renewed-reloaded.png",
+      "exists": true
+    },
+    {
+      "file": "08-cancelled-and-new-jobs.png",
+      "exists": true
+    },
+    {
+      "file": "09-mobile-renewal.png",
+      "exists": true
+    },
+    {
+      "file": "failure-provenance-before-fix.png",
+      "exists": true
+    }
+  ]
+}

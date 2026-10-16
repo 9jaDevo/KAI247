@@ -1,0 +1,18 @@
+
+> kai247-renewpilot-ai@0.1.0 typecheck
+> next typegen && tsc --noEmit
+
+Generating route types...
+✓ Types generated successfully
+error TS6053: File 'C:/xampp/htdocs/Project/KAI247/.next/dev/types/cache-life.d.ts' not found.
+  The file is in the program because:
+    Matched by include pattern '.next/dev/types/**/*.ts' in 'C:/xampp/htdocs/Project/KAI247/tsconfig.json'
+error TS6053: File 'C:/xampp/htdocs/Project/KAI247/.next/dev/types/root-params.d.ts' not found.
+  The file is in the program because:
+    Matched by include pattern '.next/dev/types/**/*.ts' in 'C:/xampp/htdocs/Project/KAI247/tsconfig.json'
+error TS6053: File 'C:/xampp/htdocs/Project/KAI247/.next/dev/types/routes.d.ts' not found.
+  The file is in the program because:
+    Matched by include pattern '.next/dev/types/**/*.ts' in 'C:/xampp/htdocs/Project/KAI247/tsconfig.json'
+error TS6053: File 'C:/xampp/htdocs/Project/KAI247/.next/dev/types/validator.ts' not found.
+  The file is in the program because:
+    Matched by include pattern '.next/dev/types/**/*.ts' in 'C:/xampp/htdocs/Project/KAI247/tsconfig.json'

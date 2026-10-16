@@ -1,4 +1,5 @@
 import { createHash, randomBytes } from "node:crypto";
+import { traceStep } from "../observability/telemetry.ts";
 import { ObjectId } from "mongodb";
 import { z } from "zod";
 import { collections, ensureIndexes, getClient } from "../db/client.ts";
@@ -72,14 +73,27 @@ export async function requestVerification(
     createdAt: now,
     expiresAt: new Date(now.getTime() + 15 * 60000),
   });
-  const result = await transport(
-    {
-      from: process.env.EMAIL_FROM ?? "",
-      to: [ctx.user.email],
-      subject: "KAI247 owner email verification",
-      text: `KAI247 AI\n\nPaste this verification code into Settings while signed in:\n\n${code}\n\nExpires in 15 minutes. This verifies your own address only; reminders remain off until you explicitly opt in.`,
+  const result = await traceStep(
+    "send_email",
+    { synthetic: transport !== sendEmail },
+    async (annotate) => {
+      const outcome = await transport(
+        {
+          from: process.env.EMAIL_FROM ?? "",
+          to: [ctx.user.email],
+          subject: "KAI247 owner email verification",
+          text: `KAI247 AI\n\nPaste this verification code into Settings while signed in:\n\n${code}\n\nExpires in 15 minutes. This verifies your own address only; reminders remain off until you explicitly opt in.`,
+        },
+        `verify:${id}`,
+      );
+      annotate({
+        outcome: outcome.accepted ? "provider_accepted" : "provider_rejected",
+        ...(!outcome.accepted
+          ? { error_code: outcome.code, retryable: outcome.retryable }
+          : {}),
+      });
+      return outcome;
     },
-    `verify:${id}`,
   );
   if (!result.accepted) {
     await c.emailVerifications.deleteOne({ _id: id });

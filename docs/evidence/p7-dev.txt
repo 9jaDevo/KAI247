@@ -1,0 +1,49 @@
+▲ Next.js 16.4.0 (Turbopack)
+- Local:         http://127.0.0.1:3017
+- Network:       http://127.0.0.1:3017
+- Environments: .env.local, .env
+✓ Ready in 7.5s
+✓ Running next.config.mjs took 3.8s
+- Experiments (use with caution):
+  · clientTraceMetadata
+
+○ Compiling /login ...
+ GET /login 200 in 1304ms (next.js: 890ms, application-code: 414ms)
+ POST /api/auth/login 503 in 4.8s (next.js: 573ms, application-code: 4.2s)
+ GET /app/settings 307 in 857ms (next.js: 414ms, application-code: 443ms)
+ GET /login 200 in 127ms (next.js: 7ms, application-code: 120ms)
+ POST /api/auth/login 200 in 6.4s (next.js: 7ms, application-code: 6.4s)
+ GET /app 200 in 921ms (next.js: 56ms, application-code: 865ms)
+ GET /app/settings 200 in 602ms (next.js: 32ms, application-code: 569ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+○ Compiling /api/email-verification/confirm ...
+ POST /api/email-verification/confirm 200 in 2.2s (next.js: 222ms, application-code: 1992ms)
+ GET /app/settings 200 in 611ms (next.js: 14ms, application-code: 597ms)
+ PATCH /api/settings 200 in 2.4s (next.js: 123ms, application-code: 2.3s)
+ GET /app/settings 200 in 5.0s (next.js: 18ms, application-code: 4.9s)
+ GET /app/import 200 in 965ms (next.js: 39ms, application-code: 926ms)
+ POST /api/extractions 201 in 26.1s (next.js: 62ms, application-code: 26.1s)
+ GET /app/import/6ad21d1526c1faa069995acd 200 in 6.4s (next.js: 5.5s, application-code: 868ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/import/6ad21d1526c1faa069995acd 200 in 847ms (next.js: 32ms, application-code: 815ms)
+ POST /api/extractions/6ad21d1526c1faa069995acd/confirm 201 in 6.9s (next.js: 2.5s, application-code: 4.4s)
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 11.3s (next.js: 2.4s, application-code: 8.9s)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/settings 200 in 542ms (next.js: 6ms, application-code: 537ms)
+ POST /api/test-email 200 in 7.6s (next.js: 66ms, application-code: 7.6s)
+ GET /app/settings 200 in 533ms (next.js: 6ms, application-code: 527ms)
+ GET /app/activity 200 in 1178ms (next.js: 59ms, application-code: 1118ms)
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 1381ms (next.js: 27ms, application-code: 1354ms)
+ POST /api/renewals/6ad21d9426c1faa069995acf/renew 200 in 7.5s (next.js: 3.2s, application-code: 4.3s)
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 1014ms (next.js: 24ms, application-code: 990ms)
+✓ Compiled in 240ms
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 1046ms (next.js: 29ms, application-code: 1018ms)
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 1082ms (next.js: 32ms, application-code: 1050ms)
+ POST /api/renewals/6ad21d9426c1faa069995acf/renew 200 in 4.0s (next.js: 29ms, application-code: 4.0s)
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 966ms (next.js: 14ms, application-code: 952ms)
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 1066ms (next.js: 19ms, application-code: 1047ms)
+ GET /app/activity 200 in 823ms (next.js: 7ms, application-code: 815ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 4.3s (next.js: 72ms, application-code: 4.2s)
+ GET /app/settings 200 in 867ms (next.js: 19ms, application-code: 848ms)
+ GET /app/renewals/6ad21d9426c1faa069995acf 200 in 1432ms (next.js: 55ms, application-code: 1377ms)

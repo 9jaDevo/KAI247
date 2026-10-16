@@ -9,11 +9,13 @@ export function SettingsPreview({
   ownerEmail,
   aiConfigured,
   emailConfigured,
+  tracingConfigured = false,
 }: {
   organization: OrganizationView;
   ownerEmail: string;
   aiConfigured: boolean;
   emailConfigured: boolean;
+  tracingConfigured?: boolean;
 }) {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -178,8 +180,12 @@ export function SettingsPreview({
                 "Email provider",
                 emailConfigured ? "Configured" : "Unavailable",
               ],
-              ["Render deployment", "Not verified"],
-              ["Sentry tracing", "Unavailable · P6"],
+              [
+                "Sentry tracing",
+                tracingConfigured
+                  ? "Configured · visibility unverified"
+                  : "Not configured",
+              ],
             ].map(([label, status]) => (
               <div className="connection-row" key={label}>
                 <span>{label}</span>
@@ -198,8 +204,8 @@ export function SettingsPreview({
             ))}
             <p className="small muted" style={{ marginTop: 18 }}>
               SMS and WhatsApp are unavailable. Scheduled email requires the
-              separate worker; unattended cron is not yet verified. Gemma
-              candidates always require your review before saving.
+              separate worker and provider. Check actual run outcomes in Render.
+              Gemma candidates always require your review before saving.
             </p>
           </div>
         </Card>

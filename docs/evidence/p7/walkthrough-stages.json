@@ -1,0 +1,965 @@
+[
+  {
+    "utc": "2026-10-16T12:50:47.629Z",
+    "stage": "after-approval",
+    "dataset": "SYNTHETIC records, real founder-controlled verified owner mailbox; private identifiers omitted",
+    "ownerVerified": true,
+    "optedIn": true,
+    "timezone": "Africa/Lagos",
+    "renewals": [
+      {
+        "id": "6ad21d9426c1faa069995acf",
+        "title": "SYNTHETIC P7 · Business hosting",
+        "dueDate": "2027-10-21",
+        "version": 1,
+        "status": "active",
+        "dateSource": "document_confirmed"
+      }
+    ],
+    "jobs": [
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 30,
+        "scheduledForUtc": "2027-09-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 7,
+        "scheduledForUtc": "2027-10-14T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 1,
+        "scheduledForUtc": "2027-10-20T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 0,
+        "scheduledForUtc": "2027-10-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      }
+    ],
+    "extractions": [
+      {
+        "id": "6ad21d1526c1faa069995acd",
+        "modelId": "gemma-4-26b-a4b-it",
+        "status": "confirmed",
+        "elapsedMs": 24360,
+        "attempts": 1,
+        "usage": {
+          "promptTokens": 952,
+          "completionTokens": 195
+        },
+        "date": "2027-10-21",
+        "dateStatus": "supported"
+      }
+    ],
+    "audit": [
+      {
+        "action": "owner_email_verified",
+        "createdAt": "2026-10-16T12:46:19.759Z"
+      },
+      {
+        "action": "settings_updated",
+        "createdAt": "2026-10-16T12:47:14.343Z"
+      },
+      {
+        "action": "extraction_created",
+        "createdAt": "2026-10-16T12:48:21.804Z"
+      },
+      {
+        "action": "created_from_document",
+        "createdAt": "2026-10-16T12:50:28.561Z"
+      },
+      {
+        "action": "extraction_confirmed",
+        "createdAt": "2026-10-16T12:50:28.788Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:50:29.023Z"
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-16T12:51:59.500Z",
+    "stage": "after-real-test",
+    "dataset": "SYNTHETIC records, real founder-controlled verified owner mailbox; private identifiers omitted",
+    "ownerVerified": true,
+    "optedIn": true,
+    "timezone": "Africa/Lagos",
+    "renewals": [
+      {
+        "id": "6ad21d9426c1faa069995acf",
+        "title": "SYNTHETIC P7 · Business hosting",
+        "dueDate": "2027-10-21",
+        "version": 1,
+        "status": "active",
+        "dateSource": "document_confirmed"
+      }
+    ],
+    "jobs": [
+      {
+        "kind": "test",
+        "renewalVersion": 0,
+        "offsetDays": 0,
+        "scheduledForUtc": "2026-10-16T12:51:23.759Z",
+        "status": "provider_accepted",
+        "attemptCount": 1,
+        "providerIdPresent": true
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 30,
+        "scheduledForUtc": "2027-09-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 7,
+        "scheduledForUtc": "2027-10-14T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 1,
+        "scheduledForUtc": "2027-10-20T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 0,
+        "scheduledForUtc": "2027-10-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      }
+    ],
+    "extractions": [
+      {
+        "id": "6ad21d1526c1faa069995acd",
+        "modelId": "gemma-4-26b-a4b-it",
+        "status": "confirmed",
+        "elapsedMs": 24360,
+        "attempts": 1,
+        "usage": {
+          "promptTokens": 952,
+          "completionTokens": 195
+        },
+        "date": "2027-10-21",
+        "dateStatus": "supported"
+      }
+    ],
+    "audit": [
+      {
+        "action": "owner_email_verified",
+        "createdAt": "2026-10-16T12:46:19.759Z"
+      },
+      {
+        "action": "settings_updated",
+        "createdAt": "2026-10-16T12:47:14.343Z"
+      },
+      {
+        "action": "extraction_created",
+        "createdAt": "2026-10-16T12:48:21.804Z"
+      },
+      {
+        "action": "created_from_document",
+        "createdAt": "2026-10-16T12:50:28.561Z"
+      },
+      {
+        "action": "extraction_confirmed",
+        "createdAt": "2026-10-16T12:50:28.788Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:50:29.023Z"
+      },
+      {
+        "action": "test_email_requested",
+        "createdAt": "2026-10-16T12:51:23.982Z"
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-16T12:52:53.309Z",
+    "stage": "after-renewal",
+    "dataset": "SYNTHETIC records, real founder-controlled verified owner mailbox; private identifiers omitted",
+    "ownerVerified": true,
+    "optedIn": true,
+    "timezone": "Africa/Lagos",
+    "renewals": [
+      {
+        "id": "6ad21d9426c1faa069995acf",
+        "title": "SYNTHETIC P7 · Business hosting",
+        "dueDate": "2028-10-21",
+        "version": 2,
+        "status": "active",
+        "dateSource": "document_confirmed",
+        "renewedAt": "2026-10-16T12:52:47.143Z"
+      }
+    ],
+    "jobs": [
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 30,
+        "scheduledForUtc": "2028-09-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 7,
+        "scheduledForUtc": "2028-10-14T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 1,
+        "scheduledForUtc": "2028-10-20T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 0,
+        "scheduledForUtc": "2028-10-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "test",
+        "renewalVersion": 0,
+        "offsetDays": 0,
+        "scheduledForUtc": "2026-10-16T12:51:23.759Z",
+        "status": "provider_accepted",
+        "attemptCount": 1,
+        "providerIdPresent": true
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 30,
+        "scheduledForUtc": "2027-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 7,
+        "scheduledForUtc": "2027-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 1,
+        "scheduledForUtc": "2027-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 0,
+        "scheduledForUtc": "2027-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      }
+    ],
+    "extractions": [
+      {
+        "id": "6ad21d1526c1faa069995acd",
+        "modelId": "gemma-4-26b-a4b-it",
+        "status": "confirmed",
+        "elapsedMs": 24360,
+        "attempts": 1,
+        "usage": {
+          "promptTokens": 952,
+          "completionTokens": 195
+        },
+        "date": "2027-10-21",
+        "dateStatus": "supported"
+      }
+    ],
+    "audit": [
+      {
+        "action": "owner_email_verified",
+        "createdAt": "2026-10-16T12:46:19.759Z"
+      },
+      {
+        "action": "settings_updated",
+        "createdAt": "2026-10-16T12:47:14.343Z"
+      },
+      {
+        "action": "extraction_created",
+        "createdAt": "2026-10-16T12:48:21.804Z"
+      },
+      {
+        "action": "created_from_document",
+        "createdAt": "2026-10-16T12:50:28.561Z"
+      },
+      {
+        "action": "extraction_confirmed",
+        "createdAt": "2026-10-16T12:50:28.788Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:50:29.023Z"
+      },
+      {
+        "action": "test_email_requested",
+        "createdAt": "2026-10-16T12:51:23.982Z"
+      },
+      {
+        "action": "renewed",
+        "createdAt": "2026-10-16T12:52:47.648Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:52:47.881Z"
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-16T12:58:32.744Z",
+    "stage": "provenance-fix-reloaded",
+    "dataset": "SYNTHETIC records, real founder-controlled verified owner mailbox; private identifiers omitted",
+    "ownerVerified": true,
+    "optedIn": true,
+    "timezone": "Africa/Lagos",
+    "renewals": [
+      {
+        "id": "6ad21d9426c1faa069995acf",
+        "title": "SYNTHETIC P7 · Business hosting",
+        "dueDate": "2029-10-21",
+        "version": 3,
+        "status": "active",
+        "dateSource": "manual",
+        "renewedAt": "2026-10-16T12:54:09.066Z"
+      }
+    ],
+    "jobs": [
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 30,
+        "scheduledForUtc": "2029-09-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 7,
+        "scheduledForUtc": "2029-10-14T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 1,
+        "scheduledForUtc": "2029-10-20T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 0,
+        "scheduledForUtc": "2029-10-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 30,
+        "scheduledForUtc": "2028-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 7,
+        "scheduledForUtc": "2028-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 1,
+        "scheduledForUtc": "2028-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 0,
+        "scheduledForUtc": "2028-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "test",
+        "renewalVersion": 0,
+        "offsetDays": 0,
+        "scheduledForUtc": "2026-10-16T12:51:23.759Z",
+        "status": "provider_accepted",
+        "attemptCount": 1,
+        "providerIdPresent": true
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 30,
+        "scheduledForUtc": "2027-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 7,
+        "scheduledForUtc": "2027-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 1,
+        "scheduledForUtc": "2027-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 0,
+        "scheduledForUtc": "2027-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      }
+    ],
+    "extractions": [
+      {
+        "id": "6ad21d1526c1faa069995acd",
+        "modelId": "gemma-4-26b-a4b-it",
+        "status": "confirmed",
+        "elapsedMs": 24360,
+        "attempts": 1,
+        "usage": {
+          "promptTokens": 952,
+          "completionTokens": 195
+        },
+        "date": "2027-10-21",
+        "dateStatus": "supported"
+      }
+    ],
+    "audit": [
+      {
+        "action": "owner_email_verified",
+        "createdAt": "2026-10-16T12:46:19.759Z"
+      },
+      {
+        "action": "settings_updated",
+        "createdAt": "2026-10-16T12:47:14.343Z"
+      },
+      {
+        "action": "extraction_created",
+        "createdAt": "2026-10-16T12:48:21.804Z"
+      },
+      {
+        "action": "created_from_document",
+        "createdAt": "2026-10-16T12:50:28.561Z"
+      },
+      {
+        "action": "extraction_confirmed",
+        "createdAt": "2026-10-16T12:50:28.788Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:50:29.023Z"
+      },
+      {
+        "action": "test_email_requested",
+        "createdAt": "2026-10-16T12:51:23.982Z"
+      },
+      {
+        "action": "renewed",
+        "createdAt": "2026-10-16T12:52:47.648Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:52:47.881Z"
+      },
+      {
+        "action": "renewed",
+        "createdAt": "2026-10-16T12:54:09.522Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:54:09.735Z"
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-16T12:59:32.995Z",
+    "stage": "cleanup-owner-opted-out",
+    "dataset": "SYNTHETIC records, real founder-controlled verified owner mailbox; private identifiers omitted",
+    "ownerVerified": true,
+    "optedIn": true,
+    "timezone": "Africa/Lagos",
+    "renewals": [
+      {
+        "id": "6ad21d9426c1faa069995acf",
+        "title": "SYNTHETIC P7 · Business hosting",
+        "dueDate": "2029-10-21",
+        "version": 3,
+        "status": "active",
+        "dateSource": "manual",
+        "renewedAt": "2026-10-16T12:54:09.066Z"
+      }
+    ],
+    "jobs": [
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 30,
+        "scheduledForUtc": "2029-09-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 7,
+        "scheduledForUtc": "2029-10-14T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 1,
+        "scheduledForUtc": "2029-10-20T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 0,
+        "scheduledForUtc": "2029-10-21T08:00:00.000Z",
+        "status": "pending",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 30,
+        "scheduledForUtc": "2028-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 7,
+        "scheduledForUtc": "2028-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 1,
+        "scheduledForUtc": "2028-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 0,
+        "scheduledForUtc": "2028-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "test",
+        "renewalVersion": 0,
+        "offsetDays": 0,
+        "scheduledForUtc": "2026-10-16T12:51:23.759Z",
+        "status": "provider_accepted",
+        "attemptCount": 1,
+        "providerIdPresent": true
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 30,
+        "scheduledForUtc": "2027-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 7,
+        "scheduledForUtc": "2027-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 1,
+        "scheduledForUtc": "2027-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 0,
+        "scheduledForUtc": "2027-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      }
+    ],
+    "extractions": [
+      {
+        "id": "6ad21d1526c1faa069995acd",
+        "modelId": "gemma-4-26b-a4b-it",
+        "status": "confirmed",
+        "elapsedMs": 24360,
+        "attempts": 1,
+        "usage": {
+          "promptTokens": 952,
+          "completionTokens": 195
+        },
+        "date": "2027-10-21",
+        "dateStatus": "supported"
+      }
+    ],
+    "audit": [
+      {
+        "action": "owner_email_verified",
+        "createdAt": "2026-10-16T12:46:19.759Z"
+      },
+      {
+        "action": "settings_updated",
+        "createdAt": "2026-10-16T12:47:14.343Z"
+      },
+      {
+        "action": "extraction_created",
+        "createdAt": "2026-10-16T12:48:21.804Z"
+      },
+      {
+        "action": "created_from_document",
+        "createdAt": "2026-10-16T12:50:28.561Z"
+      },
+      {
+        "action": "extraction_confirmed",
+        "createdAt": "2026-10-16T12:50:28.788Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:50:29.023Z"
+      },
+      {
+        "action": "test_email_requested",
+        "createdAt": "2026-10-16T12:51:23.982Z"
+      },
+      {
+        "action": "renewed",
+        "createdAt": "2026-10-16T12:52:47.648Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:52:47.881Z"
+      },
+      {
+        "action": "renewed",
+        "createdAt": "2026-10-16T12:54:09.522Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:54:09.735Z"
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-16T13:00:56.105Z",
+    "stage": "cleanup-service-verified",
+    "dataset": "SYNTHETIC records, real founder-controlled verified owner mailbox; private identifiers omitted",
+    "ownerVerified": true,
+    "optedIn": false,
+    "timezone": "Africa/Lagos",
+    "renewals": [
+      {
+        "id": "6ad21d9426c1faa069995acf",
+        "title": "SYNTHETIC P7 · Business hosting",
+        "dueDate": "2029-10-21",
+        "version": 3,
+        "status": "active",
+        "dateSource": "manual",
+        "renewedAt": "2026-10-16T12:54:09.066Z"
+      }
+    ],
+    "jobs": [
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 30,
+        "scheduledForUtc": "2029-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 7,
+        "scheduledForUtc": "2029-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 1,
+        "scheduledForUtc": "2029-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 3,
+        "offsetDays": 0,
+        "scheduledForUtc": "2029-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 30,
+        "scheduledForUtc": "2028-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 7,
+        "scheduledForUtc": "2028-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 1,
+        "scheduledForUtc": "2028-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 2,
+        "offsetDays": 0,
+        "scheduledForUtc": "2028-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "test",
+        "renewalVersion": 0,
+        "offsetDays": 0,
+        "scheduledForUtc": "2026-10-16T12:51:23.759Z",
+        "status": "provider_accepted",
+        "attemptCount": 1,
+        "providerIdPresent": true
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 30,
+        "scheduledForUtc": "2027-09-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 7,
+        "scheduledForUtc": "2027-10-14T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 1,
+        "scheduledForUtc": "2027-10-20T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      },
+      {
+        "kind": "renewal",
+        "renewalVersion": 1,
+        "offsetDays": 0,
+        "scheduledForUtc": "2027-10-21T08:00:00.000Z",
+        "status": "cancelled",
+        "attemptCount": 0,
+        "providerIdPresent": false
+      }
+    ],
+    "extractions": [
+      {
+        "id": "6ad21d1526c1faa069995acd",
+        "modelId": "gemma-4-26b-a4b-it",
+        "status": "confirmed",
+        "elapsedMs": 24360,
+        "attempts": 1,
+        "usage": {
+          "promptTokens": 952,
+          "completionTokens": 195
+        },
+        "date": "2027-10-21",
+        "dateStatus": "supported"
+      }
+    ],
+    "audit": [
+      {
+        "action": "owner_email_verified",
+        "createdAt": "2026-10-16T12:46:19.759Z"
+      },
+      {
+        "action": "settings_updated",
+        "createdAt": "2026-10-16T12:47:14.343Z"
+      },
+      {
+        "action": "extraction_created",
+        "createdAt": "2026-10-16T12:48:21.804Z"
+      },
+      {
+        "action": "created_from_document",
+        "createdAt": "2026-10-16T12:50:28.561Z"
+      },
+      {
+        "action": "extraction_confirmed",
+        "createdAt": "2026-10-16T12:50:28.788Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:50:29.023Z"
+      },
+      {
+        "action": "test_email_requested",
+        "createdAt": "2026-10-16T12:51:23.982Z"
+      },
+      {
+        "action": "renewed",
+        "createdAt": "2026-10-16T12:52:47.648Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:52:47.881Z"
+      },
+      {
+        "action": "renewed",
+        "createdAt": "2026-10-16T12:54:09.522Z"
+      },
+      {
+        "action": "reminders_planned",
+        "createdAt": "2026-10-16T12:54:09.735Z"
+      },
+      {
+        "action": "settings_updated",
+        "createdAt": "2026-10-16T13:00:49.923Z"
+      }
+    ]
+  }
+]

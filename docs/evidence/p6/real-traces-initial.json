@@ -1,0 +1,230 @@
+{
+  "utc": "2026-10-16T06:38:18.883Z",
+  "dataset": "New isolated synthetic Atlas database; real Gemma; explicitly synthetic parse failure; zero real email",
+  "database": "kai247_p6_dfa3268506aa",
+  "configured": true,
+  "sampleRate": 1,
+  "spans": [
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "b5776057788bd4cf",
+      "parent_span_id": "b50a881183e8357e",
+      "name": "parse_document",
+      "start_timestamp": 1792132705.3880193,
+      "end_timestamp": 1792132705.3892486,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "outcome": "success",
+        "text_method": "txt_utf8",
+        "page_count": 1,
+        "duration_ms": 0.6039000000000669,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "ab8f226af77cf3c0",
+      "parent_span_id": "b50a881183e8357e",
+      "name": "gemma_extract",
+      "start_timestamp": 1792132705.3921552,
+      "end_timestamp": 1792132711.1959646,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "gen_ai.system": "gemma",
+        "gen_ai.request.model": "gemma-4-26b-a4b-it",
+        "attempt": 1,
+        "outcome": "success",
+        "gen_ai.usage.input_tokens": 1007,
+        "gen_ai.usage.output_tokens": 204,
+        "duration_ms": 5803.551600000001,
+        "sentry.op": "gen_ai.chat",
+        "gen_ai.operation.type": "ai_client",
+        "gen_ai.operation.name": "chat"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "9a6ac56406b618c3",
+      "parent_span_id": "b50a881183e8357e",
+      "name": "validate_candidate",
+      "start_timestamp": 1792132711.1974788,
+      "end_timestamp": 1792132711.200903,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "attempt": 1,
+        "outcome": "success",
+        "duration_ms": 3.055500000000393,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "b16d1132641845f7",
+      "parent_span_id": "b50a881183e8357e",
+      "name": "validate_candidate",
+      "start_timestamp": 1792132711.2017052,
+      "end_timestamp": 1792132711.2206838,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "outcome": "success",
+        "duration_ms": 18.70550000000003,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "b50a881183e8357e",
+      "name": "ai_workflow",
+      "start_timestamp": 1792132704.95016,
+      "end_timestamp": 1792132711.8812304,
+      "status": "ok",
+      "is_segment": true,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "success",
+        "duration_ms": 6928.710400000001,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "8e111ae08579cf56",
+      "parent_span_id": "83f380e60fcd6b5f",
+      "name": "queue_reminder",
+      "start_timestamp": 1792132712.9474933,
+      "end_timestamp": 1792132713.154438,
+      "status": "ok",
+      "is_segment": false,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "success",
+        "duration_ms": 206.55589999999938,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "83f380e60fcd6b5f",
+      "name": "approve_renewal",
+      "start_timestamp": 1792132711.8842545,
+      "end_timestamp": 1792132713.3657815,
+      "status": "ok",
+      "is_segment": true,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "success",
+        "duration_ms": 1481.2591000000011,
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "ad2e86503d5c486d",
+      "parent_span_id": "92d9a7a746a3d79f",
+      "name": "parse_document",
+      "start_timestamp": 1792132713.3673127,
+      "end_timestamp": 1792132713.4793403,
+      "status": "error",
+      "is_segment": false,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "failure",
+        "duration_ms": 111.41380000000026,
+        "error_code": "MALFORMED_DOCUMENT",
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "92d9a7a746a3d79f",
+      "name": "ai_workflow",
+      "start_timestamp": 1792132713.366663,
+      "end_timestamp": 1792132713.4795847,
+      "status": "error",
+      "is_segment": true,
+      "attributes": {
+        "synthetic": true,
+        "outcome": "failure",
+        "duration_ms": 112.72849999999926,
+        "error_code": "MALFORMED_DOCUMENT",
+        "sentry.op": "function"
+      }
+    },
+    {
+      "trace_id": "1c1c32edfecd4d7e9d26ef574437b0e5",
+      "span_id": "9b4b0c05d2337520",
+      "name": "reminder_batch",
+      "start_timestamp": 1792132713.4830956,
+      "end_timestamp": 1792132713.4836974,
+      "status": "ok",
+      "is_segment": true,
+      "attributes": {
+        "outcome": "success",
+        "provider_unavailable": true,
+        "processed": 0,
+        "duration_ms": 0.30980000000090513,
+        "sentry.op": "function"
+      }
+    }
+  ],
+  "ingestion": [
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "span"
+      ]
+    },
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "span"
+      ]
+    },
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "event"
+      ]
+    },
+    {
+      "statusCode": 200,
+      "itemTypes": [
+        "span"
+      ]
+    }
+  ],
+  "realEmailSent": false,
+  "outcome": "PASS_REAL_GEMMA_AND_APPROVAL",
+  "extraction": {
+    "id": "6ad1c667b622b349ff74b1f1",
+    "modelId": "gemma-4-26b-a4b-it",
+    "elapsedMs": 5810,
+    "attempts": 1,
+    "status": "pending_review",
+    "dateStatus": "supported",
+    "usage": {
+      "promptTokens": 1007,
+      "completionTokens": 204
+    }
+  },
+  "renewalId": "6ad1c668b622b349ff74b1f3",
+  "reminders": {
+    "status": "disabled",
+    "jobsCreated": 0,
+    "message": "No jobs: verified owner email and explicit opt-in are required."
+  },
+  "syntheticFailure": {
+    "code": "MALFORMED_DOCUMENT",
+    "expected": "MALFORMED_DOCUMENT",
+    "label": "Deliberately invalid synthetic PDF"
+  },
+  "nonDeliveringBatch": {
+    "processed": 0,
+    "providerUnavailable": true
+  },
+  "sentryAccepted": true
+}

@@ -1,4 +1,5 @@
 import { AppError } from "../security/errors.ts";
+import { traceStep } from "../observability/telemetry.ts";
 import {
   callGemma,
   type ChatMessage,
@@ -34,8 +35,25 @@ export async function extractWithGemma(
   for (let attempt = 1; ; attempt++) {
     const started = performance.now();
     try {
-      const result = await callModel(config, messages);
-      const output = parseModelContent(result.content);
+      const result = await traceStep(
+        "gemma_extract",
+        {
+          "gen_ai.system": "gemma",
+          "gen_ai.request.model": config.modelId,
+          attempt,
+        },
+        async (annotate) => {
+          const response = await callModel(config, messages);
+          annotate({
+            "gen_ai.usage.input_tokens": response.usage?.promptTokens,
+            "gen_ai.usage.output_tokens": response.usage?.completionTokens,
+          });
+          return response;
+        },
+      );
+      const output = traceStep("validate_candidate", { attempt }, () =>
+        parseModelContent(result.content),
+      );
       elapsedMs += performance.now() - started;
       return {
         output,

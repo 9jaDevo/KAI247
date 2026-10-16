@@ -191,6 +191,51 @@ afterAll(async () => {
 });
 
 describe("P3 extraction API on real MongoDB (synthetic Gemma transport)", () => {
+  it("P6: rejects broken PDF, oversized chunked upload and foreign confirmation before inference", async () => {
+    const before = modelCalls;
+    const malformed = await json(
+      await routes.extractionsPost(
+        upload(
+          "broken.pdf",
+          "application/pdf",
+          Buffer.from("%PDF-1.7\nnot a PDF\n%%EOF"),
+          cookie2,
+        ),
+      ),
+    );
+    expect(malformed.status).toBe(422);
+    expect(malformed.error.code).toBe("MALFORMED_DOCUMENT");
+    const huge = await json(
+      await routes.extractionsPost(
+        upload(
+          "big.txt",
+          "text/plain",
+          Buffer.alloc(5 * 1024 * 1024 + 1, 65),
+          cookie2,
+        ),
+      ),
+    );
+    expect(huge.status).toBe(413);
+    const wrongOrigin = await json(
+      await routes.extractionConfirm(
+        new Request(
+          base + "/api/extractions/000000000000000000000000/confirm",
+          {
+            method: "POST",
+            headers: {
+              cookie: cookie2,
+              origin: "https://evil.example",
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(confirmBody()),
+          },
+        ),
+        "000000000000000000000000",
+      ),
+    );
+    expect(wrongOrigin.status).toBe(403);
+    expect(modelCalls).toBe(before);
+  });
   it("rejects unauthenticated, cross-origin and unconfigured uploads before any model call", async () => {
     const pdf = fixture("hosting-invoice-two-dates.pdf");
     expect(
@@ -418,6 +463,30 @@ describe("P3 extraction API on real MongoDB (synthetic Gemma transport)", () => 
       (await routes.extractionReject(post("/x", {}), data.id)).status,
     ).toBe(409);
     expect((await counts()).renewals).toBe(before.renewals + 1);
+    // P7 walkthrough regression: an owner-entered new cycle must not inherit
+    // document confirmation or a quote supporting only the previous date.
+    const renewed = await json(
+      await routes.renewalRenew(
+        post("/x", { version: 1, dueDate: "2028-10-21" }),
+        confirmed.data.renewal.id,
+      ),
+    );
+    expect(renewed.status).toBe(200);
+    expect(renewed.data).toMatchObject({
+      dueDate: "2028-10-21",
+      dateSource: "manual",
+      version: 2,
+    });
+    expect(renewed.data.sourceExcerpt).toBeUndefined();
+    expect(renewed.data.sourceFilename).toBeUndefined();
+    expect(renewed.data.sourceHash).toBeUndefined();
+    // Original evidence stays in the confirmed extraction/history.
+    expect(
+      (await json(await routes.extractionGet(get("/x"), data.id))).data,
+    ).toMatchObject({
+      validationStatus: "confirmed",
+      verbatimEvidence: "Your hosting plan renews on 21 October 2027.",
+    });
   });
   it("allows a deliberate owner override, honestly labelled as a manual date", async () => {
     const { data } = await extract();

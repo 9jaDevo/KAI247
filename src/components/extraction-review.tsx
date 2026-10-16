@@ -646,7 +646,9 @@ export function ExtractionReview({
           {differs
             ? "This date is owner-entered and will be labelled as manual."
             : "This date matches verified document evidence."}{" "}
-          Reminder scheduling is not active yet; no email will be sent.
+          Saving may schedule reminders for your verified, opted-in owner
+          address. The separate worker and an available provider are required
+          for sending.
         </p>
         <div className="dialog-actions">
           <Button

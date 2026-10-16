@@ -1,0 +1,31 @@
+▲ Next.js 16.4.0 (Turbopack)
+- Local:         http://127.0.0.1:3016
+- Network:       http://127.0.0.1:3016
+- Environments: .env.local, .env
+✓ Ready in 4.3s
+✓ Running next.config.mjs took 15.9s
+○ Compiling instrumentation Node.js ...
+- Experiments (use with caution):
+  · clientTraceMetadata
+
+○ Compiling /login ...
+ GET /login 200 in 2.1s (next.js: 1449ms, application-code: 683ms)
+ POST /api/auth/login 200 in 21.7s (next.js: 718ms, application-code: 20.9s)
+ GET /app 200 in 2.1s (next.js: 588ms, application-code: 1496ms)
+ GET /app/settings 200 in 717ms (next.js: 62ms, application-code: 655ms)
+ GET /app/renewals/new 200 in 629ms (next.js: 22ms, application-code: 606ms)
+ GET /app/import 200 in 883ms (next.js: 39ms, application-code: 844ms)
+ GET /app/activity 200 in 847ms (next.js: 20ms, application-code: 826ms)
+✓ Compiled in 554ms
+ GET /app/activity 200 in 1102ms (next.js: 10ms, application-code: 1091ms)
+ GET /app 200 in 1952ms (next.js: 13ms, application-code: 1939ms)
+ GET /app/settings 200 in 778ms (next.js: 11ms, application-code: 766ms)
+ GET /app/renewals/new 200 in 908ms (next.js: 32ms, application-code: 876ms)
+ GET /app/import 200 in 1335ms (next.js: 14ms, application-code: 1321ms)
+ GET /app/activity 200 in 1041ms (next.js: 8ms, application-code: 1033ms)
+ GET /app/renewals/new 200 in 1044ms (next.js: 16ms, application-code: 1029ms)
+ GET /app/renewals/new 200 in 841ms (next.js: 13ms, application-code: 827ms)
+ GET /login 200 in 423ms (next.js: 70ms, application-code: 353ms)
+ POST /api/auth/login 401 in 1384ms (next.js: 15ms, application-code: 1370ms)
+✓ Compiled in 515ms
+ GET /login 200 in 97ms (next.js: 11ms, application-code: 86ms)

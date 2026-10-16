@@ -1,3 +1,4 @@
+import { traceStep } from "../observability/telemetry.ts";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { ObjectId, type Filter } from "mongodb";
@@ -219,7 +220,20 @@ export async function processClaim(
   if (!saved.matchedCount || !(await c.reminderJobs.findOne(ownership))) return;
   let result;
   try {
-    result = await transport(payload, job.idempotencyKey);
+    result = await traceStep(
+      "send_email",
+      { attempt: job.attemptCount, synthetic: transport !== sendEmail },
+      async (annotate) => {
+        const outcome = await transport(payload, job.idempotencyKey);
+        annotate({
+          outcome: outcome.accepted ? "provider_accepted" : "provider_rejected",
+          ...(!outcome.accepted
+            ? { error_code: outcome.code, retryable: outcome.retryable }
+            : {}),
+        });
+        return outcome;
+      },
+    );
   } catch {
     result = {
       accepted: false as const,
@@ -255,16 +269,21 @@ export async function processBatch(
     onlyId?: ObjectId;
   } = {},
 ) {
-  if (!options.transport && !emailStatus().configured)
-    return { processed: 0, providerUnavailable: true };
-  await ensureIndexes();
-  let processed = 0;
-  for (let i = 0; i < Math.min(Math.max(options.limit ?? 25, 1), 100); i++) {
-    const job = await claimJob(options.now ?? new Date(), options.onlyId);
-    if (!job) break;
-    await processClaim(job, options.transport, options.now ?? new Date());
-    processed++;
-    if (options.onlyId) break;
-  }
-  return { processed, providerUnavailable: false };
+  return traceStep("reminder_batch", {}, async (annotate) => {
+    if (!options.transport && !emailStatus().configured) {
+      annotate({ provider_unavailable: true, processed: 0 });
+      return { processed: 0, providerUnavailable: true };
+    }
+    await ensureIndexes();
+    let processed = 0;
+    for (let i = 0; i < Math.min(Math.max(options.limit ?? 25, 1), 100); i++) {
+      const job = await claimJob(options.now ?? new Date(), options.onlyId);
+      if (!job) break;
+      await processClaim(job, options.transport, options.now ?? new Date());
+      processed++;
+      if (options.onlyId) break;
+    }
+    annotate({ processed, provider_unavailable: false });
+    return { processed, providerUnavailable: false };
+  });
 }

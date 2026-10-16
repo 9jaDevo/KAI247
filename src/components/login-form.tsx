@@ -54,6 +54,8 @@ export function LoginForm({
           autoComplete="username"
           placeholder="you@yourbusiness.com"
           maxLength={254}
+          aria-invalid={error ? true : undefined}
+          aria-describedby={error ? "login-error" : undefined}
         />
         <label htmlFor="password">Password</label>
         <input
@@ -63,11 +65,18 @@ export function LoginForm({
           required
           maxLength={128}
           autoComplete="current-password"
+          aria-invalid={error ? true : undefined}
+          aria-describedby={error ? "login-error" : undefined}
         />
         <Button type="submit">{pending ? "Signing in…" : "Sign in"}</Button>
       </fieldset>
       {error && (
-        <p className="field-error" role="alert" style={{ marginTop: 16 }}>
+        <p
+          id="login-error"
+          className="field-error"
+          role="alert"
+          style={{ marginTop: 16 }}
+        >
           {error}
         </p>
       )}

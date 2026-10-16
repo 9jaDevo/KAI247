@@ -61,6 +61,17 @@ async function code(promise: Promise<unknown> | (() => unknown)) {
 }
 
 describe("Gemma configuration guard", () => {
+  it("rejects a provider identity that merely starts with the configured model", async () => {
+    expect(
+      await code(
+        callGemma(
+          config,
+          [],
+          mockFetch(200, completion(config.modelId + "-substitute")),
+        ),
+      ),
+    ).toBe("502:AI_MODEL_MISMATCH");
+  });
   it("accepts only Gemma-family model identifiers", () => {
     for (const id of [
       "gemma-4-26b-a4b-it",
@@ -103,6 +114,18 @@ describe("Gemma configuration guard", () => {
 });
 
 describe("Gemma adapter (synthetic mock transport)", () => {
+  it("does not persist untrusted non-numeric token usage", async () => {
+    const response = {
+      ...completion(config.modelId),
+      usage: {
+        prompt_tokens: "private@example.invalid",
+        completion_tokens: -20,
+      },
+    };
+    expect(
+      (await callGemma(config, [], mockFetch(200, response))).usage,
+    ).toBeUndefined();
+  });
   it("sends a JSON-schema request and returns the provider-reported model ID", async () => {
     let sent:
       | { url: string; body: Record<string, unknown>; auth: string | null }

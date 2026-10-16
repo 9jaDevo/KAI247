@@ -1,0 +1,126 @@
+{
+  "utc": "2026-10-16T12:48:27.533Z",
+  "scoresReproduced": true,
+  "gemma": {
+    "documents": 16,
+    "completed": 2,
+    "strictAllFields": 2,
+    "perField": {
+      "documentType": {
+        "correct": 2,
+        "total": 16
+      },
+      "provider": {
+        "correct": 2,
+        "total": 16
+      },
+      "rawDate": {
+        "correct": 2,
+        "total": 16
+      },
+      "date": {
+        "correct": 2,
+        "total": 16
+      },
+      "dateType": {
+        "correct": 2,
+        "total": 16
+      },
+      "dateStatus": {
+        "correct": 2,
+        "total": 16
+      },
+      "interpretations": {
+        "correct": 2,
+        "total": 16
+      },
+      "evidence": {
+        "correct": 2,
+        "total": 16
+      },
+      "amountMinor": {
+        "correct": 2,
+        "total": 16
+      },
+      "currency": {
+        "correct": 2,
+        "total": 16
+      }
+    }
+  },
+  "baseline": {
+    "documents": 16,
+    "completed": 16,
+    "strictAllFields": 10,
+    "perField": {
+      "documentType": {
+        "correct": 16,
+        "total": 16
+      },
+      "provider": {
+        "correct": 16,
+        "total": 16
+      },
+      "rawDate": {
+        "correct": 12,
+        "total": 16
+      },
+      "date": {
+        "correct": 12,
+        "total": 16
+      },
+      "dateType": {
+        "correct": 14,
+        "total": 16
+      },
+      "dateStatus": {
+        "correct": 13,
+        "total": 16
+      },
+      "interpretations": {
+        "correct": 12,
+        "total": 16
+      },
+      "evidence": {
+        "correct": 12,
+        "total": 16
+      },
+      "amountMinor": {
+        "correct": 14,
+        "total": 16
+      },
+      "currency": {
+        "correct": 15,
+        "total": 16
+      }
+    }
+  },
+  "errors": {
+    "AI_TIMEOUT": 3,
+    "AI_UNAVAILABLE": 11
+  },
+  "usage": {
+    "promptTokens": 1836,
+    "completionTokens": 268,
+    "responsesWithUsage": 2,
+    "missingUsageAttempts": 14
+  },
+  "allAttemptedDocumentLatency": {
+    "n": 16,
+    "medianMs": 674.5,
+    "p95Ms": null,
+    "p95Note": "Not reported: fewer than 20 document observations; median only, no population tail claim.",
+    "minMs": 556,
+    "maxMs": 60023
+  },
+  "successfulDocumentLatency": {
+    "n": 2,
+    "medianMs": 52962,
+    "p95Ms": null,
+    "p95Note": "Not reported: fewer than 20 document observations; median only, no population tail claim.",
+    "minMs": 49018,
+    "maxMs": 56906
+  },
+  "wallMs": 324225,
+  "attemptedDocumentsPerMinute": 2.960906777700671
+}

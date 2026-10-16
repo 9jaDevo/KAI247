@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-16T11:49:52.662Z",
+  "target": "http://127.0.0.1:3016",
+  "dataset": "Isolated synthetic P6 Atlas workspace",
+  "checks": [
+    {
+      "controls": 0,
+      "heading": "A clearer view of what’s next.",
+      "path": "/app",
+      "scrollWidth": 345,
+      "unlabelled": [],
+      "width": 360
+    },
+    {
+      "controls": 10,
+      "heading": "A rhythm that works for you.",
+      "path": "/app/settings",
+      "scrollWidth": 345,
+      "unlabelled": [],
+      "width": 360
+    },
+    {
+      "controls": 11,
+      "heading": "Give the next date a place.",
+      "path": "/app/renewals/new",
+      "scrollWidth": 345,
+      "unlabelled": [],
+      "width": 360
+    },
+    {
+      "controls": 1,
+      "heading": "Find the date. Keep the context.",
+      "path": "/app/import",
+      "scrollWidth": 345,
+      "unlabelled": [],
+      "width": 360
+    },
+    {
+      "controls": 0,
+      "heading": "Reminders, with a paper trail.",
+      "path": "/app/activity",
+      "scrollWidth": 345,
+      "unlabelled": [],
+      "width": 360
+    },
+    {
+      "controls": 11,
+      "heading": "Give the next date a place.",
+      "path": "/app/renewals/new",
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "controls": 11,
+      "heading": "Give the next date a place.",
+      "path": "/app/renewals/new",
+      "scrollWidth": 1265,
+      "width": 1280
+    }
+  ],
+  "keyboard": {
+    "escapeClosesNavigation": true,
+    "focusReturnedToToggle": true,
+    "visibleOutline": true
+  },
+  "loginError": {
+    "describedBy": "login-error",
+    "emailInvalid": "true",
+    "message": "Email or password is incorrect.",
+    "passwordInvalid": "true",
+    "scrollWidth": 345,
+    "width": 360
+  }
+}

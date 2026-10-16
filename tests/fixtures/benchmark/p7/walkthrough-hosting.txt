@@ -1,0 +1,7 @@
+SYNTHETIC P7 WALKTHROUGH — NOT A REAL BUSINESS INVOICE
+Provider: Fictional Palm Hosting
+Service: Synthetic demo business hosting
+Invoice issue date: 2 October 2027.
+Hosting renews on 21 October 2027.
+Renewal total: NGN 36,000.00
+This fictional document creates no payment obligation.

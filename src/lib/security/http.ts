@@ -1,6 +1,8 @@
+import { readRequestBytes } from "./body.ts";
 import { z } from "zod";
 import { AppError } from "./errors.ts";
 import { validateEnv } from "./env.ts";
+import { captureSafeError } from "../observability/telemetry.ts";
 
 export function assertMutationOrigin(request: Request) {
   const env = validateEnv(process.env, ["auth"]);
@@ -26,27 +28,14 @@ export async function readJson(request: Request) {
       "JSON_REQUIRED",
       "Send an application/json request.",
     );
-  const reader = request.body?.getReader();
-  if (!reader)
-    throw new AppError(400, "INVALID_JSON", "A JSON body is required.");
-  const chunks: Uint8Array[] = [];
-  let size = 0;
+  const body = await readRequestBytes(
+    request,
+    32768,
+    new AppError(413, "BODY_TOO_LARGE", "Request exceeds 32 KB."),
+    new AppError(400, "INVALID_JSON", "A JSON body is required."),
+  );
   try {
-    while (true) {
-      const { value, done } = await reader.read();
-      if (done) break;
-      size += value.length;
-      if (size > 32768) {
-        await reader.cancel();
-        throw new AppError(413, "BODY_TOO_LARGE", "Request exceeds 32 KB.");
-      }
-      chunks.push(value);
-    }
-  } finally {
-    reader.releaseLock();
-  }
-  try {
-    return JSON.parse(Buffer.concat(chunks).toString("utf8")) as unknown;
+    return JSON.parse(body.toString("utf8")) as unknown;
   } catch {
     throw new AppError(400, "INVALID_JSON", "Send valid JSON.");
   }
@@ -82,6 +71,7 @@ export async function apiResponse(
         { status: error.status, headers: { "Cache-Control": "no-store" } },
       );
     // Do not return/log raw database/configuration errors, connection strings or inputs.
+    captureSafeError(error);
     return Response.json(
       {
         success: false,

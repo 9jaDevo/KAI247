@@ -1,0 +1,1 @@
+{"outcome":"PASS_REAL_GEMMA_AND_APPROVAL","configured":true,"sentSpans":10,"sentryAccepted":true,"model":"gemma-4-26b-a4b-it","elapsedMs":5810,"syntheticFailure":{"code":"MALFORMED_DOCUMENT","expected":"MALFORMED_DOCUMENT","label":"Deliberately invalid synthetic PDF"},"realEmailSent":false}

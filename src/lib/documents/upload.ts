@@ -1,3 +1,4 @@
+import { readRequestBytes } from "../security/body.ts";
 import { createHash } from "node:crypto";
 import { AppError } from "../security/errors.ts";
 
@@ -91,36 +92,6 @@ export function validateDocument(
   };
 }
 
-async function readBounded(request: Request) {
-  const declared = Number(request.headers.get("content-length") ?? "0");
-  if (declared > MAX_BODY_BYTES)
-    throw new AppError(413, "FILE_TOO_LARGE", "Files must be 5 MB or smaller.");
-  const reader = request.body?.getReader();
-  if (!reader)
-    throw new AppError(400, "FILE_REQUIRED", "Choose a PDF or TXT file.");
-  const chunks: Uint8Array[] = [];
-  let size = 0;
-  try {
-    while (true) {
-      const { value, done } = await reader.read();
-      if (done) break;
-      size += value.length;
-      if (size > MAX_BODY_BYTES) {
-        await reader.cancel();
-        throw new AppError(
-          413,
-          "FILE_TOO_LARGE",
-          "Files must be 5 MB or smaller.",
-        );
-      }
-      chunks.push(value);
-    }
-  } finally {
-    reader.releaseLock();
-  }
-  return Buffer.concat(chunks);
-}
-
 /** Reads one `file` field from a bounded multipart/form-data body. */
 export async function readDocumentUpload(request: Request) {
   const contentType = request.headers.get("content-type") ?? "";
@@ -130,7 +101,12 @@ export async function readDocumentUpload(request: Request) {
       "MULTIPART_REQUIRED",
       "Upload the document as multipart/form-data.",
     );
-  const body = await readBounded(request);
+  const body = await readRequestBytes(
+    request,
+    MAX_BODY_BYTES,
+    new AppError(413, "FILE_TOO_LARGE", "Files must be 5 MB or smaller."),
+    new AppError(400, "FILE_REQUIRED", "Choose a PDF or TXT file."),
+  );
   let form: FormData;
   try {
     form = await new Response(new Uint8Array(body), {

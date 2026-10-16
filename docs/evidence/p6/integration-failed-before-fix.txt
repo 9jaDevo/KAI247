@@ -1,0 +1,184 @@
+
+> kai247-renewpilot-ai@0.1.0 test:integration
+> vitest run --config vitest.integration.config.ts
+
+
+ RUN  v5.0.4 C:/xampp/htdocs/Project/KAI247
+
+ ❯ tests/integration/reminder-workflow.test.ts (16 tests | 11 failed) 6360ms
+   ❯ P4 real MongoDB reliability; all email transport is SYNTHETIC (16)
+     × does not retry outside the provider idempotency horizon 80ms
+     × records provider outcome if cancellation wins during HTTP without reactivating 45ms
+     × recovers claim persisted by a separate worker process that exits before send 1543ms
+     × queues on manual confirmation and idempotent repeated planning 64ms
+     × parallel workers claim once and coalesce overdue offset burst 81ms
+     × recovers persisted lease after reconnect; stale worker cannot dispatch 133ms
+     × retries transient 429/500 with backoff and identical provider bytes/key 80ms
+     × invalid recipient result fails terminally and retry budget ends 63ms
+     × stops five transient attempts and never retries after idempotency horizon 58ms
+     × renew invalidates old claims, queues new version; archive cancels 82ms
+     × settings persist/reschedule; unchanged saves do not replay; opt-out cancels 103ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 11 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > does not retry outside the provider idempotency horizon
+TypeError: Cannot read properties of null (reading '_id')
+ ❯ tests/integration/reminder-workflow.test.ts:142:68
+    140|     expect(await claimJob(after)).toBeNull();
+    141|     expect(
+    142|       (await (await collections()).reminderJobs.findOne({ _id: job._id…
+       |                                                                    ^
+    143|         ?.lastErrorCode,
+    144|     ).toBe("RETRY_BUDGET_EXHAUSTED");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > records provider outcome if cancellation wins during HTTP without reactivating
+TypeError: Cannot read properties of null (reading '_id')
+ ❯ processClaim src/lib/notifications/worker.ts:130:14
+    128|   const c = await collections();
+    129|   const ownership = {
+    130|     _id: job._id,
+       |              ^
+    131|     status: "claimed" as const,
+    132|     leaseToken: job.leaseToken,
+ ❯ tests/integration/reminder-workflow.test.ts:167:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > recovers claim persisted by a separate worker process that exits before send
+AssertionError: expected undefined to be 2 // Object.is equality
+
+- Expected:
+2
+
++ Received:
+undefined
+
+ ❯ tests/integration/reminder-workflow.test.ts:204:37
+    202|     expect(await claimJob(new Date(now.getTime() + 1000))).toBeNull();
+    203|     const recovered = await claimJob(new Date(now.getTime() + LEASE_MS…
+    204|     expect(recovered?.attemptCount).toBe(2);
+       |                                     ^
+    205|     await processClaim(
+    206|       recovered!,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > queues on manual confirmation and idempotent repeated planning
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/integration/reminder-workflow.test.ts:216:19
+    214|     const c = await collections();
+    215|     const count = await c.reminderJobs.countDocuments({ renewalId: ite…
+    216|     expect(count).toBeGreaterThan(0);
+       |                   ^
+    217|     await queue(item);
+    218|     await queue(item);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > parallel workers claim once and coalesce overdue offset burst
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/integration/reminder-workflow.test.ts:245:37
+    243|       claimJob(now),
+    244|     ]);
+    245|     expect(results.filter(Boolean)).toHaveLength(1);
+       |                                     ^
+    246|     await processClaim(results.find(Boolean)!, accepted, now);
+    247|     expect(accepted).toHaveBeenCalledTimes(1);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > recovers persisted lease after reconnect; stale worker cannot dispatch
+TypeError: Cannot read properties of null (reading '_id')
+ ❯ tests/integration/reminder-workflow.test.ts:263:17
+    261|     expect(await claimJob(new Date(now.getTime() + 1000))).toBeNull();
+    262|     const next = (await claimJob(new Date(now.getTime() + LEASE_MS + 1…
+    263|     expect(next._id.equals(first._id)).toBe(true);
+       |                 ^
+    264|     expect(next.leaseToken).not.toBe(first.leaseToken);
+    265|     await processClaim(first, accepted, new Date(now.getTime() + LEASE…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > retries transient 429/500 with backoff and identical provider bytes/key
+AssertionError: expected null to be truthy
+
+- Expected:
+true
+
++ Received:
+null
+
+ ❯ tests/integration/reminder-workflow.test.ts:289:19
+    287|     for (let i = 0; i < 3; i++) {
+    288|       const job = (await claimJob(at))!;
+    289|       expect(job).toBeTruthy();
+       |                   ^
+    290|       await processClaim(job, transport, at);
+    291|       const stored = (await (
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > invalid recipient result fails terminally and retry budget ends
+TypeError: Cannot read properties of null (reading '_id')
+ ❯ processClaim src/lib/notifications/worker.ts:130:14
+    128|   const c = await collections();
+    129|   const ownership = {
+    130|     _id: job._id,
+       |              ^
+    131|     status: "claimed" as const,
+    132|     leaseToken: job.leaseToken,
+ ❯ tests/integration/reminder-workflow.test.ts:306:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > stops five transient attempts and never retries after idempotency horizon
+TypeError: Cannot read properties of null (reading '_id')
+ ❯ tests/integration/reminder-workflow.test.ts:327:16
+    325|     for (let i = 0; i < 5; i++) {
+    326|       const job = (await claimJob(at))!;
+    327|       id = job._id;
+       |                ^
+    328|       await processClaim(
+    329|         job,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > renew invalidates old claims, queues new version; archive cancels
+TypeError: Cannot read properties of null (reading '_id')
+ ❯ processClaim src/lib/notifications/worker.ts:130:14
+    128|   const c = await collections();
+    129|   const ownership = {
+    130|     _id: job._id,
+       |              ^
+    131|     status: "claimed" as const,
+    132|     leaseToken: job.leaseToken,
+ ❯ tests/integration/reminder-workflow.test.ts:352:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/11]⎯
+
+ FAIL  tests/integration/reminder-workflow.test.ts > P4 real MongoDB reliability; all email transport is SYNTHETIC > settings persist/reschedule; unchanged saves do not replay; opt-out cancels
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/integration/reminder-workflow.test.ts:388:7
+    386|         settingsRevision: 1,
+    387|       }),
+    388|     ).toBeGreaterThan(0);
+       |       ^
+    389|     const count = await c.reminderJobs.countDocuments({});
+    390|     await updateSettings(ctx, data);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/11]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  11 failed | 31 passed (42)
+   Start at  07:56:18
+   Duration  47.39s (tests 63%, import 36%, transform 2%)

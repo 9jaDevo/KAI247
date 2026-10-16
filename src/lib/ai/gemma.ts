@@ -185,7 +185,7 @@ export async function callGemma(
   if (
     !reported ||
     !isGemmaModelId(reported) ||
-    !reported.toLowerCase().startsWith(config.modelId.toLowerCase())
+    reported.toLowerCase() !== config.modelId.toLowerCase()
   )
     throw unavailable(
       "The provider did not confirm the configured Gemma model. Nothing was saved.",
@@ -202,16 +202,23 @@ export async function callGemma(
       "Gemma returned no answer. Nothing was saved; retry.",
       "MODEL_OUTPUT_INVALID",
     );
+  const tokenCount = (value: unknown) =>
+    typeof value === "number" && Number.isSafeInteger(value) && value >= 0
+      ? value
+      : undefined;
+  const promptTokens = tokenCount(body.usage?.prompt_tokens);
+  const completionTokens = tokenCount(body.usage?.completion_tokens);
   return {
     content: choice.message.content,
     modelId: reported,
     provider: new URL(config.baseUrl).host,
     elapsedMs,
-    usage: body.usage
-      ? {
-          promptTokens: body.usage.prompt_tokens,
-          completionTokens: body.usage.completion_tokens,
-        }
-      : undefined,
+    usage:
+      promptTokens !== undefined || completionTokens !== undefined
+        ? {
+            promptTokens,
+            completionTokens,
+          }
+        : undefined,
   };
 }

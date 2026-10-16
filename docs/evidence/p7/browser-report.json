@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-16T12:58:01.649Z",
+  "target": "http://127.0.0.1:3017",
+  "dataset": "Synthetic records, founder-controlled real owner mailbox (omitted)",
+  "manualWalkthrough": "Import actual Gemma -> source review/edit -> explicit browser approval -> stored renewal/jobs -> authorized TEST -> renew twice for provenance regression -> reload",
+  "mobile": {
+    "heading": "SYNTHETIC P7 · Business hosting",
+    "manualProvenance": true,
+    "scrollWidth": 345,
+    "width": 360,
+    "versionFieldVisible": true
+  },
+  "screenshots": [
+    "01-import.png",
+    "02-review.png",
+    "03-explicit-confirmation.png",
+    "04-renewal-scheduled.png",
+    "05-real-test-activity.png",
+    "06-mark-renewed.png",
+    "07-renewed-reloaded.png",
+    "08-cancelled-and-new-jobs.png",
+    "09-mobile-renewal.png",
+    "failure-provenance-before-fix.png"
+  ],
+  "screenRecordingCreated": false
+}
