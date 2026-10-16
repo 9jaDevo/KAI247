@@ -2,6 +2,8 @@
 
 This runbook is prepared for `9jaDevo/KAI247`, branch `main`. **Configuration/code is not deployment evidence.** See the root tracker and `docs/evidence/p5-verification.md` for observed results and blocked gates. P5 does not implement Sentry/P6.
 
+Observed P5 release: [live app](https://kai247.onrender.com), web `srv-db8qvg6q1p3s73931peg`, separate Cron `crn-db8raion74is73chvv40`, release `d690810`, [passing CI](https://github.com/9jaDevo/KAI247/actions/runs/38855395748). HTTPS auth/Atlas CRUD/renew/history and real Gemma TXT review/approval pass. Two PDF calls failed safely. Cron's first actual scheduled run exited 2/provider unavailable, zero sends. **Remaining founder action:** configure the email key and verified sender privately in both services, verify a controlled private owner's address and opt in, then perform the authorized TEST. Do not recreate existing services or tick the email gate from these deployment results.
+
 ## Release preparation and costs
 
 1. Review the focused P5 diff and authorize its commit/push under the shared phase instructions. Existing baseline `32e07f8a1533b1d46106d4f57715203696897866` is already on GitHub (observed in P5); the older tracker statement that P0–P4 are uncommitted is historical.

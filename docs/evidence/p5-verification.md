@@ -1,6 +1,28 @@
 # P5 verification and release status
 
-P5 is in progress. The master specification is unchanged. P6 has not started.
+P5 core is deployed and verified; the real-email gate remains blocked. The master specification is unchanged. P6 has not started.
+
+## Final deployed acceptance
+
+- Live: https://kai247.onrender.com. Corrected deployment **dep-db8rfuui0phs738ou2sg** is Live on **d690810**. The startup wrapper passed, bound 0.0.0.0:10000, and public DB-backed `/api/health` returns 200. The public origin was corrected to HTTPS; no authentication secret was revealed or changed by the agent.
+- `p5/live-acceptance.json`: actual HTTPS owner login, Secure/HttpOnly/SameSite=Lax cookie flags, unauthenticated API 401, create/read/edit/renew/new-request history pass. Manual record **6ad1b87b94e6210a92c2140e** retains version 3 and due date 2029-06-15. Browser sign-in, details and reload also pass. Only a new isolated, visibly synthetic organization was used in the configured Atlas app DB; no cross-owner reads/writes or real recipient.
+- Two actual deployed PDF extraction requests returned **502 MODEL_OUTPUT_INVALID**; both failure reports are retained (`live-smoke-1792129137143.json`, `live-extraction-retry.json`). Neither created a renewal. Do not claim deployed PDF extraction passed.
+- A separate synthetic **insurance-certificate.txt** upload returned 201: actual **gemma-4-26b-a4b-it**, **6,070ms**, `txt_utf8`, pending review, supported date. Renewal count remained unchanged before confirmation. The smoke's first confirmation used an invalid `insurance` category and was correctly rejected 400. The real browser form used the existing valid Vehicle category, edited the title to visibly synthetic, checked the highlighted source evidence, then confirmed the dialog. Created renewal **6ad1b9a394e6210a92c21414** reloads with date 2027-10-31, NGN 45,000, exact source quote and `created_from_document` history. This was real model output, not a fixture response. The original failed smoke report is preserved; final readback records the corrected successful flow.
+- Screenshots: `live-synthetic-dashboard.png`, `live-renewal-history.png`, `live-gemma-review.png`, `live-approved-gemma-renewal.png`, `render-p5-live.png`, `github-actions-success.png`, `render-cron-provider-unavailable.png`, `live-email-unavailable.png`. All contain synthetic content/status only; no credentials or private mailbox values.
+- Real email remains **BLOCKED**: provider unavailable, synthetic address unverified/opted out, no configured controlled private owner. Zero actual emails sent. Cron invocation passes as execution evidence; its exit 2 is a real unavailable-provider failure, not a successful delivery batch. No delivered claim or receipt is fabricated.
+- `scripts/verify-p5-live.mjs` was formatted and lint rerun successfully after addition. Earlier root/clean/hosted checks remain passing. Master/prompts SHA256 unchanged. Private synthetic credentials remain only in ignored `.local/p5-live-1792129137143.json`; synthetic records retained for inspection.
+
+Remaining founder path: configure Resend `EMAIL_API_KEY` and verified `EMAIL_FROM` privately in both Render web and Cron, use a private owner account you control, request/verify its mailbox code, save explicit opt-in, send the authorized TEST, then retain redacted acceptance/inbox evidence. P5 is not marked complete before that gate. Reassess PDF failures rather than hiding them. No P6 work performed.
+
+## Published release and hosted evidence
+
+Founder authorized commit/push: release **d690810f70b5ed4b61e20eba2182d51d388f2b9e** is on main. [GitHub Actions run 38855395748](https://github.com/9jaDevo/KAI247/actions/runs/38855395748) succeeded on Ubuntu with Node 24.11.1: install, lint, typecheck, 93 unit/UI tests, 41 real-MongoDB integration tests and build. See p5/github-actions-run.json and github-actions-success.png.
+
+The separate **kai247-reminders** Cron crn-db8raion74is73chvv40 was created with founder approval, same repository/main, Virginia, smallest 0.5 CPU/512MB, UTC schedule `*/15 * * * *`, build `npm ci --include=dev --no-audit --no-fund`, command `npm run reminders:process`. Dashboard creation showed US$0.00016 per active minute, minimum US$1/month. No web compute tier changed. Atlas URI and database were transferred privately to Render; no secret values captured. Build bld-db8raj0n74is73ci00i0 succeeded using Node 24.11.1. Its **actual scheduled run** started 2026-10-16 05:30:23 UTC and exited 2: processed=0, providerUnavailable=true, deliveryClaimed=false. This verifies invocation, **not successful reminder delivery**. See render-release.json and render-cron-provider-unavailable.png. No duplicate manual run was triggered.
+
+The production launcher correctly rejected an HTTP APP_URL (dep-db8rdecvk9tc73e5qm90). A masked-field edit did not persist the requested value; revealing only the non-secret APP_URL row identified this. It was then edited and verified as https://kai247.onrender.com before saving again. Failed deployment evidence is retained. Corrected deployment dep-db8rfuui0phs738ou2sg is Live and public health passes. Web settings use reproducible npm ci/build, start:render and /api/health. Founder entered AUTH_SECRET privately; the agent never revealed or changed it.
+
+The baseline/in-progress notes below are chronological history, superseded by the final acceptance recorded above when available.
 
 ## Confirmed baseline and access
 

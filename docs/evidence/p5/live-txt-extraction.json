@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-16T05:42:52.288Z",
+  "target": "https://kai247.onrender.com",
+  "fixture": "insurance-certificate.txt",
+  "dataset": "Same isolated synthetic owner; separate TXT fixture after two PDF failures",
+  "realEmailSent": false,
+  "outcome": "FAIL_TXT_ACCEPTANCE",
+  "status": 201,
+  "extraction": {
+    "id": "6ad1b96294e6210a92c21412",
+    "modelId": "gemma-4-26b-a4b-it",
+    "elapsedMs": 6070,
+    "method": "txt_utf8",
+    "status": "pending_review",
+    "dateStatus": "supported"
+  },
+  "confirmStatus": 400
+}

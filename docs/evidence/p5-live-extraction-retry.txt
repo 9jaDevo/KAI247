@@ -1,0 +1,1 @@
+{"utc":"2026-10-16T05:41:10.346Z","target":"https://kai247.onrender.com","dataset":"Same isolated synthetic P5 live owner; one controlled retry after actual invalid model response","realEmailSent":false,"outcome":"FAIL_REAL_GEMMA_RETRY","status":502,"errorCode":"MODEL_OUTPUT_INVALID"}

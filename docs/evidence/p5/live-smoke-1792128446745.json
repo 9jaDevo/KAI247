@@ -1,0 +1,10 @@
+{
+  "timestampUtc": "2026-10-16T05:27:26.741Z",
+  "target": "https://kai247.onrender.com",
+  "dataset": "New isolated SYNTHETIC owner/org in configured Atlas app database; no cross-owner reads",
+  "checks": [],
+  "outcome": "FAIL",
+  "realEmailSent": false,
+  "healthStatus": 503,
+  "failedStage": "readiness"
+}

@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-16T05:44:50.746Z",
+  "target": "https://kai247.onrender.com",
+  "outcome": "PASS_HTTPS_CORE_GEMMA_TXT_EMAIL_BLOCKED",
+  "dataset": "Existing isolated synthetic P5 live owner; HTTPS readback after browser approval",
+  "realEmailSent": false,
+  "health": {
+    "status": 200,
+    "data": {
+      "status": "ready"
+    }
+  },
+  "unauthenticatedApi": 401,
+  "cookieFlags": {
+    "secure": true,
+    "httpOnly": true,
+    "sameSiteLax": true
+  },
+  "manual": {
+    "id": "6ad1b87b94e6210a92c2140e",
+    "version": 3,
+    "dueDate": "2029-06-15",
+    "historyActions": [
+      "renewed",
+      "updated",
+      "created"
+    ]
+  },
+  "document": {
+    "id": "6ad1b9a394e6210a92c21414",
+    "dueDate": "2027-10-31",
+    "historyActions": [
+      "created_from_document"
+    ],
+    "confirmedInLiveBrowser": true
+  },
+  "gemma": {
+    "id": "6ad1b96294e6210a92c21412",
+    "modelId": "gemma-4-26b-a4b-it",
+    "elapsedMs": 6070,
+    "method": "txt_utf8",
+    "dateStatus": "supported",
+    "ownerConfirmed": true
+  },
+  "knownFailures": [
+    "Two real PDF extraction requests returned 502 MODEL_OUTPUT_INVALID; neither produced a renewal",
+    "TXT first confirmation smoke request used invalid category insurance and was correctly rejected 400; corrected via actual Vehicle form and explicit confirmation dialog"
+  ],
+  "email": {
+    "provider": "unavailable",
+    "owner": "synthetic .invalid / unverified / opted out",
+    "realSend": "BLOCKED",
+    "delivered": false
+  }
+}

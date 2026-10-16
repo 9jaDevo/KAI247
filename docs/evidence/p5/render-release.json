@@ -1,0 +1,46 @@
+{
+  "checkedUtc": "2026-10-16T05:35:01.725Z",
+  "web": {
+    "id": "srv-db8qvg6q1p3s73931peg",
+    "url": "https://kai247.onrender.com",
+    "release": "d690810f70b5ed4b61e20eba2182d51d388f2b9e",
+    "build": "npm ci --include=dev --no-audit --no-fund && npm run build",
+    "start": "npm run start:render",
+    "health": "/api/health",
+    "failedDeployment": "dep-db8rdecvk9tc73e5qm90",
+    "failure": "APP_URL must use HTTPS for production authentication.",
+    "correction": "Masked edit initially did not persist; revealed only non-secret APP_URL, set public HTTPS origin and verified visible value before saving",
+    "correctedDeployment": "dep-db8rfuui0phs738ou2sg",
+    "status": "Live",
+    "intermediateFailedDeployment": "dep-db8rerjl550s73euko80",
+    "healthStatus": 200,
+    "verifiedDeployment": "dep-db8rfuui0phs738ou2sg",
+    "publicOrigin": "https://kai247.onrender.com"
+  },
+  "cron": {
+    "id": "crn-db8raion74is73chvv40",
+    "name": "kai247-reminders",
+    "build": "bld-db8raj0n74is73ci00i0",
+    "buildOutcome": "succeeded",
+    "node": "24.11.1",
+    "schedule": "*/15 * * * *",
+    "timezone": "UTC",
+    "command": "npm run reminders:process",
+    "compute": "0.5 CPU / 512MB",
+    "rateUsdPerActiveMinute": 0.00016,
+    "minimumUsdPerMonth": 1,
+    "authorization": "Founder replied Proceed after minimum and usage costs were disclosed; no web tier change",
+    "firstRun": {
+      "trigger": "Scheduled",
+      "startUtc": "2026-10-16T05:30:23Z",
+      "resultUtc": "2026-10-16T05:31:07Z",
+      "processed": 0,
+      "providerUnavailable": true,
+      "mode": "one-shot",
+      "deliveryClaimed": false,
+      "exitCode": 2
+    },
+    "secrets": "Atlas URI/DB copied privately from ignored .env to Render Cron; values omitted",
+    "provider": "EMAIL_API_KEY / EMAIL_FROM unavailable; zero real emails sent"
+  }
+}

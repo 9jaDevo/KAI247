@@ -1,0 +1,15 @@
+{
+  "timestampUtc": "2026-10-16T05:26:09.688Z",
+  "target": "https://kai247.onrender.com",
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": "network-unavailable"
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "loginDisabled": false
+    }
+  ]
+}

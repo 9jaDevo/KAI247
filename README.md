@@ -2,7 +2,7 @@
 
 KAI247 AI is a planned renewal tracker for Nigerian small businesses: enter a renewal or extract candidate details from a document using an open-weight Gemma model, human-confirm the deadline, then receive auditable email reminders.
 
-**Current implementation: P5 deployment preparation and local production-bundle verification.** The founder deployed the earlier baseline at [kai247.onrender.com](https://kai247.onrender.com). The P5 CI workflow, startup checks and health endpoint are prepared locally; publishing them and updating the existing service remain pending. Authenticated CRUD, real Gemma PDF extraction and explicit approval passed against isolated real Atlas using the local production bundle. Real email remains blocked; no Cron or hosted CI success is claimed. See [P5 deployment](docs/P5_DEPLOYMENT.md) and [evidence](docs/evidence/p5-verification.md).
+**Current implementation: P5 deployed core verified; email gate blocked.** The [live Render app](https://kai247.onrender.com) passes HTTPS authentication, Atlas CRUD/renew/history and a real Gemma TXT candidate → explicit browser approval → persisted renewal. [GitHub Actions passed](https://github.com/9jaDevo/KAI247/actions/runs/38855395748) for release `d690810`. Separate `kai247-reminders` Cron runs every 15 minutes UTC; its actual scheduled invocation exited 2/provider unavailable, zero emails sent. Two deployed PDF calls returned invalid Gemma output and were safely rejected. P5 is not fully complete. See [deployment/setup](docs/P5_DEPLOYMENT.md) and [evidence](docs/evidence/p5-verification.md).
 
 ## Source of truth
 
@@ -60,7 +60,7 @@ Future server modules must call `validateEnv(process.env, ['auth'])`, `['db']`, 
 
 ## Structure and planned infrastructure
 
-`src/app` holds routes; `src/components` shared UI; `src/lib/{auth,db,ai,renewals,notifications,security}` feature modules; `src/types` domain and serialized UI contracts; `tests/{unit,integration,fixtures}` verification; `scripts` one-shot commands; `.github/workflows` a P5 placeholder. Domain contracts are implemented in `src/types/domain.ts`; owner-scoped services use MongoDB documents. P1 invented fixtures remain isolated historical UI/test data in `src/lib/renewals/preview-fixtures.ts`.
+`src/app` holds routes; `src/components` shared UI; `src/lib/{auth,db,ai,renewals,notifications,security}` feature modules; `src/types` domain and serialized UI contracts; `tests/{unit,integration,fixtures}` verification; `scripts` one-shot commands; `.github/workflows` the tested push/PR CI workflow. Domain contracts are implemented in `src/types/domain.ts`; owner-scoped services use MongoDB documents. P1 invented fixtures remain isolated historical UI/test data in `src/lib/renewals/preview-fixtures.ts`.
 
 ## Use the P2 owner workspace
 
@@ -90,7 +90,7 @@ See [P3 setup](docs/P3_SETUP.md) for the Gemma provider, licence notes, pipeline
 
 Run unit tests with `npm test` and real-MongoDB integration tests with `npm run test:integration`. Optional `node --env-file=.env.local scripts/verify-p2.mjs` uses an installed Playwright package/browser (or `KAI247_PLAYWRIGHT_MODULE`) and only synthetic sandbox data. P1 browser artifacts remain historical. Current evidence: [P2 verification report](docs/evidence/p2-verification.md).
 
-P2 local persistence, P3 real Gemma extraction and P4 scheduling/reliability are verified locally. Atlas now has isolated synthetic job persistence evidence; the full P2 app workflow on Atlas remains open. The P4 Resend adapter is implemented, but real send is blocked by blank EMAIL_API_KEY/EMAIL_FROM. Remaining phases cover Render web hosting, a separate UTC Cron service and GitHub Actions (P5), then sanitized Sentry traces (P6). No extra services, provider SDKs or guessed Render blueprint are added in P0. No web-process timer will substitute for durable scheduling. Paid infrastructure requires founder authorization.
+P2 persistence, P3 real Gemma extraction and P4 scheduling/reliability are verified locally. P5 also verifies deployed HTTPS owner CRUD/renew/history on Atlas and real Gemma TXT extraction/approval. The P4 Resend adapter is implemented, but real send is blocked by blank EMAIL_API_KEY/EMAIL_FROM. P5 web hosting, separate UTC Cron and GitHub Actions are configured; real email remains a blocked P5 gate. Sanitized Sentry traces belong to P6. No extra services, provider SDKs or guessed Render blueprint are added in P0. No web-process timer will substitute for durable scheduling. Paid infrastructure requires founder authorization.
 
 ## Contest constraints and evidence
 
@@ -102,9 +102,9 @@ One entry, the official DEV template, English article, `devchallenge`/`hf26chall
 
 ## Verification and limitations
 
-See the root tracker, [P0 verification report](docs/evidence/p0-verification.md), [P1 verification report](docs/evidence/p1-verification.md), [P2 verification report](docs/evidence/p2-verification.md) and [P3 verification report](docs/evidence/p3-verification.md) for actual commands and results. Local checks do not establish production readiness or contest acceptance. Unit tests use synthetic values; integration tests use a real ephemeral MongoDB server, and browser QA exercises the local app only. Real email acceptance/receipt, physical-device QA and deployed smoke tests remain future gates. P0's five high development-tool advisories and deprecated ESLint 9 compatibility constraint remain documented risks.
+See the root tracker, [P0 verification report](docs/evidence/p0-verification.md), [P1 verification report](docs/evidence/p1-verification.md), [P2 verification report](docs/evidence/p2-verification.md) and [P3 verification report](docs/evidence/p3-verification.md) for actual commands and results. Local checks do not establish production readiness or contest acceptance. Unit tests use synthetic values; integration tests use a real ephemeral MongoDB server, and P5 browser QA also exercises the live Render app with an isolated synthetic owner. Real email acceptance/receipt and physical-device QA remain open gates. P0's five high development-tool advisories and deprecated ESLint 9 compatibility constraint remain documented risks.
 
-P0–P4 were committed and pushed by the founder as `32e07f8`. P5 changes remain local until publication is authorized under the shared instructions. P5 live health/CI/Cron/full smoke gates remain pending; real email requires provider configuration. P6 has not started.
+P0–P4 were committed and pushed by the founder as `32e07f8`. The founder authorized P5 publication and the smallest separate paid Cron. Release `d690810` is pushed and its hosted CI passes. Real email still requires provider configuration and a verified opted-in owner. P6 has not started.
 
 ## Render and CI (P5)
 
@@ -113,4 +113,4 @@ Follow [the P5 runbook](docs/P5_DEPLOYMENT.md) for the existing service, environ
 
 ## P4 email operations
 
-See [P4 setup](docs/P4_SETUP.md) for the exact verification/opt-in/test flow and worker exit codes. `npm run reminders:process` uses Next environment precedence; `.env.local` overrides `.env`. Configure a Resend key and verified sender securely, use a private owner address you control, verify the emailed code, save explicit opt-in, then send the labelled TEST from Settings. The `.invalid` synthetic sandbox cannot receive mail. No arbitrary recipient, fake verification or due-date mutation is accepted. A non-delivering preview remains available without credentials. Provider acceptance is not delivered; no delivery receipt webhook exists. The worker runs once and exits; Render Cron setup is deferred to P5.
+See [P4 setup](docs/P4_SETUP.md) for the exact verification/opt-in/test flow and worker exit codes. `npm run reminders:process` uses Next environment precedence; `.env.local` overrides `.env`. Configure a Resend key and verified sender securely, use a private owner address you control, verify the emailed code, save explicit opt-in, then send the labelled TEST from Settings. The `.invalid` synthetic sandbox cannot receive mail. No arbitrary recipient, fake verification or due-date mutation is accepted. A non-delivering preview remains available without credentials. Provider acceptance is not delivered; no delivery receipt webhook exists. The worker runs once and exits; The separate Render Cron is configured every 15 minutes UTC; its real scheduled run exits 2 while the provider is unavailable.
