@@ -1,0 +1,40 @@
+{
+  "checkedUtc": "2026-10-16T14:37:47.222Z",
+  "target": "https://kai247.onrender.com",
+  "scope": "New isolated SYNTHETIC .invalid owner; actual deployed HTTPS API and Atlas. No real email, no other owner records.",
+  "checks": [
+    "Safe HTTPS readiness 200 and unauthenticated renewals 401",
+    "Owner login and Secure/HttpOnly/SameSite session cookie",
+    "Origin rejection and actual create/edit/renew/fresh read/history persistence",
+    "Real Gemma pending candidate, no automatic renewal, owner approval and P7 replacement provenance fix deployed"
+  ],
+  "realEmailSent": false,
+  "manualId": "6ad236c71547adc482a08767",
+  "uploadStatus": 201,
+  "extraction": {
+    "modelId": "gemma-4-26b-a4b-it",
+    "modelMs": 4773,
+    "status": "pending_review",
+    "evidenceMatched": true
+  },
+  "documentRenewalId": "6ad236ce1547adc482a0876d",
+  "replacement": {
+    "dateSource": "manual",
+    "version": 2,
+    "dueDate": "2028-10-21"
+  },
+  "notificationStatus": {
+    "verified": false,
+    "note": "Initial harness inspected incorrect settings nesting; see browser settings check for configuration. No real send attempted."
+  },
+  "outcome": "PASS_CORE_EMAIL_AND_CRON_NOT_TESTED",
+  "logout": true,
+  "settingsFollowup": {
+    "checkedUtc": "2026-10-16T19:49:16.412Z",
+    "emailOptIn": false,
+    "verified": false,
+    "activityStatus": 200,
+    "jobCount": 0,
+    "providerConfiguration": "Visible Settings configured; not delivery proof"
+  }
+}

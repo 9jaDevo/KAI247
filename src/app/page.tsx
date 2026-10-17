@@ -1,3 +1,4 @@
+import "./landing.css";
 import Link from "next/link";
 import { Brand } from "@/components/brand";
 import { Icon } from "@/components/icon";
@@ -37,61 +38,36 @@ export default function Home() {
               <ActionLink href="/login">
                 Open your workspace <Icon name="arrow" />
               </ActionLink>
-              <Link className="text-link" href="#how-it-works">
+              <Link
+                className="text-link button button-secondary"
+                href="#how-it-works"
+              >
                 See the approach ↘
               </Link>
             </div>
             <p className="hero-footnote">
-              <span className="status-dot" />
+              <span className="hero-check">
+                <Icon name="check" width="12" height="12" />
+              </span>
               Manual tracking and Gemma extraction · verified-owner email
               scheduling
             </p>
           </div>
           <div
-            className="hero-visual"
-            aria-label="Illustrative renewal preview with synthetic records"
-          >
-            <div className="visual-topline">
-              <span>YOUR NEXT CHAPTER, IN VIEW</span>
-              <Icon name="grid" />
-            </div>
-            <div className="visual-date">
-              <span>OCT</span>
-              <strong>21</strong>
-              <small>2026</small>
-            </div>
-            <div className="visual-renewal">
-              <p className="eyebrow">NEXT SAMPLE RENEWAL</p>
-              <h2>Website hosting</h2>
-              <p>Example Hosting · Digital infrastructure</p>
-              <div className="visual-meta">
-                <Pill tone="amber">Due soon · sample</Pill>
-                <strong>₦85,000</strong>
-              </div>
-            </div>
-            <div className="visual-evidence">
-              <Icon name="document" />
-              <div>
-                <strong>A date you can check.</strong>
-                <span>“Service renews on 21 October 2026.”</span>
-              </div>
-              <Icon name="check" />
-            </div>
-            <div className="visual-footer">
-              <span>ILLUSTRATION · NOT A LIVE RECORD</span>
-              <span>01 / 03</span>
-            </div>
-          </div>
+            className="hero-visual reference-hero"
+            role="img"
+            aria-label="Illustration, not a live record: a sample website hosting renewal for 21 October 2026, with source evidence, beside a notebook and pen."
+          />
         </section>
         <div className="use-case-strip">
           <div className="page-container">
             <span>Less scattered. More considered.</span>
             <span>
-              <Icon name="calendar" />
+              <Icon name="globe" />
               Domains & hosting
             </span>
             <span>
-              <Icon name="shield" />
+              <Icon name="car" />
               Vehicle documents
             </span>
             <span>
@@ -126,7 +102,7 @@ export default function Home() {
               },
               {
                 n: "02",
-                icon: "check" as const,
+                icon: "sparkles" as const,
                 title: "Check the details",
                 text: "Review candidate dates alongside their source evidence. Edit ambiguity and confirm what matters.",
                 status: "Gemma extraction with human review",
@@ -144,6 +120,10 @@ export default function Home() {
                   <span>{step.n}</span>
                   <Icon name={step.icon} width="26" height="26" />
                 </div>
+                <div
+                  className={`step-art step-art-${step.n}`}
+                  aria-hidden="true"
+                />
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
                 <span className="small muted">{step.status}</span>
@@ -164,13 +144,14 @@ export default function Home() {
                 For Nigerian small-business owners balancing customers,
                 operations and the admin that keeps everything working.
               </p>
-              <ActionLink href="/login" variant="secondary">
+              <ActionLink href="/login">
                 Manage your renewals <Icon name="arrow" />
               </ActionLink>
             </div>
             <div className="value-list">
               <article>
                 <span>01</span>
+                <Icon name="calendar" width="25" height="25" />
                 <div>
                   <h3>Context, beside the deadline.</h3>
                   <p>
@@ -181,6 +162,7 @@ export default function Home() {
               </article>
               <article>
                 <span>02</span>
+                <Icon name="people" width="25" height="25" />
                 <div>
                   <h3>Your judgement stays central.</h3>
                   <p>
@@ -191,12 +173,13 @@ export default function Home() {
               </article>
               <article>
                 <span>03</span>
+                <Icon name="document" width="25" height="25" />
                 <div>
                   <h3>A record of what happened.</h3>
                   <p>
-                    Planned notification activity distinguishes attempts,
-                    failures and provider acceptance. An email sent is not a
-                    delivery guarantee.
+                    Notification activity distinguishes attempts, failures and
+                    provider acceptance. An email sent is not a delivery
+                    guarantee.
                   </p>
                 </div>
               </article>
@@ -212,13 +195,15 @@ export default function Home() {
           </h2>
           <p>
             Sign in, add confirmed renewals or extract candidates from a
-            document with Gemma, then confirm them. Email delivery is planned.
+            document with Gemma, then confirm them. Email requires verified
+            opt-in.
           </p>
           <ActionLink href="/login">
             Open your workspace <Icon name="arrow" />
           </ActionLink>
           <span className="small muted">
-            Owner credentials required. No emails are sent yet.
+            Owner credentials required. Email requires a configured provider and
+            worker.
           </span>
         </section>
       </main>

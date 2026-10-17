@@ -1,0 +1,26 @@
+{
+  "checkedUtc": "2026-10-17T00:02:21.591Z",
+  "mobile": {
+    "viewport": 360,
+    "client": 345,
+    "scroll": 345
+  },
+  "checks": [
+    {
+      "client": 753,
+      "headingCount": 1,
+      "loginLinks": 4,
+      "scroll": 753,
+      "viewport": 768
+    },
+    {
+      "client": 1265,
+      "headingCount": 1,
+      "loginLinks": 4,
+      "scroll": 1265,
+      "viewport": 1280
+    }
+  ],
+  "anchorNavigation": "How it works opens #how-it-works",
+  "artwork": "Founder-supplied reference, decorative CSS regions only"
+}

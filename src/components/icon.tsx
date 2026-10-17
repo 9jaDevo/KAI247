@@ -1,6 +1,13 @@
 import type { SVGProps } from "react";
 
 const paths = {
+  globe:
+    "M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18",
+  car: "M3 17V9l3-5h12l3 5v8M3 10h18M6 14h2m8 0h2M5 17v3m14-3v3M3 17h18",
+  sparkles:
+    "m12 2 2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5L12 2M20 2v4m-2-2h4M4 18v4m-2-2h4",
+  people:
+    "M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M2 21v-3a7 7 0 0 1 14 0v3H2m15-17a4 4 0 0 1 0 8m2 3a6 6 0 0 1 3 6h-3",
   arrow: "M5 12h14m-5-5 5 5-5 5",
   grid: "M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z",
   calendar: "M4 5h16v16H4zM8 3v4m8-4v4M4 10h16M8 14h2m4 0h2m-8 3h2",

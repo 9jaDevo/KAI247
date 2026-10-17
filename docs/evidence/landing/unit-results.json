@@ -1,0 +1,21 @@
+{
+  "scope": "Actual terminal runs during landing redesign; not a new live model/provider test",
+  "initial": {
+    "command": "npm test",
+    "passed": 105,
+    "failed": 1,
+    "failure": "telemetry.test.ts SDK span lifecycle test exceeded default 5000ms timeout",
+    "durationSeconds": 72.30
+  },
+  "rerun": {
+    "command": "npm test -- --maxWorkers=1",
+    "passed": 106,
+    "failed": 0,
+    "filesPassed": 15,
+    "durationSeconds": 67.49,
+    "localStart": "2026-10-16 19:57:26 America/New_York"
+  },
+  "testOrApplicationTimeoutChanged": false,
+  "integrationTestsRerun": false,
+  "reason": "Public landing design only; existing backend integration evidence remains historical"
+}

@@ -1,0 +1,160 @@
+{
+  "checkedUtc": "2026-10-16T19:46:12.985Z",
+  "method": "HEAD; public access only, no private dashboard or authenticated content inference",
+  "records": [
+    {
+      "url": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12"
+    },
+    {
+      "url": "https://kai247.onrender.com",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://kai247.onrender.com/"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/9jaDevo/KAI247/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0/docs/evidence/p7/02-review.png",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://raw.githubusercontent.com/9jaDevo/KAI247/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0/docs/evidence/p7/02-review.png"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/P7_COMMERCIAL_HYPOTHESIS.md",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/blob/main/docs/P7_COMMERCIAL_HYPOTHESIS.md"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/P7_DEMO_STORYBOARD.md",
+      "ok": false,
+      "error": "NETWORK_OR_TIMEOUT",
+      "retry": {
+        "ok": false,
+        "error": "NETWORK_OR_TIMEOUT"
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/9jaDevo/KAI247/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0/docs/evidence/p7/05-real-test-activity.png",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://raw.githubusercontent.com/9jaDevo/KAI247/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0/docs/evidence/p7/05-real-test-activity.png"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/commit/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/commit/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/P3_SETUP.md",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/blob/main/docs/P3_SETUP.md"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/actions/runs/38905759266",
+      "ok": false,
+      "error": "NETWORK_OR_TIMEOUT",
+      "retry": {
+        "method": "GET",
+        "status": 200,
+        "ok": true
+      }
+    },
+    {
+      "url": "https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/evidence/p7-benchmark-analysis.md",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/blob/main/docs/evidence/p7-benchmark-analysis.md"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/tests/fixtures/benchmark/p7/dataset.json",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/blob/main/tests/fixtures/benchmark/p7/dataset.json"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/P5_DEPLOYMENT.md",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/blob/main/docs/P5_DEPLOYMENT.md"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/P7_METHODOLOGY.md",
+      "ok": false,
+      "error": "NETWORK_OR_TIMEOUT",
+      "retry": {
+        "method": "GET",
+        "status": 200,
+        "ok": true
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/9jaDevo/KAI247/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0/docs/evidence/p6/sentry-gemma.png",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://raw.githubusercontent.com/9jaDevo/KAI247/a156994b951bc608b1b913d1bbe8d1adcd8b9bf0/docs/evidence/p6/sentry-gemma.png"
+    },
+    {
+      "url": "https://dev.to/dailycontext/your-financial-agent-passed-every-eval-can-you-defend-its-decision-1npg",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://dev.to/dailycontext/your-financial-agent-passed-every-eval-can-you-defend-its-decision-1npg"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/P7_COSTS_PRIVACY_LICENSE.md",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/blob/main/docs/P7_COSTS_PRIVACY_LICENSE.md"
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/blob/main/docs/evidence/p6/real-traces.json",
+      "ok": false,
+      "error": "NETWORK_OR_TIMEOUT",
+      "retry": {
+        "method": "GET",
+        "status": 200,
+        "ok": true
+      }
+    },
+    {
+      "url": "https://github.com/9jaDevo/KAI247/commit/51c5f2af008eb247340373760b3a0f0793b550d4",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://github.com/9jaDevo/KAI247/commit/51c5f2af008eb247340373760b3a0f0793b550d4"
+    },
+    {
+      "url": "https://ai.google.dev/gemma/apache_2",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://ai.google.dev/gemma/apache_2"
+    },
+    {
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://ai.google.dev/gemma/docs/core/model_card_4"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/terms#unpaid-services",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://ai.google.dev/gemini-api/terms"
+    }
+  ],
+  "retryCheckedUtc": "2026-10-16T19:47:41.139Z"
+}

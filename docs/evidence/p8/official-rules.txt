@@ -1,0 +1,6 @@
+Official Week 2 rules independently retrieved via HTTPS 200 on 2026-10-16.
+Source: https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules
+Entry opens: 2026-10-12 12:00 PDT (19:00 UTC).
+Entry closes: 2026-10-18 23:59 PDT (2026-10-19 06:59 UTC / 07:59 WAT / 02:59 EDT).
+Required: one published DEV entry using the official template and challenge tag, a new in-window project/repo with open-weight or open-source AI at its core, plausible Side Hustle customer, deployed link or demo video, code repository and explanation of open innovation.
+Category participation requires meaningful actual use and identification in the article. General terms also apply. Full HTML was inspected privately; dates above are paraphrased metadata, not a claim of organizer approval.

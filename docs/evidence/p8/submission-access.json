@@ -1,0 +1,22 @@
+{
+  "checkedDateUtc": "2026-10-16",
+  "dev": {
+    "initialRead": "403 dev_account_mismatch",
+    "prescribedSignin": "Already connected with complete requested scopes",
+    "readAfterSignin": "403 dev_account_mismatch",
+    "writeAttempted": false,
+    "draftId": null,
+    "publishedUrl": null,
+    "publishedAt": null,
+    "contestAcceptanceVerified": false
+  },
+  "render": {
+    "founderReportedConnected": true,
+    "subsequentConnectorStatus": "initiated; no active account",
+    "authenticatedApiCallsExecuted": false,
+    "existingChromeDashboard": "Focus-control timeout twice",
+    "currentDashboardReleaseShaVerified": false,
+    "currentCronRunHistoryVerified": false
+  },
+  "status": "NOT_SUBMITTED"
+}

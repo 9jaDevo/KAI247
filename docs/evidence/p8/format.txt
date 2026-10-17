@@ -1,0 +1,7 @@
+
+> kai247-renewpilot-ai@0.1.0 format:check
+> prettier --check src scripts tests package.json tsconfig.json *.mjs
+
+Checking formatting...
+[warn] scripts/verify-p8-live.mjs
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.
