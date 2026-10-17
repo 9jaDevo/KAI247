@@ -1,0 +1,7 @@
+{
+  "checkedUtc": "2026-10-17T00:38:37.078Z",
+  "scope": "Local actual Next HTTP, public pages/assets only; no owner mutations or provider sends",
+  "checks": [],
+  "outcome": "FAIL",
+  "failure": "The expression evaluated to a falsy value:\n\n  assert(html.includes('href=\"https://kai247.pdev.tech/\"'))\n"
+}

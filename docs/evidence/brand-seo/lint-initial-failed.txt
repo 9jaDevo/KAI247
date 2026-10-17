@@ -1,0 +1,9 @@
+
+> kai247-renewpilot-ai@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+C:\xampp\htdocs\Project\KAI247\src\app\opengraph-image.tsx
+  38:40  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+✖ 1 problem (1 error, 0 warnings)

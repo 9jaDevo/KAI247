@@ -1,5 +1,10 @@
 import { AppShell } from "@/components/app-shell";
 import { pageOwner } from "@/lib/auth/owner";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Owner workspace",
+  robots: { index: false, follow: false },
+};
 export default async function WorkspaceLayout({
   children,
 }: {

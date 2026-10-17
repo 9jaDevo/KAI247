@@ -13,6 +13,24 @@ const optionalUrl = z.preprocess(
     .optional(),
 );
 const schema = z.object({
+  SITE_URL: z.preprocess(
+    (value) => (value === "" ? undefined : value),
+    z
+      .url()
+      .refine((value) => {
+        if (!URL.canParse(value)) return false;
+        const url = new URL(value);
+        return (
+          url.protocol === "https:" &&
+          !url.username &&
+          !url.password &&
+          url.pathname === "/" &&
+          !url.search &&
+          !url.hash
+        );
+      })
+      .optional(),
+  ),
   APP_URL: z
     .url()
     .refine((value) => /^https?:\/\//.test(value))

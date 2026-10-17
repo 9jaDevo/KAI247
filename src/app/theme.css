@@ -211,6 +211,21 @@ h3 {
 .brand-light .brand-ai {
   color: #b8dac8;
 }
+.brand .brand-image {
+  display: block;
+  width: 156px;
+  height: 46px;
+  object-fit: contain;
+}
+.brand-light .brand-image {
+  filter: brightness(0) invert(1);
+}
+@media (max-width: 700px) {
+  .brand .brand-image {
+    width: 138px;
+    height: 42px;
+  }
+}
 .pill {
   display: inline-flex;
   align-items: center;

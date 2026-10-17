@@ -1,0 +1,66 @@
+
+> kai247-renewpilot-ai@0.1.0 build
+> next build
+
+▲ Next.js 16.4.0 (Turbopack)
+- Environments: .env.local, .env
+✓ Running next.config.mjs took 2.2s
+- Experiments (use with caution):
+  · clientTraceMetadata
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.8s
+  Running next.config.js provided runAfterProductionCompile ...
+✓ Completed runAfterProductionCompile in 1101ms
+  Running TypeScript ...
+  Finished TypeScript in 13.6s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/30) ...
+  Generating static pages using 7 workers (7/30)
+  Generating static pages using 7 workers (14/30)
+  Generating static pages using 7 workers (22/30)
+✓ Generating static pages using 7 workers (30/30) in 1486ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/activity
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/dashboard
+├ ƒ /api/email-verification
+├ ƒ /api/email-verification/confirm
+├ ƒ /api/extractions
+├ ƒ /api/extractions/[id]
+├ ƒ /api/extractions/[id]/confirm
+├ ƒ /api/extractions/[id]/reject
+├ ƒ /api/health
+├ ƒ /api/reminder-preview
+├ ƒ /api/renewals
+├ ƒ /api/renewals/[id]
+├ ƒ /api/renewals/[id]/renew
+├ ƒ /api/settings
+├ ƒ /api/test-email
+├ ƒ /app
+├ ƒ /app/activity
+├ ƒ /app/import
+├ ƒ /app/import/[id]
+├ ƒ /app/import/review
+├ ƒ /app/renewals
+├ ƒ /app/renewals/[id]
+├ ƒ /app/renewals/[id]/edit
+├ ƒ /app/renewals/new
+├ ƒ /app/settings
+├ ○ /apple-icon.png
+├ ○ /icon.png
+├ ƒ /login
+├ ○ /manifest.webmanifest
+├ ○ /opengraph-image
+├ ○ /robots.txt
+└ ○ /sitemap.xml
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

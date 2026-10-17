@@ -2,6 +2,11 @@ import { Brand } from "@/components/brand";
 import { Icon } from "@/components/icon";
 import { LoginForm } from "@/components/login-form";
 import { validateEnv } from "@/lib/security/env";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Owner sign-in",
+  robots: { index: false, follow: false },
+};
 export default async function LoginPage({
   searchParams,
 }: {

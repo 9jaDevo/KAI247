@@ -14,6 +14,8 @@ KAI247 AI helps Nigerian small-business owners review document-derived renewal d
 
 ## Source of truth
 
+Logo/favicon assets and canonical/search configuration are documented in [branding and SEO setup](docs/BRANDING_SEO.md). Public canonical origin defaults to `https://kai247.pdev.tech`, as selected by the founder; optional `SITE_URL` is separate from authentication `APP_URL`. Search Console verification and actual indexing require deployment/account checks.
+
 Read these before every phase:
 
 - [Master specification](01_RENEWPILOT_MASTER_SPEC.md) — sole product/architecture authority, locked.

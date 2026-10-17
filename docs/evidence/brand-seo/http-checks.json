@@ -1,0 +1,12 @@
+{
+  "checkedUtc": "2026-10-17T00:44:22.011Z",
+  "scope": "Local actual Next HTTP, public pages/assets only; no owner mutations or provider sends",
+  "checks": [
+    "Homepage title/description/canonical, OG/Twitter and parsed truthful JSON-LD",
+    "Robots boundaries and canonical-only sitemap",
+    "Actual login noindex/nofollow and API X-Robots-Tag",
+    "Actual ICO with three frames, PNG/Apple icons and manifest asset sizes",
+    "Actual social-card renderer HTTP200, PNG1200x630"
+  ],
+  "outcome": "PASS"
+}

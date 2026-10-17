@@ -7,6 +7,14 @@ validateEnv(process.env);
 const nextConfig = {
   poweredByHeader: false,
   turbopack: { root: fileURLToPath(new URL(".", import.meta.url)) },
+  async headers() {
+    return [
+      {
+        source: "/api/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
+  },
 };
 export default withSentryConfig(nextConfig, {
   silent: true,

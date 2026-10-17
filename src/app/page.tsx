@@ -1,12 +1,52 @@
 import "./landing.css";
+import type { Metadata } from "next";
+import { getSiteUrl, siteName, siteDescription } from "@/lib/site";
 import Link from "next/link";
 import { Brand } from "@/components/brand";
 import { Icon } from "@/components/icon";
 import { ActionLink, Pill } from "@/components/ui";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    url: "/",
+    type: "website",
+    siteName,
+    title: "KAI247 AI — Clarity for everything that's due",
+    description: siteDescription,
+    locale: "en_NG",
+  },
+};
+
 export default function Home() {
   return (
     <div className="landing">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": `${getSiteUrl()}#website`,
+                name: siteName,
+                alternateName: "KAI247",
+                url: getSiteUrl().href,
+                description: siteDescription,
+                inLanguage: "en-NG",
+              },
+              {
+                "@type": "Organization",
+                "@id": `${getSiteUrl()}#organization`,
+                name: siteName,
+                url: getSiteUrl().href,
+                logo: new URL("/brand/logo.png", getSiteUrl()).href,
+              },
+            ],
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
       <a href="#main" className="skip-link">
         Skip to content
       </a>
